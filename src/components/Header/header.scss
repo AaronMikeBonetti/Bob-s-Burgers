@@ -1,20 +1,19 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
 
 .header{
+    overflow-x: hidden !important;
     position: fixed;
     display: flex;
+    z-index: 5;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 95vw;
     height: 40px;
     background: red;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-family: 'Russo One', sans-serif;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.479);
     
 
@@ -26,4 +25,3 @@
     
 }
 
-}

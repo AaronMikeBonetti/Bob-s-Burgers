@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./navbar.scss"
+import { Link } from "react-router-dom"
 
 class Navbar extends Component{
     constructor(){
@@ -33,9 +34,11 @@ class Navbar extends Component{
         return(
             <div className="navbar-container">
             <ul className={this.state.classNames.navDisplay}>
-                <li>Menu</li>
-                <li>Locations</li>
-                <li>Contact</li>
+            <Link to="/"><li>Home</li></Link>
+            <Link to="/menu"><li>Menu</li></Link>
+            <Link to="/location"><li>Locations</li></Link>
+            <Link to="/contact"><li>Contact</li></Link>
+                
             </ul>
             <i className={this.state.classNames.navButton}
              onClick={this.HandleDisplayNav}></i>

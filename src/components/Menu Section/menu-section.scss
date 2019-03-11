@@ -1,0 +1,209 @@
+
+
+.menu-container{
+    width: 100%;
+    background: rgb(195, 195, 195);
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 50%;
+
+ div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 5vw;
+    transition: 1s all;
+    
+ }
+ 
+
+
+    .box1{
+        
+        padding: 20px;        
+        grid-column:1/-1;
+        grid-row: 1/1;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.383) 20%,
+        rgba(0, 0, 0, 0.383)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/lettuce-tomato.jpg');
+        background-size: cover;
+        background-position: center;
+        color: rgb(255, 255, 255);
+          
+    }
+    
+    .box2{
+        
+        grid-column:1;
+        grid-row: 2;
+        background:rgb(255, 0, 0);
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Lobster', cursive;
+           
+    }
+    
+    .box3{
+        
+        grid-column:2;
+        grid-row: 2;
+        color: rgb(229, 255, 0);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.376) 20%,
+        rgba(255, 255, 255, 0.308)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheeseburger-black-gloves.jpg');
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .box4{
+        
+        grid-column:1/-1;
+        grid-row: 3;
+        color: rgb(229, 255, 0);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.096) 20%,
+        rgba(255, 255, 255, 0.096)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheese-burger-fries-veg.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .box5{
+        
+        grid-column:1;
+        grid-row: 4;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%,
+        rgba(0, 0, 0, 0.089)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/fries.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .box6{
+        
+        grid-column:2;
+        grid-row: 4;
+        background:rgb(255, 238, 0);
+        padding-right: 10px;
+        font-family: 'Lobster', cursive;
+        text-align: right;
+        height: 100%;
+        
+        .fa-angle-double-left{
+            font-size: 12vw;
+            animation: pulse-arrow 1.5s infinite ease-in-out;
+            width: 100%;
+            
+        }
+        @keyframes pulse-arrow{
+            0%{
+                
+                
+            }
+            50%{
+                
+                width: 70%;
+            }
+            
+            100%{
+                
+            }
+        }
+    }
+    .box7{
+        
+        grid-column:1/-1;
+        grid-row: 5;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%,
+        rgba(0, 0, 0, 0.089)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheese-burger-close-up.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+   
+    .box-link{
+        animation: box-link-pulse 2s infinite;
+        padding: 1vw;
+        width: 20vw; 
+        background: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-size: 4vw;
+        border-radius: 5%;
+        
+        @keyframes box-link-pulse {
+            0%{
+                transform: scale(1)
+            }
+            50%{
+                transform: scale(1.1)
+            }
+            100%{
+                transform: scale(1)
+            }
+        }
+    }
+   
+}
+
+
+@media only screen and (min-width: 300px) {
+.menu-container{  
+    grid-template-columns: repeat(3, 33.3vw);
+    grid-auto-rows: 33.3vw;
+    
+    .box1{
+        grid-column:1/2;
+        grid-row: 1/1;
+        
+    }
+    .box2{
+        
+        grid-column:3/-1;
+        grid-row: 1/1;
+        
+    }
+    .box3{
+        
+        grid-column:1;
+        grid-row: 2;
+        
+    }
+    .box4{
+        
+        grid-column:2;
+        grid-row: 2;
+        
+    }
+    .box5{
+        
+        grid-column:3;
+        grid-row: 2;
+        
+    }
+    .box6{
+        
+        grid-column:1/3;
+        grid-row: 3;
+        
+    }
+    .box7{
+        
+        grid-column:3;
+        grid-row: 3;
+        
+    }
+    .box8{
+        
+        grid-column:1;
+        grid-row: 4;
+        
+    }
+    .box9{
+        
+        grid-column:2/4;
+        grid-row: 4;
+        
+    }
+}
+}
+
+
+
+

@@ -10,8 +10,11 @@ class TitleSection extends Component{
     }
     render(){
         return(
-            <div className="container">
-            
+            <div className="title-container">
+                
+                <div className="jumbotron">Burgers Made, The Right Way.</div>
+                <div className="six"></div>
+                
             </div>
         )
     }

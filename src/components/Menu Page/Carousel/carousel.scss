@@ -1,0 +1,51 @@
+.carousel-container{
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+
+    a{
+        position: absolute;
+        font-size: 10vw;
+        top: 35vh;
+        left: 20px;
+        color: white;
+        animation: header-opacity 3000ms infinite;
+       
+    }
+    @keyframes header-opacity {
+        0%{
+            transform: scale(1.05)
+        }
+        50%{
+            transform: scale(1)
+        }
+        100%{
+            transform: scale(1.05)
+        }
+    }
+    a:hover{
+        color: red;
+    }
+    
+    .carousel-image{
+        width: 100vw;
+        height: 40vh;
+        margin-top: 40px;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .fa-arrow-circle-left, .fa-arrow-circle-right{
+        position: absolute;
+        font-size: 10vw;
+        padding: 5px;
+        color: red;
+        top:20vh;
+        opacity: 1;
+    }
+    .fa-arrow-circle-right{
+        position: absolute;
+        top:20vh;
+        right: 0;
+    }
+}
