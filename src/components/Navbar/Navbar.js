@@ -24,7 +24,8 @@ class Navbar extends Component{
         this.setState({     
             classNames:{
                     navButton:(this.state.classNames.navButton=== "fas fa-hamburger" ?"fas fa-hamburger fa-hamburger-active" :"fas fa-hamburger"),
-                    navDisplay:(this.state.classNames.navDisplay=== "nav-hidden" ? "nav-show" :"nav-hidden")
+                    navDisplay:
+                    (this.state.classNames.navDisplay=== "nav-hidden" ? "nav-show" :"nav-hidden")
             }       
         }
         )

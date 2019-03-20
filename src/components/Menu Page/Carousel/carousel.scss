@@ -2,17 +2,22 @@
     height: 50vh;
     width: 100%;
     overflow: hidden;
-
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
     a{
         position: absolute;
         font-size: 10vw;
         top: 35vh;
         left: 20px;
         color: white;
-        animation: header-opacity 3000ms infinite;
+        animation: header-scale 3000ms ease-in-out infinite ;
        
     }
-    @keyframes header-opacity {
+    @keyframes header-scale {
         0%{
             transform: scale(1.05)
         }
@@ -25,6 +30,7 @@
     }
     a:hover{
         color: red;
+        transition: color 0.5s ease-out;
     }
     
     .carousel-image{
@@ -33,11 +39,13 @@
         margin-top: 40px;
         background-position: center;
         background-size: cover;
+    
     }
+    
     
     .fa-arrow-circle-left, .fa-arrow-circle-right{
         position: absolute;
-        font-size: 10vw;
+        font-size: 30px;
         padding: 5px;
         color: red;
         top:20vh;
@@ -47,5 +55,10 @@
         position: absolute;
         top:20vh;
         right: 0;
+    }
+    .fa-arrow-circle-left:hover,
+    .fa-arrow-circle-right:hover{
+        color: white;
+        transition: color 0.5s;
     }
 }

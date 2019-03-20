@@ -1,0 +1,54 @@
+.menu-item-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 1vh 5vw 2vh 5vw;
+    height: 120px;
+    width: 100%;
+    background: red;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.555);
+   
+    .menu-item-name{
+        text-decoration: underline; 
+        font-size: 20px;
+        text-align: left;
+        flex-grow: 2;
+        
+    }
+    .menu-discription{
+        flex-grow: 2;
+        align-self: center;
+        font-size: 11px;
+        padding: 2vw;
+        height: 50px;
+        color: white;  
+    }
+    .menu-item-price{
+        flex-grow: 1;
+        justify-items: center;
+        text-align: left;
+        padding: 2vw 0 0 6vw;
+        font-size: 20px;
+
+    }
+    .menu-item-button{
+        flex-grow: 1;
+        justify-items: flex-end;
+        background: none;
+        border: none;
+        text-align: right;
+        outline: none;
+        
+        .fa-plus-square{
+            height: 100%;
+            color: black;
+            padding: 1px;
+            font-size: 30px;
+        }
+        .fa-plus-square:hover{
+            color: white;
+        }
+    }
+}
