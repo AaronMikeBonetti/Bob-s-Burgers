@@ -1,0 +1,2 @@
+export const ADD_ITEM_TO_ORDER = "ADD_ITEM_TO_ORDER" 
+export const ADD_ITEM_TO_CHECKOUT = "ADD_ITEM_TO_CHECKOUT" 

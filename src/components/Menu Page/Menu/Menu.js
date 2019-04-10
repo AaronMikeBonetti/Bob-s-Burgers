@@ -1,6 +1,8 @@
 import React, { Component }from "react"
+import { connect } from "react-redux"
+import {addItemToOrder} from "../../../actions/action-creators"
 import "./menu.scss"
-import Carousel from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Menu Page/Carousel/Carousel.js"
+import Carousel from "../Carousel/Carousel"
 import MenuItem from "./Menu Item/MenuItem"
 
 
@@ -38,17 +40,25 @@ class Menu extends Component{
                     
                 ]
                 },
-            checkout:{
-                items:[],
-                finalPrice:0       
-            }
-            }
+         
+            
+        }
+
+
+        this.handleAdd = this.handleAdd.bind(this)
+        }
+
+        handleAdd(props){
+            console.log(props)
+            this.props.addItemToOrder(props)
         }
     
     
+    
     render(){
+      
         const burgers=  
-        this.state.item.burgers.map(burger=> <MenuItem key={burger.name} name={burger.name} price={burger.price} discription={burger.discription}/>)     
+        this.state.item.burgers.map(burger=> <MenuItem key={burger.name} name={burger.name} price={burger.price} discription={burger.discription} handleAdd={this.handleAdd}/>)     
       
     
         return(
@@ -63,4 +73,17 @@ class Menu extends Component{
     }
 }
 
-export default Menu
+const mapStateToProps= state =>{
+    return{
+       
+    }
+}
+const mapDispatchToProps= dispatch =>{
+    return{
+        addItemToOrder: (order) => dispatch(addItemToOrder(order)),
+    }
+}
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Menu)

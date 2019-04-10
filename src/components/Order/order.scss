@@ -1,0 +1,92 @@
+.order-container{
+    padding-top: 50px;
+    height: 100vh;
+    background: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.555);
+    
+        
+
+.order-header{
+    height: 10%;
+    width: 100%;
+    padding: none;
+    text-align: center;
+    line-height: 60px;    
+}
+
+h2{
+    color:red;
+    padding: 10px;
+} 
+
+
+.add-ons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: red;
+    width:100%;
+    padding: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.568);
+
+    h1{
+        color:white;
+    }
+
+     
+    
+    
+    input{ 
+        visibility: hidden;
+                
+}
+label span{
+    display: flex;
+    align-items: flex-start;
+    width:30px;
+    height: 30px;
+    margin-right: 5vw;
+    margin-bottom: 20px;
+    background:white;
+    border: 2px solid black;
+    
+}
+[type=checkbox]:checked + span{
+    background: black;
+}
+    
+  
+}
+
+textarea{
+    border: 2px solid red;
+    width: 80vw;
+    height: 150px;
+    font-size: 30px;
+    margin: auto;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    outline: none;
+}
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+
+    button{
+        height: 80px;
+        width: 150px;
+        padding: 5px 10px;
+        margin-top:100px;
+        margin-bottom: 20px;
+        background: red;
+        outline: none;
+        font-size: 20px;
+        border: 0;
+    }
+}
+
+}
