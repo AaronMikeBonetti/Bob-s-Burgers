@@ -1,12 +1,12 @@
 
 .header{
-    overflow-x: hidden !important;
+    
     position: fixed;
     display: flex;
     z-index: 5;
     justify-content: space-between;
     align-items: center;
-    width: 95vw;
+    width: 100vw;
     height: 40px;
     background: red;
     color: white;
@@ -21,6 +21,14 @@
         flex-basis: 80%;
         text-align: center;
         font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+
+        a:focus{
+            outline: none;
+        }
     }
     
 }

@@ -1,0 +1,87 @@
+.carousel-container {
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.carousel-container a {
+  position: absolute;
+  font-size: 10vw;
+  top: 35vh;
+  left: 20px;
+  color: white;
+  -webkit-animation: header-scale 3000ms ease-in-out infinite;
+          animation: header-scale 3000ms ease-in-out infinite;
+}
+
+@-webkit-keyframes header-scale {
+  0% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@keyframes header-scale {
+  0% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+.carousel-container a:hover {
+  color: red;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+
+.carousel-container .carousel-image {
+  width: 100vw;
+  height: 40vh;
+  margin-top: 40px;
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-container .fa-arrow-circle-left, .carousel-container .fa-arrow-circle-right {
+  position: absolute;
+  font-size: 30px;
+  padding: 5px;
+  color: red;
+  top: 20vh;
+  opacity: 1;
+}
+
+.carousel-container .fa-arrow-circle-right {
+  position: absolute;
+  top: 20vh;
+  right: 0;
+}
+
+.carousel-container .fa-arrow-circle-left:hover,
+.carousel-container .fa-arrow-circle-right:hover {
+  color: white;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+/*# sourceMappingURL=carousel.css.map */

@@ -154,6 +154,9 @@
         animation-duration: 0.5s;
            
     }
+    .fa-hamburger:focus{
+        outline: none;   
+   }
     .fa-hamburger-active{
         animation-name: nav-active;
         animation-duration: 0.5s;
@@ -169,8 +172,7 @@
             transform: rotate(360deg);
             transform-origin: center;
         }
-    }
-
         
-
+    }
+    
 }

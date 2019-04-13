@@ -1,4 +1,5 @@
 .title-container {
+  overflow-x: hidden;
   position: initial;
   z-index: 0;
   display: -ms-grid;
@@ -8,7 +9,7 @@
   -ms-grid-rows: 20% 50% 30%;
       grid-template-rows: 20% 50% 30%;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-image: url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/Title-img.png");
   background-size: cover;
   background-position: left;
@@ -35,12 +36,21 @@
 .title-container .six {
   display: -ms-grid;
   display: grid;
-  grid-column: 1/-1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
   -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  grid-row: 2/5;
-  background-image: url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/six.png");
+  -ms-grid-row-span: 4;
+  grid-row: 2/6;
+  height: 120%;
+  background-image: url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/six-mini.png");
   background-size: cover;
   background-position: left;
+}
+
+@media only screen and (min-width: 400px) {
+  .title-container .six {
+    background-image: url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/six.png");
+  }
 }
 /*# sourceMappingURL=title-section.css.map */

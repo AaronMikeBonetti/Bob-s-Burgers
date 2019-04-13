@@ -7,6 +7,9 @@ import Header from "./components/Header/Header"
 import Home from "./components/Home"
 import Menu from "./components/Menu Page/Menu/Menu"
 import Order from './components/Order/Order';
+import Checkout from "./components/Checkout/Checkout"
+
+
 export const intialState = {
   nav:{itemsInCheckout: 0},
   checkout:[],
@@ -18,7 +21,7 @@ export const intialState = {
     cardCVV:"",
     cardExpirationDate:""
   },
-  order:[{name:"test"}],
+  order:[{name:null}],
   
       
   }
@@ -29,15 +32,17 @@ export const store = createStore(rootReducer,intialState,applyMiddleware())
 store.subscribe(()=> console.log("store", store.getState()))
 
 function App(){
+
+  
   
     return (
-      <BrowserRouter>
+      <BrowserRouter >
       <div className="container">
       <Header />
-      <Route exact path="/" component={Home}/>
+      <Route onUpdate={()=> window.scrollTo(0,0)} exact path="/home" component={Home}/>
       <Route path="/menu" component={Menu}/>
       <Route path="/order" component={Order}/>
-      {/* <Route path="/" component={Checkout}/> */}
+      <Route path="/checkout" component={Checkout}/>
       
       </div>
       </BrowserRouter>

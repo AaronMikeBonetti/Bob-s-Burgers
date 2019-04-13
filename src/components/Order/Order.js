@@ -12,46 +12,87 @@ class Order extends Component{
         this.state= {
             
             addOns:[
-            {name:'Ketchup',checked: false},
-            {name:'Mayo',checked: false},
-            {name:'Mustard',checked: false},
-            {name:'Pickels',checked: false},
-            {name:'Onions',checked: false},
+            'Ketchup',
+            'Mayo',
+            'Mustard',
+            'Pickels',
+            'Onions',
             ],
             cookingInstructions:"",
-            order:[]
+            Ketchup:false,
+            Mayo:false,
+            Mustard:false,
+            Pickels:false,
+            Onions:false
+            
             
 
         }
         this.handleChange=this.handleChange.bind(this)
         this.handleSubmit=this.handleSubmit.bind(this)
+        
     }
+    
+    componentDidMount(){
+        window.scrollTo(0,0)
+    } 
+
+
+
+
 
 handleChange(e){
-    const {name,value,type}= e.target
-    type === "checkbox" ? this.setState( prevState => {
-        return{
-            order:[...prevState.order,{
-        [name]: name
-        }]
+    
+    const {name,value,type,checked}= e.target
+    
+    type === "checkbox" ? this.setState(() => {
+        return{   
+        //I set the value of name to either false or the name so I could more easily parse the data im sending to the store.       
+        [name]: checked  ? name : null             
     }
     }):
-    this.setState({
-            
-        [name]: value
+    this.setState({        
+        [name]: value,
+        
     })
 }
 
-handleSubmit(){  
-    this.props.addItemToCheckout(this.state)
+
+
+
+
+handleSubmit(){
+    //Here I deconstructed state put the add ons into an Array and pushed the ones that were true to an a final array and sent that to the store.
+    
+    const {Ketchup,Mayo,Mustard,Pickels,Onions,cookingInstructions} = this.state
+    const addOns = [Ketchup,Mayo,Mustard,Pickels,Onions]
+    const filteredAddOns = []
+    addOns.forEach(item=>{
+        if(item!==false){
+            return filteredAddOns.push(item)
+        }
+        else{
+            return null
+        }
+    })
+
+    const burgerInfo = [this.props.burger[0].name,this.props.burger[0].price]
+
+    const completeOrder = [burgerInfo,cookingInstructions,...filteredAddOns]
+
+
+
+    
+    this.props.addItemToCheckout(completeOrder)
     store.subscribe(()=> console.log("store", store.getState()))
 }
     
     
 render(){
-    console.log(this.state.order)
-    const addOns= this.state.addOns.map(addOn=>   
-    <AddOns className="add-ons" key={addOn.name} name={addOn.name} onChange={this.handleChange}/>    
+    
+    console.log(this.state)
+    const addOns= this.state.addOns.map(addOn=> 
+         <AddOns className="add-ons" key={addOn} name={addOn} onChange={this.handleChange}/>    
 )
 
 const burgerName= this.props.burger[0].name
@@ -64,7 +105,7 @@ const burgerName= this.props.burger[0].name
                 <h2>Add Ons</h2>
                 {addOns}
                 <h2 className="cooking-instructions">Cooking Instructions</h2>
-                <textarea type="textarea" name="cookingInstructions" value={this.state.order.cookingInstructions} onChange={this.handleChange}/>
+                <textarea type="textarea" name="cookingInstructions" value={this.state.cookingInstructions} onChange={this.handleChange}/>
                 <div className="button-container">
                 <Link to="/checkout"><button onClick={this.handleSubmit}>Add To Checkout</button></Link>
                 <Link to="/menu"><button>Cancel</button></Link>
@@ -90,3 +131,5 @@ const mapDispatchToProps= dispatch =>{
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Order)
+
+

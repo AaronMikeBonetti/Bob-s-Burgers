@@ -6,6 +6,7 @@ class Navbar extends Component{
     constructor(){
         super()
         this.state={
+            navLinks:["Home","Menu","Checkout","Location"],
             classNames:{
                 navButton: "fas fa-hamburger",
                 navDisplay: "nav-hidden"
@@ -13,6 +14,7 @@ class Navbar extends Component{
         }
         this.HandleDisplayNav = this.HandleDisplayNav.bind(this)
         this.HandleNavAnimation = this.HandleNavAnimation.bind(this)
+        this.handleReset = this.handleReset.bind(this)
     }
     HandleNavAnimation(){
         this.setState({
@@ -30,16 +32,28 @@ class Navbar extends Component{
         }
         )
     }
+
+    handleReset(){
+        this.setState(
+        {     
+            classNames:{
+                    navButton:(this.state.classNames.navButton=== "fas fa-hamburger" ?"fas fa-hamburger fa-hamburger-active" :"fas fa-hamburger"),
+                    navDisplay: "nav-hidden"
+            }       
+        }
+        )
+        
+    }
     
     render(){
+
+    const navLinks = this.state.navLinks.map(link =>{
+        return  <Link key={link} to={`/${link}`}><li  onClick={this.handleReset}>{link}</li></Link>
+    })
         return(
             <div className="navbar-container">
             <ul className={this.state.classNames.navDisplay}>
-            <Link to="/"><li>Home</li></Link>
-            <Link to="/menu"><li>Menu</li></Link>
-            <Link to="/location"><li>Locations</li></Link>
-            <Link to="/contact"><li>Contact</li></Link>
-                
+            {navLinks}   
             </ul>
             <i className={this.state.classNames.navButton}
              onClick={this.HandleDisplayNav}></i>

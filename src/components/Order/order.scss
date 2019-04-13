@@ -48,12 +48,14 @@ label span{
     height: 30px;
     margin-right: 5vw;
     margin-bottom: 20px;
-    background:white;
-    border: 2px solid black;
+    background: white;
+    
     
 }
 [type=checkbox]:checked + span{
-    background: black;
+    background-image: url("../../imgs/checkmark.png");
+    background-size: cover;
+    
 }
     
   

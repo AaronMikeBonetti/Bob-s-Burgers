@@ -1,0 +1,74 @@
+.menu-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 1vh 5vw 2vh 5vw;
+  height: 120px;
+  width: 100%;
+  background: red;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.555);
+}
+
+.menu-item-container .menu-item-name {
+  text-decoration: underline;
+  font-size: 20px;
+  text-align: left;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.menu-item-container .menu-discription {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 11px;
+  padding: 2vw;
+  height: 50px;
+  color: white;
+}
+
+.menu-item-container .menu-item-price {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  justify-items: center;
+  text-align: left;
+  padding: 2vw 0 0 6vw;
+  font-size: 20px;
+}
+
+.menu-item-container .menu-item-button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  justify-items: flex-end;
+  background: none;
+  border: none;
+  text-align: right;
+  outline: none;
+}
+
+.menu-item-container .menu-item-button .fa-plus-square {
+  height: 100%;
+  color: black;
+  padding: 1px;
+  font-size: 30px;
+}
+
+.menu-item-container .menu-item-button .fa-plus-square:hover {
+  color: white;
+}
+/*# sourceMappingURL=menu-item.css.map */

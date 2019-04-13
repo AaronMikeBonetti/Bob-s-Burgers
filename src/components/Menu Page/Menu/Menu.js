@@ -47,6 +47,10 @@ class Menu extends Component{
 
         this.handleAdd = this.handleAdd.bind(this)
         }
+        
+        componentDidMount(){
+            window.scrollTo(0,0)
+        }
 
         handleAdd(props){
             console.log(props)

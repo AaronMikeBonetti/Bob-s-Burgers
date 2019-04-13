@@ -12,11 +12,12 @@ export const rootReducer = (state = intialState, action) => {
           ]})
 
         case ADD_ITEM_TO_CHECKOUT: 
-          return { 
-          ...state,
-          checkout:[...state.checkout, {addOns: action.payload.order,
-           cookingInstructions: action.payload.cookingInstructions}]
-        }
+        return Object.assign({},state,{checkout:{
+          ItemInfo: action.payload[0],
+          cookingInstructions: action.payload[1],
+          addOns: action.payload.splice(2),
+          }
+        })
     
         default: return{
          ...state

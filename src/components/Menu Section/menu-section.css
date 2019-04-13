@@ -1,11 +1,11 @@
 .menu-container {
-  width: 100vw;
-  background: yellow;
+  width: 100%;
+  background: #c3c3c3;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (50vw)[2];
-      grid-template-columns: repeat(2, 50vw);
-  grid-auto-rows: 50vw;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: 50%;
 }
 
 .menu-container div {
@@ -19,6 +19,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  font-size: 5vw;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 }
 
 .menu-container .box1 {
@@ -31,7 +34,6 @@
   background-size: cover;
   background-position: center;
   color: white;
-  font-size: 2vw;
 }
 
 .menu-container .box2 {
@@ -40,49 +42,15 @@
   -ms-grid-row: 2;
   grid-row: 2;
   background: red;
-  text-decoration: underline;
-}
-
-.menu-container .box2 button {
-  -webkit-animation: menu-box-pulse 2s infinite;
-          animation: menu-box-pulse 2s infinite;
-  padding: 2%;
-  width: 70%;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-@-webkit-keyframes menu-box-pulse {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes menu-box-pulse {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Lobster', cursive;
 }
 
 .menu-container .box3 {
@@ -90,59 +58,126 @@
   grid-column: 2;
   -ms-grid-row: 2;
   grid-row: 2;
-  background: yellow;
+  color: #e5ff00;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.376)), to(rgba(255, 255, 255, 0.308))), url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheeseburger-black-gloves.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.376) 20%, rgba(255, 255, 255, 0.308)), url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheeseburger-black-gloves.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .menu-container .box4 {
   grid-column: 1/-1;
   -ms-grid-row: 3;
   grid-row: 3;
-  background: brown;
+  color: #e5ff00;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.096)), to(rgba(255, 255, 255, 0.096))), url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheese-burger-fries-veg.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.096) 20%, rgba(255, 255, 255, 0.096)), url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheese-burger-fries-veg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .menu-container .box5 {
-  grid-column: 1/-1;
-  -ms-grid-row: 4;
-  grid-row: 4;
-  background: purple;
-}
-
-.menu-container .box6 {
   -ms-grid-column: 1;
   grid-column: 1;
   -ms-grid-row: 4;
   grid-row: 4;
-  background: red;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/fries.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/fries.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.menu-container .box7 {
+.menu-container .box6 {
   -ms-grid-column: 2;
   grid-column: 2;
   -ms-grid-row: 4;
   grid-row: 4;
-  background: #09ff00;
+  background: #ffee00;
+  padding-right: 10px;
+  font-family: 'Lobster', cursive;
+  text-align: right;
+  height: 100%;
 }
 
-.menu-container .box8 {
+.menu-container .box6 .fa-angle-double-left {
+  font-size: 12vw;
+  -webkit-animation: pulse-arrow 1.5s infinite ease-in-out;
+          animation: pulse-arrow 1.5s infinite ease-in-out;
+  width: 100%;
+  padding-right: 10px;
+}
+
+@-webkit-keyframes pulse-arrow {
+  50% {
+    padding: 5px;
+  }
+}
+
+@keyframes pulse-arrow {
+  50% {
+    padding: 5px;
+  }
+}
+
+.menu-container .box7 {
   grid-column: 1/-1;
   -ms-grid-row: 5;
   grid-row: 5;
-  background: #ffe600;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheese-burger-close-up.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheese-burger-close-up.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.menu-container .box9 {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  -ms-grid-row: 6;
-  grid-row: 6;
-  background: #1100ff;
+.menu-container .box-link {
+  -webkit-animation: box-link-pulse 2s infinite;
+          animation: box-link-pulse 2s infinite;
+  padding: 1vw;
+  width: 20vw;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 4vw;
+  border-radius: 5%;
+}
+
+@-webkit-keyframes box-link-pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes box-link-pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @media only screen and (min-width: 300px) {
   .menu-container {
-    -ms-grid-columns: (33.4vw)[3];
-        grid-template-columns: repeat(3, 33.4vw);
-    grid-auto-rows: 33.4vw;
+    -ms-grid-columns: (33.3vw)[3];
+        grid-template-columns: repeat(3, 33.3vw);
+    grid-auto-rows: 33.3vw;
   }
   .menu-container .box1 {
     -ms-grid-column: 1;
