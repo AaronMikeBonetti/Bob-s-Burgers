@@ -9,7 +9,7 @@
           box-sizing: border-box;
 }
 
-.carousel-container a {
+.carousel-container span {
   position: absolute;
   font-size: 10vw;
   top: 35vh;
@@ -47,12 +47,6 @@
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
   }
-}
-
-.carousel-container a:hover {
-  color: red;
-  -webkit-transition: color 0.5s ease-out;
-  transition: color 0.5s ease-out;
 }
 
 .carousel-container .carousel-image {

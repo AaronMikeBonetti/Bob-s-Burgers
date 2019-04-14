@@ -76,7 +76,7 @@ componentWillUnmount(){
         return(
                 
             <div className={this.state.count%2?this.state.imgTransition1:this.state.imgTransition2}>
-            <a href="https://www.google.com"> {this.state.imgHeaders[this.state.count]}</a>
+            <span> {this.state.imgHeaders[this.state.count]}</span>
             <i className="fas fa-arrow-circle-left" onClick={this.HandleArrowClickLeft}/>       
             <div alt="Burger" className="carousel-image"style={style}/> 
             <i className="fas fa-arrow-circle-right" onClick={this.HandleArrowClickRight}/>   

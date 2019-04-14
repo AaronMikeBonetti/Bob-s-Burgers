@@ -15,27 +15,27 @@ class Menu extends Component{
                     {
                         name: "Classic",
                         discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
-                        price: "$6.49"
+                        price: 6.49
                     },
                     {
                         name: "Southwestern",
                         discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
-                        price: "$7.29"
+                        price: 7.29
                     },
                    {
                         name: "Teriyaki",
                         discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
-                        price: "$8.49"
+                        price: 8.49
                     },
                      {
                         name: "Hawaiian",
                         discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
-                        price: "$7.99"
+                        price: 7.99
                     },
                     {
                         name: "Stacker",
                         discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
-                        price: "$10.79"
+                        price: 10.79
                     },
                     
                 ]

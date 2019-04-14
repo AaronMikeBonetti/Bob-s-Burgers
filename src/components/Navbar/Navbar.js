@@ -48,7 +48,7 @@ class Navbar extends Component{
     render(){
 
     const navLinks = this.state.navLinks.map(link =>{
-        return  <Link key={link} to={`/${link}`}><li  onClick={this.handleReset}>{link}</li></Link>
+        return  <Link key={link} to={link==="Home" ? "/" :`/${link}`}><li  onClick={this.handleReset}>{link}</li></Link>
     })
         return(
             <div className="navbar-container">

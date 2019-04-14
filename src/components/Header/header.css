@@ -36,4 +36,24 @@
 .header .header-title a:focus {
   outline: none;
 }
+
+.header .fa-shopping-cart {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  padding-right: 10px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.header .checkout-number {
+  position: absolute;
+  top: 12px;
+  right: 39px;
+  z-index: 20;
+  font-size: 1.5rem;
+  padding: 2px;
+  margin-right: 5%;
+  color: #020001;
+}
 /*# sourceMappingURL=header.css.map */

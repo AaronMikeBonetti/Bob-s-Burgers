@@ -30,6 +30,23 @@
             outline: none;
         }
     }
+    .fa-shopping-cart{
+        justify-self: right;
+        padding-right: 10px;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+    .checkout-number{
+        position: absolute;
+        top: 12px;
+        right: 39px;
+        z-index: 20;
+        font-size: 1.5rem;
+        padding: 2px;
+        margin-right: 5%;
+        color: rgb(2, 0, 1);
+    }
     
 }
 

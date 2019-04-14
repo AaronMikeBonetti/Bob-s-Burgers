@@ -78,9 +78,11 @@ handleSubmit(){
 
     const burgerInfo = [this.props.burger[0].name,this.props.burger[0].price]
 
-    const completeOrder = [burgerInfo,cookingInstructions,...filteredAddOns]
+    const updateCheckoutIcon = this.props.checkoutNumber +1
 
+    const completeOrder = [burgerInfo,cookingInstructions,updateCheckoutIcon,...filteredAddOns,]
 
+    
 
     
     this.props.addItemToCheckout(completeOrder)
@@ -90,7 +92,8 @@ handleSubmit(){
     
 render(){
     
-    console.log(this.state)
+
+    console.log(this.props.checkoutNumber)
     const addOns= this.state.addOns.map(addOn=> 
          <AddOns className="add-ons" key={addOn} name={addOn} onChange={this.handleChange}/>    
 )
@@ -100,7 +103,7 @@ const burgerName= this.props.burger[0].name
     return(
     <div>
        <div className="order-container">
-           <h1 className="order-header">The {burgerName}</h1>
+           <h1 className="order-header">{burgerName}</h1>
            <form className="order-form"onChange=                {this.handleChange}>
                 <h2>Add Ons</h2>
                 {addOns}
@@ -120,7 +123,8 @@ const burgerName= this.props.burger[0].name
 
 const mapStateToProps= state =>{
     return{
-    burger: state.order
+    burger: state.order,
+    checkoutNumber: state.header.itemsInCheckout
    
     }
 }

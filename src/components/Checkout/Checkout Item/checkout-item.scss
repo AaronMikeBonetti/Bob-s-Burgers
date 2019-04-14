@@ -1,0 +1,44 @@
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1rem;
+    padding: 30px 10%;
+    margin:20px;
+    border: 6px solid red;
+    border-radius: 5%;
+    .item-name{
+        padding-left: 5%;
+        flex-grow: 1;
+        color: red;
+        font-size: 1rem;
+    }
+    .item-price{
+        
+        padding-right: 40px;
+    }
+    .item-addons{
+        color: black;
+        flex-basis: 100vw;
+        padding: 15px;
+        font-size: 0.7rem;
+    }
+    .item-cooking-instructions{
+        flex-basis: 100vw;
+        padding: 0px 15px 15px 15px;
+        font-size: 0.7rem;
+    }
+    span{
+        color:red;
+    }
+    .item-buttons button{
+        padding: 5px;
+        margin: 10px;
+        background: red;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+    }
+}

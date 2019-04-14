@@ -11,7 +11,7 @@ import Checkout from "./components/Checkout/Checkout"
 
 
 export const intialState = {
-  nav:{itemsInCheckout: 0},
+  header:{itemsInCheckout: null},
   checkout:[],
   payPortal:{
     firstName:"",
@@ -39,7 +39,7 @@ function App(){
       <BrowserRouter >
       <div className="container">
       <Header />
-      <Route onUpdate={()=> window.scrollTo(0,0)} exact path="/home" component={Home}/>
+      <Route onUpdate={()=> window.scrollTo(0,0)} exact path="/" component={Home}/>
       <Route path="/menu" component={Menu}/>
       <Route path="/order" component={Order}/>
       <Route path="/checkout" component={Checkout}/>

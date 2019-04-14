@@ -1,0 +1,39 @@
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  padding: 30px 5%;
+}
+
+.item .item-name {
+  padding-left: 5%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.item .item-price {
+  padding-right: 40px;
+}
+
+.item button {
+  height: 15px;
+  width: 15px;
+}
+
+.item .item-addons {
+  color: black;
+  -ms-flex-preferred-size: 100vw;
+      flex-basis: 100vw;
+  padding: 15px;
+}
+/*# sourceMappingURL=checkout-item.css.map */
