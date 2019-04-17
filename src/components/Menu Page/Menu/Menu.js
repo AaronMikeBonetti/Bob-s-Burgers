@@ -53,7 +53,7 @@ class Menu extends Component{
         }
 
         handleAdd(props){
-            console.log(props)
+
             this.props.addItemToOrder(props)
         }
     
@@ -62,7 +62,7 @@ class Menu extends Component{
     render(){
       
         const burgers=  
-        this.state.item.burgers.map(burger=> <MenuItem key={burger.name} name={burger.name} price={burger.price} discription={burger.discription} handleAdd={this.handleAdd}/>)     
+            this.state.item.burgers.map(burger=> <MenuItem key={burger.name} itemID={`${burger.name}${Math.random()}`} name={burger.name} price={burger.price} discription={burger.discription} handleAdd={this.handleAdd}/>)     
       
     
         return(

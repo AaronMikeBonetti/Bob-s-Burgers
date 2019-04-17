@@ -2,9 +2,9 @@ import React, { Component }from "react"
 import { connect } from "react-redux"
 import AddOns from "./Add-Ons/AddOns"
 import "./order.scss"
-import {addItemToCheckout} from "../../actions/action-creators";
+import {addItemToCart} from "../../actions/action-creators";
 import { Link } from "react-router-dom"
-import {store} from "../../App"
+
 
 class Order extends Component{
     constructor(){
@@ -66,7 +66,7 @@ handleSubmit(){
     
     const {Ketchup,Mayo,Mustard,Pickels,Onions,cookingInstructions} = this.state
     const addOns = [Ketchup,Mayo,Mustard,Pickels,Onions]
-    const filteredAddOns = []
+    let filteredAddOns = []
     addOns.forEach(item=>{
         if(item!==false){
             return filteredAddOns.push(item)
@@ -75,25 +75,22 @@ handleSubmit(){
             return null
         }
     })
-
-    const burgerInfo = [this.props.burger[0].name,this.props.burger[0].price]
-
-    const updateCheckoutIcon = this.props.checkoutNumber +1
-
-    const completeOrder = [burgerInfo,cookingInstructions,updateCheckoutIcon,...filteredAddOns,]
-
     
 
+    const burgerInfo = [this.props.burger[0].name,this.props.burger[0].price,
+this.props.burger[0].itemID]
+
+    const updateCartIcon = this.props.CartNumber +1
+
+    const completeOrder = [burgerInfo,cookingInstructions,updateCartIcon,...filteredAddOns,]
     
-    this.props.addItemToCheckout(completeOrder)
-    store.subscribe(()=> console.log("store", store.getState()))
+    this.props.addItemToCart(completeOrder)
+   
 }
     
     
 render(){
     
-
-    console.log(this.props.checkoutNumber)
     const addOns= this.state.addOns.map(addOn=> 
          <AddOns className="add-ons" key={addOn} name={addOn} onChange={this.handleChange}/>    
 )
@@ -110,7 +107,7 @@ const burgerName= this.props.burger[0].name
                 <h2 className="cooking-instructions">Cooking Instructions</h2>
                 <textarea type="textarea" name="cookingInstructions" value={this.state.cookingInstructions} onChange={this.handleChange}/>
                 <div className="button-container">
-                <Link to="/checkout"><button onClick={this.handleSubmit}>Add To Checkout</button></Link>
+                <Link to="/Cart"><button onClick={this.handleSubmit}>Add To Cart</button></Link>
                 <Link to="/menu"><button>Cancel</button></Link>
                 </div>
            </form>     
@@ -124,13 +121,13 @@ const burgerName= this.props.burger[0].name
 const mapStateToProps= state =>{
     return{
     burger: state.order,
-    checkoutNumber: state.header.itemsInCheckout
+    CartNumber: state.header.itemsInCart
    
     }
 }
 const mapDispatchToProps= dispatch =>{
     return{
-        addItemToCheckout: (order) => dispatch(addItemToCheckout(order)),
+        addItemToCart: (order) => dispatch(addItemToCart(order)),
     }
 }
 

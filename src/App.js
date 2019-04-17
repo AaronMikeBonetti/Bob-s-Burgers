@@ -7,12 +7,14 @@ import Header from "./components/Header/Header"
 import Home from "./components/Home"
 import Menu from "./components/Menu Page/Menu/Menu"
 import Order from './components/Order/Order';
-import Checkout from "./components/Checkout/Checkout"
+import Cart from "./components/Cart/Cart"
 
 
 export const intialState = {
-  header:{itemsInCheckout: null},
-  checkout:[],
+  header:{itemsInCart: null},
+  Cart:[],
+//   Cart:[{itemInfo: ["test",999,0], cookingInstructions: "", addOns:["test"],
+// }],
   payPortal:{
     firstName:"",
     lastName:"",
@@ -22,11 +24,11 @@ export const intialState = {
     cardExpirationDate:""
   },
   order:[{name:null}],
-  
-      
+    
   }
 
-// console.log(intialState.checkout)
+  
+
 export const store = createStore(rootReducer,intialState,applyMiddleware())
 
 store.subscribe(()=> console.log("store", store.getState()))
@@ -42,7 +44,7 @@ function App(){
       <Route onUpdate={()=> window.scrollTo(0,0)} exact path="/" component={Home}/>
       <Route path="/menu" component={Menu}/>
       <Route path="/order" component={Order}/>
-      <Route path="/checkout" component={Checkout}/>
+      <Route path="/Cart" component={Cart}/>
       
       </div>
       </BrowserRouter>

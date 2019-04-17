@@ -11,7 +11,10 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 1rem;
-  padding: 30px 5%;
+  padding: 30px 10%;
+  margin: 20px;
+  border: 6px solid red;
+  border-radius: 5%;
 }
 
 .item .item-name {
@@ -19,15 +22,12 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  color: red;
+  font-size: 1rem;
 }
 
 .item .item-price {
   padding-right: 40px;
-}
-
-.item button {
-  height: 15px;
-  width: 15px;
 }
 
 .item .item-addons {
@@ -35,5 +35,27 @@
   -ms-flex-preferred-size: 100vw;
       flex-basis: 100vw;
   padding: 15px;
+  font-size: 0.7rem;
 }
-/*# sourceMappingURL=checkout-item.css.map */
+
+.item .item-cooking-instructions {
+  -ms-flex-preferred-size: 100vw;
+      flex-basis: 100vw;
+  padding: 0px 15px 15px 15px;
+  font-size: 0.7rem;
+}
+
+.item span {
+  color: red;
+}
+
+.item .item-buttons button {
+  padding: 5px;
+  margin: 10px;
+  background: red;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+/*# sourceMappingURL=cart-item.css.map */
