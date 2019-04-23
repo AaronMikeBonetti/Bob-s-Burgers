@@ -1,5 +1,5 @@
 import { ADD_ITEM_TO_ORDER, ADD_ITEM_TO_CART,
-REMOVE_ITEM_FROM_CART } from "../actions/action-types"
+REMOVE_ITEM_FROM_CART,ADD_SUBTOTAL } from "../actions/action-types"
 import { intialState } from "../App"
 
 
@@ -25,6 +25,10 @@ export const rootReducer = (state = intialState, action) => {
         return Object.assign({},state,{
           header:{itemsInCart: state.header.itemsInCart -1},
           Cart: action.payload
+        })
+        case ADD_SUBTOTAL: 
+        return Object.assign({},state,{
+          Subtotal: action.payload
         })
     
         default: return{

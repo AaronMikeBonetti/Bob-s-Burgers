@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import "./Title Section/title-section.scss"
 import TitleSection from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Title Section/TitleSection.js"
 import MenuSection from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Menu Section/MenuSection.js"
 
@@ -9,7 +10,7 @@ class Home extends Component{
     } 
     render(){
         return(
-        <div>
+        <div className="home-container">
             <TitleSection/>
             <MenuSection/>
         </div>

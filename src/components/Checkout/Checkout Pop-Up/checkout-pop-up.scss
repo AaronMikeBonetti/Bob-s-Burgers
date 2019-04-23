@@ -1,0 +1,81 @@
+.hidden{
+    visibility: hidden;
+}
+.pop-up-container{
+    position: fixed;
+    top:0px;
+    z-index: 5;
+    height: 100vh;
+    width: 100%;
+    background: rgba(100, 100, 100, 0.493);
+
+    
+    
+    .pop-up{
+        width: 80%;
+        height: 70%;
+        margin: 20% auto;
+        padding: 10px;
+        background: red;
+        display: grid;
+        grid-template-columns: 5vw 1fr 5vw;
+        grid-template-rows: 15% 5% 45% 5%;
+        h1{
+            grid-row: 1/2;
+            color:white;
+            text-align: center;
+            padding: 0px;
+            font-size: 8vw;
+            grid-column: 2/3;
+        
+        }
+
+        h3{
+            grid-row: 2/3;
+            grid-column: 2/3;
+            font-size: 4vw;
+        }
+
+        ul{
+            grid-row: 3/4;
+            grid-column: 2/3;
+            margin: 0vw 7vw;
+            font-size: 5vw;
+            padding: 3vw;
+            
+            li{
+                padding: 2px;
+                margin-left: 2vw;
+            }
+            }
+        .total-header{
+            grid-row: 4/5;
+            grid-column: 2/3;
+            padding-left: 20px;
+            padding-top: 20px;
+            font-size: 6vw;
+
+        }
+        .pop-up-buttons{
+            grid-row: 5/6;
+            grid-column: 2/3;
+            
+            display: flex;
+            justify-content: space-around;
+            align-items:flex-end;
+            
+            button{
+                width: 100%;
+                background: white;
+                padding: 3vw;
+                border: 2px solid rgb(255, 0, 0);
+                color: black;
+                font-size: 5vw;
+                cursor: pointer;
+                outline: none;
+
+            }
+        }
+    }
+    
+}

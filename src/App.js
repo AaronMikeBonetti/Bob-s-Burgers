@@ -8,6 +8,8 @@ import Home from "./components/Home"
 import Menu from "./components/Menu Page/Menu/Menu"
 import Order from './components/Order/Order';
 import Cart from "./components/Cart/Cart"
+import Checkout from "./components/Checkout/Checkout"
+
 
 
 export const intialState = {
@@ -44,7 +46,8 @@ function App(){
       <Route onUpdate={()=> window.scrollTo(0,0)} exact path="/" component={Home}/>
       <Route path="/menu" component={Menu}/>
       <Route path="/order" component={Order}/>
-      <Route path="/Cart" component={Cart}/>
+      <Route path="/cart" component={Cart}/>
+      <Route path="/checkout" component={Checkout}/>
       
       </div>
       </BrowserRouter>

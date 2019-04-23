@@ -47,7 +47,7 @@ handleChange(e){
     
     type === "checkbox" ? this.setState(() => {
         return{   
-        //I set the value of name to either false or the name so I could more easily parse the data im sending to the store.       
+        //I set the value of name to either false or the name so I could more easily parse the data sent to the store.       
         [name]: checked  ? name : null             
     }
     }):
@@ -108,7 +108,7 @@ const burgerName= this.props.burger[0].name
                 <textarea type="textarea" name="cookingInstructions" value={this.state.cookingInstructions} onChange={this.handleChange}/>
                 <div className="button-container">
                 <Link to="/Cart"><button onClick={this.handleSubmit}>Add To Cart</button></Link>
-                <Link to="/menu"><button>Cancel</button></Link>
+                <Link to="/menu"><button >Cancel</button></Link>
                 </div>
            </form>     
        </div>

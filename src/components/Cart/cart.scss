@@ -37,20 +37,21 @@
         border-top: 2px solid black
     }
     .cart-button-container{
-        width:60vw;
-        margin: 30px auto;
-        
+        width:80vw;
+        margin: 30px auto;    
         display: flex;
         justify-content: space-between;
         align-items: center;
         .cart-buttton{
-        padding: 10px;
-        font-size: 5vw;
+        width: 35vw;
+        padding: 3vw 0vw;
         color: white;
         background: red;
-        border: none;
-        cursor: pointer;
         outline: none;
+        font-size: 5vw;
+        border: 0;
+        cursor: pointer;
+        
         }
     }
    

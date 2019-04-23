@@ -1,5 +1,5 @@
 import React, { Component }from "react"
-import "./header.css"
+import "./header.scss"
 import Navbar from "../Navbar/Navbar";
 import {Link} from "react-router-dom"
 import { connect } from "react-redux"
@@ -18,7 +18,7 @@ class Header extends Component{
         return(
             <div className="header">
             <Link to="/" className="header-title">Six Guys</Link>
-            <Link to="/Checkout"><i className="fas fa-shopping-cart"><span className="checkout-number">{this.props.itemNumber}</span></i></Link>
+            <Link to="/cart"><i className="fas fa-shopping-cart"><span className="cart-number">{this.props.itemNumber}</span></i></Link>
             
             <Navbar/>
             </div>
@@ -28,7 +28,7 @@ class Header extends Component{
 
 const mapStateToProps= state =>{
     return{
-    itemNumber: state.header.itemsInCheckout
+    itemNumber: state.header.itemsInCart
     }
 }
 
