@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import "./Title Section/title-section.scss"
-import TitleSection from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Title Section/TitleSection.js"
-import MenuSection from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Menu Section/MenuSection.js"
+import TitleSection from "./Title Section/TitleSection"
+import MenuSection from "./Menu Section/MenuSection"
 
 
 class Home extends Component{
