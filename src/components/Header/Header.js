@@ -20,6 +20,8 @@ class Header extends Component{
             <Link to="/" className="header-title">Six Guys</Link>
             <Link to="/cart"><i className="fas fa-shopping-cart"><span className="cart-number">{this.props.itemNumber}</span></i></Link>
             
+
+            
             <Navbar/>
             </div>
         )
