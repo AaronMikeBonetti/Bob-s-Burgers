@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 4vw;
+    font-size: 5vw;
     transition: 1s all;  
  }
  
@@ -37,7 +37,7 @@
         grid-column:1;
         grid-row: 2;
         background:rgb(255, 0, 0);
-        line-height: 30px;
+        line-height: 80px;
         display: flex;
         flex-direction: column;
         font-family: 'Lobster', cursive;
@@ -108,18 +108,22 @@
         rgba(0, 0, 0, 0.089)), url('./images/cheese-burger-close-up.jpg');
         background-size: cover;
         background-position: center;
+        color: yellow;
+        font-size: 7vw;
     }
    
     .box-link{
         animation: box-link-pulse 2s infinite;
         padding: 1vw;
         width: 20vw; 
+        height: 15vw; 
+        line-height: 12vw;
         background: black;
         color: white;
         border: none;
         cursor: pointer;
         outline: none;
-        font-size: 4vw;
+        font-size: 5vw;
         border-radius: 5%;
         
         @keyframes box-link-pulse {
@@ -138,7 +142,7 @@
 }
 
 
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 900px) {
 .menu-container{  
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;

@@ -14,27 +14,27 @@ class Menu extends Component{
                 burgers:[
                     {
                         name: "Classic",
-                        discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
+                        discription:"Lettuce, cheese, bacon, beef. Everything you need, nothing you don't.",
                         price: 6.49
                     },
                     {
                         name: "Southwestern",
-                        discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
+                        discription:"Need something with a litte kick? Lettuce, pepper jack, jalapenos, all with our house made sweet and spicy ranch.",
                         price: 7.29
                     },
                    {
                         name: "Teriyaki",
-                        discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
+                        discription:"Sweet and tangy, tomato, onion, pineapple, amercan cheese and bbq sauce.",
                         price: 8.49
                     },
                      {
                         name: "Hawaiian",
-                        discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
+                        discription:"poltry and beef, never tasted so good, gilled chicken breast, lettuce, tomato, american cheese, spicy mayo.",
                         price: 7.99
                     },
                     {
                         name: "Stacker",
-                        discription:"Lettuce, cheese, beef. Everything you need, nothing you don't",
+                        discription:"When one is never enough. Comes with 2 paddies, 4 buns, all business! lettuce, onions, american cheese and our special sauce.",
                         price: 10.79
                     },
                     

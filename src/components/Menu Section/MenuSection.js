@@ -17,11 +17,11 @@ class MenuSection extends Component{
                 <div className="box2">See What's Cooking...
                 <Link to="/menu" className="box-link">Menu</Link>
                 </div>
-                <div className="box3">"The Classic"</div>
-                <div className="box4">"The Southwestern Hammy"</div>
+                <div className="box3">"The Hawaiian"</div>
+                <div className="box4">"The Southwestern"</div>
                 <div className="box5"></div>
                 <div className="box6"><i className="fas fa-angle-double-left"></i>Hand Cut Fries Made Daily</div>
-                <div className="box7"></div>
+                <div className="box7">"The Classic"</div>
                 
             </div>
         )

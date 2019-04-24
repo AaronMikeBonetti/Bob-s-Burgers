@@ -8,7 +8,7 @@ class Navbar extends Component{
         this.state={
             navLinks:["Home","Menu","Cart"],
             classNames:{
-                navButton: "fas fa-hamburger",
+                navButton:"fas fa-hamburger",
                 navDisplay: "nav-hidden"
             }
         }
@@ -46,7 +46,7 @@ class Navbar extends Component{
     }
     
     render(){
-
+console.log(window.screen.width)
     const navLinks = this.state.navLinks.map(link =>{
         return  <Link key={link} to={link==="Home" ? "/" :`/${link}`}><li  onClick={this.handleReset}>{link}</li></Link>
     })

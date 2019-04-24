@@ -1,4 +1,6 @@
-
+.nav-hidden{
+    display: none;
+}
 .header{
     
     position: fixed;
@@ -36,17 +38,24 @@
         text-decoration: none;
         outline: none;
         cursor: pointer;
-
         a:focus{
             outline: none;
         }
     }
+    .link{
+        display: none;
+    }
+    
     .fa-shopping-cart{
         justify-self: right;
         padding-right: 10px;
         font-size: 1.5rem;
         color: white;
         cursor: pointer;
+    }
+    .link:hover, .header-title:hover, .fa-shopping-cart:hover{
+        color: black;
+        transition: color 0.5s;
     }
     .cart-number{
         position: absolute;
@@ -59,5 +68,35 @@
         color: rgb(2, 0, 1);
     }
     
+    
 }
+
+@media (min-width:900px) {
+    .header{
+        .header-title{
+            flex-basis: 80%;
+            text-align: left;
+            padding-left: 40px;
+        }
+     .link{
+        display: initial;
+        flex-basis: 10vw;
+        text-align: center;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+        a:focus{
+            outline: none;
+        }
+    }
+
+    .fa-shopping-cart{  
+        padding-right: 40px;
+       
+    }
+}
+}
+
 

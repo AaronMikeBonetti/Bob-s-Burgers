@@ -1,30 +1,4 @@
 
-.img-transition-1{
-    animation: animation1 2s; 
-}
-.img-transition-2{
-    animation: animation2 2s; 
-}
-@keyframes animation1 {
-    0%{
-        opacity: 0;
-        filter: blur(4px)
-    }
-    100%{
-        opacity: 1;
-        filter: blur(0)
-    }
-}
-@keyframes animation2 {
-    0%{
-        opacity: 0;
-        filter: blur(4px)
-    }
-    100%{
-        opacity: 1;
-        filter: blur(0)
-    }
-}
 
 .carousel-container{
     height: 50vh;
@@ -37,6 +11,7 @@
     
     span{
         position: absolute;
+        z-index: 2;
         font-size: 10vw;
         top: 35vh;
         left: 20px;
@@ -66,10 +41,39 @@
         
     
     }
+
+    
+.img-transition-1{
+    animation: animation1 2s; 
+}
+.img-transition-2{
+    animation: animation2 2s; 
+}
+@keyframes animation1 {
+    0%{
+        opacity: 0;
+        filter: blur(4px)
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0)
+    }
+}
+@keyframes animation2 {
+    0%{
+        opacity: 0;
+        filter: blur(4px)
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0)
+    }
+}
     
     
     .fa-arrow-circle-left, .fa-arrow-circle-right{
         position: absolute;
+        z-index: 2;
         font-size: 30px;
         padding: 5px;
         color: red;

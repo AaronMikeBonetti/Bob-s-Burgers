@@ -19,8 +19,8 @@ class Carousel extends Component{
             count: 0,
             imgHeaders: ["The Classic","The Teriyaki","The Hawaian","The Stacker"],
             CarouselOff: false,
-            imgTransition1: " img-transition-1 carousel-container",
-            imgTransition2: "img-transition-2 carousel-container",
+            imgTransition1: " img-transition-1 carousel-image",
+            imgTransition2: "img-transition-2 carousel-image",
             imgTransitionToggle: true
         }
         this.HandleArrowClickRight = this.HandleArrowClickRight.bind(this)
@@ -74,10 +74,12 @@ componentWillUnmount(){
        
         return(
                 
-            <div className={this.state.imgTransitionToggle?this.state.imgTransition1:this.state.imgTransition2}>
-            <span> {this.state.imgHeaders[this.state.count]}</span>
+            <div className="carousel-container">
+            
+            <span> {this.state.imgHeaders[this.state.count]}
+            </span>
             <i className="fas fa-arrow-circle-left" onClick={this.HandleArrowClickLeft}/>       
-            <div alt="Burger" className="carousel-image"style={style}/> 
+            <div alt="Burger" className={this.state.imgTransitionToggle?this.state.imgTransition1:this.state.imgTransition2} style={style}/> 
             <i className="fas fa-arrow-circle-right" onClick={this.HandleArrowClickRight}/>   
             </div>
         
