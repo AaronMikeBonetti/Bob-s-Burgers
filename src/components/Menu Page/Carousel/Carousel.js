@@ -9,6 +9,8 @@ import img4 from "../Carousel/Carousel Image/images/carosuel-burger-4.jpg"
 
 
 
+
+
 class Carousel extends Component{
     constructor(){
         super()
@@ -17,8 +19,8 @@ class Carousel extends Component{
             count: 0,
             imgHeaders: ["The Classic","The Teriyaki","The Hawaian","The Stacker"],
             CarouselOff: false,
-            imgTransition1: " imgTransition1 carousel-container",
-            imgTransition2: "imgTransition2 carousel-container",
+            imgTransition1: " img-transition-1 carousel-container",
+            imgTransition2: "img-transition-2 carousel-container",
             imgTransitionToggle: true
         }
         this.HandleArrowClickRight = this.HandleArrowClickRight.bind(this)
@@ -64,18 +66,15 @@ componentWillUnmount(){
      
 
     render(){
-        
+
        const style={
-            backgroundImage: `url("${this.state.images[this.state.count]}")`,
-            
-            
+            backgroundImage: `url("${this.state.images[this.state.count]}")`
             
         }
-        
-        
+       
         return(
                 
-            <div className={this.state.count%2?this.state.imgTransition1:this.state.imgTransition2}>
+            <div className={this.state.imgTransitionToggle?this.state.imgTransition1:this.state.imgTransition2}>
             <span> {this.state.imgHeaders[this.state.count]}</span>
             <i className="fas fa-arrow-circle-left" onClick={this.HandleArrowClickLeft}/>       
             <div alt="Burger" className="carousel-image"style={style}/> 

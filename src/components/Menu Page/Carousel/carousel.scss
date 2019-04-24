@@ -1,12 +1,39 @@
+
+.img-transition-1{
+    animation: animation1 2s; 
+}
+.img-transition-2{
+    animation: animation2 2s; 
+}
+@keyframes animation1 {
+    0%{
+        opacity: 0;
+        filter: blur(4px)
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0)
+    }
+}
+@keyframes animation2 {
+    0%{
+        opacity: 0;
+        filter: blur(4px)
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0)
+    }
+}
+
 .carousel-container{
     height: 50vh;
     width: 100%;
     overflow: hidden;
-    opacity: 1;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+ 
     
     span{
         position: absolute;
@@ -36,6 +63,7 @@
         margin-top: 40px;
         background-position: center;
         background-size: cover;
+        
     
     }
     

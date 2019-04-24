@@ -1,0 +1,87 @@
+.checkout-container .checkout-header {
+  padding-top: 60px;
+  border-bottom: 2px solid red;
+  text-align: center;
+  font-size: 10vw;
+}
+
+.checkout-container .checkout-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  width: 80vw;
+  margin: auto;
+}
+
+.checkout-container .checkout-form-container form {
+  width: 100%;
+}
+
+.checkout-container .checkout-form-container label, .checkout-container .checkout-form-container input, .checkout-container .checkout-form-container select {
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+
+.checkout-container .checkout-form-container label:focus,
+.checkout-container .checkout-form-container input:focus,
+.checkout-container .checkout-form-container select:focus {
+  outline: 2px solid red;
+}
+
+.checkout-container .checkout-form-container label {
+  padding: 10px;
+  font-size: 6vw;
+}
+
+.checkout-container .checkout-form-container input {
+  margin-top: 5px;
+}
+
+.checkout-container .checkout-form-container .error-message {
+  color: red;
+  font-size: 3vw;
+}
+
+.checkout-container .checkout-form-container .checkout-buttons {
+  font-size: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20vw;
+}
+
+.checkout-container .checkout-form-container .checkout-buttons button {
+  width: 35vw;
+  padding: 0.5vw 0vw;
+  color: white;
+  background: red;
+  outline: none;
+  font-size: 5vw;
+  border: 0;
+  cursor: pointer;
+}
+
+.checkout-container .checkout-form-container .order-total-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 8vw;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 30px 5px;
+  font-size: 3vw;
+}
+
+.checkout-container .checkout-form-container .order-total-container h1 {
+  padding: 1vw;
+}
+/*# sourceMappingURL=checkout.css.map */

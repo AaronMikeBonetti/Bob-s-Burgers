@@ -46,7 +46,7 @@
   cursor: pointer;
 }
 
-.header .checkout-number {
+.header .cart-number {
   position: absolute;
   top: 12px;
   right: 39px;

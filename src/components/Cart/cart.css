@@ -45,4 +45,29 @@
   padding: 10px;
   border-top: 2px solid black;
 }
+
+.cart-container .cart-button-container {
+  width: 80vw;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-container .cart-button-container .cart-buttton {
+  width: 35vw;
+  padding: 3vw 0vw;
+  color: white;
+  background: red;
+  outline: none;
+  font-size: 5vw;
+  border: 0;
+  cursor: pointer;
+}
 /*# sourceMappingURL=cart.css.map */
