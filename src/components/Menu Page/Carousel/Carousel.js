@@ -1,10 +1,10 @@
 import React, { Component }from "react"
 import "./carousel.scss"
 
-import img1 from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Menu Page/Carousel/Carousel Image/imgs/carosuel-burger-1.jpg"
-import img2 from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Menu Page/Carousel/Carousel Image/imgs/carosuel-burger-2.jpg"
-import img3 from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Menu Page/Carousel/Carousel Image/imgs/carosuel-burger-3.jpg"
-import img4 from "C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/components/Menu Page/Carousel/Carousel Image/imgs/carosuel-burger-4.jpg"
+import img1 from "../Carousel/Carousel Image/images/carosuel-burger-1.jpg"
+import img2 from "../Carousel/Carousel Image/images/carosuel-burger-2.jpg"
+import img3 from "../Carousel/Carousel Image/images/carosuel-burger-3.jpg"
+import img4 from "../Carousel/Carousel Image/images/carosuel-burger-4.jpg"
 
 
 
@@ -13,7 +13,7 @@ class Carousel extends Component{
     constructor(){
         super()
         this.state={
-            imgs: [img1,img2,img3,img4],
+            images: [img1,img2,img3,img4],
             count: 0,
             imgHeaders: ["The Classic","The Teriyaki","The Hawaian","The Stacker"],
             CarouselOff: false,
@@ -34,7 +34,7 @@ componentDidMount(){
         setInterval(() => {
             if(this.state.CarouselOff === false){
             this.setState({
-                count: this.state.count === this.state.imgs.length - 1? 0: this.state.count + 1,
+                count: this.state.count === this.state.images.length - 1? 0: this.state.count + 1,
                imgTransitionToggle: !this.state.imgTransitionToggle
                })
            }
@@ -47,7 +47,7 @@ componentWillUnmount(){
     HandleArrowClickRight(){
         
        this.setState({
-        count: this.state.count === this.state.imgs.length -1? 0: this.state.count + 1,
+        count: this.state.count === this.state.images.length -1? 0: this.state.count + 1,
         CarouselOff: true,
         imgTransitionToggle: !this.state.imgTransitionToggle
        })
@@ -55,7 +55,7 @@ componentWillUnmount(){
     }
     HandleArrowClickLeft(){
         this.setState({
-            count: this.state.count === 0 ? this.state.imgs.length -1 : this.state.count - 1,
+            count: this.state.count === 0 ? this.state.images.length -1 : this.state.count - 1,
             CarouselOff: true,
             imgTransitionToggle: !this.state.imgTransitionToggle
         })
@@ -66,7 +66,7 @@ componentWillUnmount(){
     render(){
         
        const style={
-            backgroundImage: `url("${this.state.imgs[this.state.count]}")`,
+            backgroundImage: `url("${this.state.images[this.state.count]}")`,
             
             
             
