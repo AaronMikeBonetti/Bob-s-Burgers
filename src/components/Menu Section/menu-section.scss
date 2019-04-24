@@ -25,7 +25,7 @@
         grid-column:1/-1;
         grid-row: 1/1;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.383) 20%,
-        rgba(0, 0, 0, 0.383)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/lettuce-tomato.jpg');
+        rgba(0, 0, 0, 0.383)), url('./images/lettuce-tomato.jpg');
         background-size: cover;
         background-position: center;
         color: rgb(255, 255, 255);
@@ -50,7 +50,7 @@
         grid-row: 2;
         color: rgb(229, 255, 0);
         background: linear-gradient(to right, rgba(0, 0, 0, 0.376) 20%,
-        rgba(255, 255, 255, 0.308)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheeseburger-black-gloves.jpg');
+        rgba(255, 255, 255, 0.308)), url('./images/cheeseburger-black-gloves.jpg');
         background-size: cover;
         background-position: center;
         
@@ -61,7 +61,7 @@
         grid-row: 3;
         color: rgb(229, 255, 0);
         background: linear-gradient(to right, rgba(0, 0, 0, 0.096) 20%,
-        rgba(255, 255, 255, 0.096)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheese-burger-fries-veg.jpg');
+        rgba(255, 255, 255, 0.096)), url('./images/cheese-burger-fries-veg.jpg');
         background-size: cover;
         background-position: center;
     }
@@ -70,7 +70,7 @@
         grid-column:1;
         grid-row: 4;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%,
-        rgba(0, 0, 0, 0.089)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/fries.jpg');
+        rgba(0, 0, 0, 0.089)), url('./images/fries.jpg');
         background-size: cover;
         background-position: center;
     }
@@ -105,7 +105,7 @@
         grid-column:1/-1;
         grid-row: 5;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%,
-        rgba(0, 0, 0, 0.089)), url('C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/cheese-burger-close-up.jpg');
+        rgba(0, 0, 0, 0.089)), url('./images/cheese-burger-close-up.jpg');
         background-size: cover;
         background-position: center;
     }

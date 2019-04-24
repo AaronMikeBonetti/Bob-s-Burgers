@@ -7,7 +7,7 @@
     grid-template-rows: 20% 50% 30%;
     height: 100vh;
     width: 100%;
-    background-image: url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/Title-img.png");
+    background-image: url("./images/Title-img.png");
     background-size: cover;
     background-position: left;
     overflow: hidden;
@@ -30,14 +30,14 @@
         grid-column: 1/4;
         grid-row: 2/6;
         height: 120%;
-        background-image: url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/six-mini.png");
+        background-image: url("./images/six-mini.png");
         background-size: cover;
         background-position: left;
                
     }
     @media only screen and (min-width: 400px){
     .six{
-        background-image: url("C:/Users/ZeroTwoNiner/Documents/MyWebsites/React-Apps/Six Guys/src/imgs/six.png");
+        background-image: url("./images/six.png");
     }
 }
     
