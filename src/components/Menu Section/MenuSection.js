@@ -13,7 +13,7 @@ class MenuSection extends Component{
     render(){
         return(
             <div className="menu-container">
-                <div className="box1">We Use Only The Most Fresh Ingredients</div>
+                <div className="box1">We Use Only The Freshest Ingredients!</div>
                 <div className="box2">See What's Cooking...
                 <Link to="/menu" className="box-link">Menu</Link>
                 </div>
