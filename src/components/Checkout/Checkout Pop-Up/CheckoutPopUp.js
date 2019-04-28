@@ -12,7 +12,7 @@ let mappedPropItems =
         )
     })
 
-console.log(props.items[0])
+
     return(
         <div className={props.valid?"pop-up-container": "pop-up-container hidden"}>
             <div className="pop-up">

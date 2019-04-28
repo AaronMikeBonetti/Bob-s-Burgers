@@ -12,13 +12,20 @@ class Header extends Component{
         this.state={
 
         }
+        this.handleScroll = this.handleScroll.bind(this)
     }
+
+handleScroll(){
+    
+    window.scroll(0,0)
+}
+    
     
     render(){
             if(window.screen.width< 900){
             return (
             <div className="header">
-            <Link to="/" className="header-title">Six Guys</Link>
+            <Link onClick={this.handleScroll}to="/" className="header-title" > Six Guys</Link>
             <Link to="/cart"><i className="fas fa-shopping-cart"><span className="cart-number">{this.props.itemNumber}</span></i></Link>
             <Navbar/>
             </div>
@@ -27,10 +34,10 @@ class Header extends Component{
         else{
             return(
             <div className="header">
-            <Link to="/" className="header-title">Six Guys</Link>
-            <Link to="/Menu" className="link">Menu</Link>
-            <Link to="/Menu" className="link">Order</Link>
-            <Link to="/cart"><i className="fas fa-shopping-cart"><span className="cart-number">{this.props.itemNumber}</span></i></Link>
+            <Link onClick={this.handleScroll} to="/" className="header-title">Six Guys</Link>
+            <Link  onClick={this.handleScroll} to="/Menu" className="link">Menu</Link>
+            <Link onClick={this.handleScroll} to="/Menu" className="link">Order</Link>
+            <Link onClick={this.handleScroll} to="/cart"><i className="fas fa-shopping-cart"><span className="cart-number">{this.props.itemNumber}</span></i></Link>
             </div>
             )
         }

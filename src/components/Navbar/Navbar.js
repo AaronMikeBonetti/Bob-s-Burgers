@@ -15,6 +15,7 @@ class Navbar extends Component{
         this.HandleDisplayNav = this.HandleDisplayNav.bind(this)
         this.HandleNavAnimation = this.HandleNavAnimation.bind(this)
         this.handleReset = this.handleReset.bind(this)
+        
     }
     HandleNavAnimation(){
         this.setState({
@@ -34,6 +35,7 @@ class Navbar extends Component{
     }
 
     handleReset(){
+        window.scroll(0,0) 
         this.setState(
         {     
             classNames:{
@@ -45,8 +47,9 @@ class Navbar extends Component{
         
     }
     
+    
     render(){
-console.log(window.screen.width)
+
     const navLinks = this.state.navLinks.map(link =>{
         return  <Link key={link} to={link==="Home" ? "/" :`/${link}`}><li  onClick={this.handleReset}>{link}</li></Link>
     })
