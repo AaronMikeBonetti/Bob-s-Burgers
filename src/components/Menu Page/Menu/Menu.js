@@ -14,35 +14,35 @@ class Menu extends Component{
                 burgers:[
                     {
                         name: "Classic",
-                        discription:"Lettuce, cheese, bacon, beef. Everything you need, nothing you don't.",
+                        description:"Lettuce, cheese, bacon, beef. Everything you need, nothing you don't.",
                         price: 6.49
                     },
                     {
                         name: "Southwestern",
-                        discription:"Need something with a litte kick? Lettuce, pepper jack, jalapenos, all with our house made sweet and spicy ranch.",
+                        description:"Need something with a little kick? Lettuce, pepper jack, jalapenos, all with our house made sweet and spicy ranch.",
                         price: 7.29
                     },
-                   {
+                    {
                         name: "Teriyaki",
-                        discription:"Sweet and tangy, tomato, onion, pineapple, amercan cheese and bbq sauce.",
+                        description:"Sweet and tangy, tomato, onion, pineapple, American cheese and bbq sauce.",
                         price: 8.49
                     },
-                     {
+                    {
                         name: "Hawaiian",
-                        discription:"poltry and beef, never tasted so good, gilled chicken breast, lettuce, tomato, american cheese, spicy mayo.",
+                        description:"poultry and beef, never tasted so good, gilled chicken breast, lettuce, tomato, american cheese, spicy mayo.",
                         price: 7.99
                     },
                     {
                         name: "Stacker",
-                        discription:"When one is never enough. Comes with 2 paddies, 4 buns, all business! lettuce, onions, american cheese and our special sauce.",
+                        description:"When one is never enough. Comes with 2 paddies, 4 buns, all business! lettuce, onions, american cheese and our special sauce.",
                         price: 10.79
                     },
                     
                 ]
-                },
-         
-            
-        }
+                
+            },
+
+    }
 
 
         this.handleAdd = this.handleAdd.bind(this)
@@ -62,26 +62,23 @@ class Menu extends Component{
     render(){
       
         const burgers=  
-            this.state.item.burgers.map(burger=> <MenuItem key={burger.name} itemID={`${burger.name}${Math.random()}`} name={burger.name} price={burger.price} discription={burger.discription} handleAdd={this.handleAdd}/>)     
-      
+            this.state.item.burgers.map(burger=> <MenuItem key={burger.name} itemID={`${burger.name}${Math.random()}`} name={burger.name} price={burger.price} description={burger.description} handleAdd={this.handleAdd}/>)     
     
         return(
             <div>
                 
-               <Carousel/>
-               <h1 className="menu-header">Burgers</h1>
-               {burgers}
-                  
+            <Carousel/>
+            <h1 className="menu-header">Burgers</h1>
+            <div className="menu-items-list-container">
+            {burgers}
+            </div>
+            
             </div>
         )
     }
 }
 
-const mapStateToProps= state =>{
-    return{
-       
-    }
-}
+
 const mapDispatchToProps= dispatch =>{
     return{
         addItemToOrder: (order) => dispatch(addItemToOrder(order)),
@@ -90,4 +87,4 @@ const mapDispatchToProps= dispatch =>{
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Menu)
+export default connect(null,mapDispatchToProps)(Menu)

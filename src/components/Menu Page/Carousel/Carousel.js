@@ -17,7 +17,7 @@ class Carousel extends Component{
         this.state={
             images: [img1,img2,img3,img4],
             count: 0,
-            imgHeaders: ["The Classic","The Teriyaki","The Hawaian","The Stacker"],
+            imgHeaders: ["The Classic","The Teriyaki","The Hawaiian","The Stacker"],
             CarouselOff: false,
             imgTransition1: " img-transition-1 carousel-image",
             imgTransition2: "img-transition-2 carousel-image",
@@ -25,36 +25,32 @@ class Carousel extends Component{
         }
         this.HandleArrowClickRight = this.HandleArrowClickRight.bind(this)
         this.HandleArrowClickLeft = this.HandleArrowClickLeft.bind(this)
-       
         
     }
-  
     
-   
 componentDidMount(){
     this.imgInterval =   
         setInterval(() => {
             if(this.state.CarouselOff === false){
             this.setState({
                 count: this.state.count === this.state.images.length - 1? 0: this.state.count + 1,
-               imgTransitionToggle: !this.state.imgTransitionToggle
-               })
-           }
+                imgTransitionToggle: !this.state.imgTransitionToggle
+            })
+        }
         }, 5000);
-   }
+}
 componentWillUnmount(){
     clearInterval(this.imgInterval)
 }
     
     HandleArrowClickRight(){
         
-       this.setState({
+    this.setState({
         count: this.state.count === this.state.images.length -1? 0: this.state.count + 1,
         CarouselOff: true,
         imgTransitionToggle: !this.state.imgTransitionToggle
-       })
-       
-    }
+    })
+}
     HandleArrowClickLeft(){
         this.setState({
             count: this.state.count === 0 ? this.state.images.length -1 : this.state.count - 1,
@@ -63,15 +59,14 @@ componentWillUnmount(){
         })
         
     }
-     
 
     render(){
 
-       const style={
+        const style={
             backgroundImage: `url("${this.state.images[this.state.count]}")`
             
         }
-       
+
         return(
                 
             <div className="carousel-container">

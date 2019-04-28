@@ -21,7 +21,7 @@ handleScroll(){
     
     
     render(){
-            if(window.screen.width< 900){
+            if(window.screen.width < 1200){
             return (
             <div className="header">
             <Link onClick={this.handleScroll} to="/" className="header-title" > Six Guys</Link>

@@ -7,17 +7,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- 
+    border-bottom: 1vw solid red;
     
+
     span{
         position: absolute;
         z-index: 2;
-        font-size: 10vw;
-        top: 35vh;
+        font-size: 8vw;
+        top: 40vh;
         left: 20px;
         color: white;
         animation: header-scale 3000ms ease-in-out infinite ;
-       
     }
     @keyframes header-scale {
         0%{
@@ -34,12 +34,10 @@
     
     .carousel-image{
         width: 100vw;
-        height: 40vh;
+        height: 50vh;
         margin-top: 40px;
         background-position: center;
         background-size: cover;
-        
-    
     }
 
     
@@ -89,5 +87,49 @@
     .fa-arrow-circle-right:hover{
         color: white;
         transition: color 0.5s;
+    }
+}
+
+@media screen and (min-width:600px){
+    .carousel-container{
+        height: 60vh;
+
+    .carousel-image{   
+        height: 60vh;
+        }
+        .fa-arrow-circle-left, .fa-arrow-circle-right{
+            position: absolute;
+            z-index: 2;
+            font-size: 5vw;
+            padding: 10px;
+            color: red;
+            top:30vh;
+            opacity: 1;
+        }
+        span{
+            position: absolute;
+            z-index: 2;
+            font-size: 7vw;
+            top: 45vh;
+            left: 20px;
+            
+        }
+    }
+}
+@media screen and (min-width:900px){
+    .carousel-container{
+        height: 80vh;
+        
+        .carousel-image{   
+            height: 80vh;
+            }
+
+        span{
+            z-index: 2;
+            font-size: 6vw;
+            top: 60vh;
+            left: 30px;
+            
+        }
     }
 }

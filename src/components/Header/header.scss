@@ -44,14 +44,8 @@
     }
     
     .cart-number{
-        position: absolute;
-        top: 12px;
-        right: 39px;
-        z-index: 20;
-        font-size: 1.5rem;
-        padding: 2px;
-        margin-right: 5%;
-        color: rgb(2, 0, 1);
+        justify-content: right;
+        color: rgb(255, 255, 255);
     }
     
     
@@ -81,6 +75,7 @@
     .fa-shopping-cart{  
         padding-right: 40px;
     }
+    
     .link:hover, .header-title:hover, .fa-shopping-cart:hover{
         color: black;
         transition: color 0.5s;

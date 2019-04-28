@@ -59,7 +59,7 @@ class Navbar extends Component{
             {navLinks}   
             </ul>
             <i className={this.state.classNames.navButton}
-             onClick={this.HandleDisplayNav}></i>
+            onClick={this.HandleDisplayNav}></i>
             </div>
         )
     }
