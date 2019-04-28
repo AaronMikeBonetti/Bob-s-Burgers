@@ -32,7 +32,6 @@ class Checkout extends Component{
         this.handleSubmit = this.handleSubmit.bind(this)
         this.formValid = this.formValid.bind(this)
 
-       
     }
     
 
@@ -44,8 +43,8 @@ class Checkout extends Component{
 
         let formErrors = this.state.formErrors
         let nameRegex = RegExp(/^[a-z ,.'-]+$/i)
-        let billingAddressRegex = RegExp("^[#.0-9a-zA-Z/s,-]+$")
-        let CreditCardRegex = RegExp("^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35/d{3})/d{11})$")
+        let creditCardRegex = RegExp("^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35/d{3})/d{11})$")
+        let cvvRegex = RegExp("^[0-9]{3,4}$")
         
         switch(name){
             
@@ -58,24 +57,25 @@ class Checkout extends Component{
             break
 
             case "billingAddress": 
-            formErrors.billingAddress = value.length >= 3 && billingAddressRegex.test(value)  ? "" : "Billing Address Invalid"
+            formErrors.billingAddress = value.length >= 3 ? "" : "Billing Address Invalid"
             break
             
             case "creditCardNumber": 
             formErrors.creditCardNumber =
-            CreditCardRegex.test(value)  && value.length > 0 ? "" : "Card Number Invalid"
+            creditCardRegex.test(value)  && value.length > 0 ? "" : "Card Number Invalid"
             break
             
             case "cvv": 
-            formErrors.cvv = value.length < 3 && value.length > 0 ? "Cvv Invalid" : ""
+            formErrors.cvv = 
+            cvvRegex.test(value) ? "" : "Cvv Invalid"
             break
             
-            case "expirtationMonth": 
-            formErrors.cvv = value.length < 3 && value.length > 0 ? "Month Not Selected" : ""
+            case "expirationMonth": 
+            formErrors.expirationMonth = value.length === 6 ? "Month Not Selected" : ""
             break
             
-            case "expirtationYear": 
-            formErrors.cvv = value.length < 4 && value.length > 0 ? "Year Not Selected" : ""
+            case "expirationYear": 
+            formErrors.expirationYear = value.length === 6 && value.length > 0 ? "Year Not Selected" : ""
             break
         
         default: 
@@ -118,14 +118,11 @@ formValid(errors, ...rest){
     render(){
         
         const { formErrors } = this.state
-       
-       
-        
-        function errorMessage(errorType){
-           return errorType.length > 0 && (<span className="error-message">{errorType}</span>)
-        }
 
-        // let firstNameError = formErrors.firstName.length > 0 && (<span className="error-message">{formErrors.firstName}</span>)
+        function errorMessage(errorType){
+        
+            return errorType.length > 0 && (<span className="error-message">{errorType}</span>)
+        }
 
         let tax = (this.props.subtotal * 0.07).toFixed(2);
         let calculatedTax = (0.07 * this.props.subtotal)
@@ -142,26 +139,22 @@ formValid(errors, ...rest){
             }
         let mappedYears = years.map(year=>{
                 return  <option key={year} value={year} name={this.state.expirationYear}>{year}</option>
-             })
-           
+                })
         
         let mappedMonths = 
             months.map(month=>{
                 return <option key={month}value={month} name={this.state.expirationMonth}>{month}</option>
-            })
+                })
             
         let items = this.props.items
-        
-        
-                   
+
         return(
             
             <div 
-            className="checkout-container">
-            
-                 <h1 className="checkout-header">Checkout</h1>
+            className="checkout-container">  
+                <h1 className="checkout-header">Checkout</h1>
             <div className="checkout-form-container">
-           
+            
             <form onSubmit={this.handleSubmit}>
                 
                 <label>First Name
@@ -173,7 +166,7 @@ formValid(errors, ...rest){
                 <label>Last Name
                     <input name="lastName" value={this.state.lastName} onChange={this.handleChange} className="last-name"type="text" required>
                 </input>
-                {errorMessage(formErrors.lastName)}</label>
+                    {errorMessage(formErrors.lastName)}</label>
                 
                 <label>Billing Address
                     <input name="billingAddress" value={this.state.billingAddress} onChange={this.handleChange} className="billing-address"type="text" required>
@@ -205,7 +198,7 @@ formValid(errors, ...rest){
                     <select value={this.state.expirationYear} name="expirationYear" onChange={this.handleChange} className="card-expiration-date" required>
 
                     {mappedYears}
-
+                    
                     </select>
                     {errorMessage(formErrors.expirationYear)}
                 </label>
@@ -223,7 +216,7 @@ formValid(errors, ...rest){
                     </div>
                 </div>
                 <div className="checkout-buttons">
-                <Link to="/cart"><button>Reveiw<br/> Order
+                <Link to="/cart"><button>Review<br/> Order
                 </button></Link>
                 <button>Submit Payment<br/></button></div>
             </form>
