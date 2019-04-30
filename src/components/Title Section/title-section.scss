@@ -163,7 +163,7 @@
             h1{
                 display: block;
                 color: white;
-                padding-top: 12vh;
+                padding-top: 15vh;
                 font-size: 70px;
                 word-spacing: -50px;
                 writing-mode: vertical-lr;
@@ -188,7 +188,6 @@
                 margin-top: 60px;
                 margin-left: 12vw;
                 padding: -30px;
-                
                 animation: icon-fries-fade-in 2s ease-in;
                 animation-delay: 1.5s;
                 
@@ -209,7 +208,6 @@
             }
             
             .icon-burger{
-                
                 height: 15%;
                 width: 100%;
                 background-image: url(./images/burger-icon.svg);
@@ -218,7 +216,6 @@
                 background-repeat: no-repeat;
                 margin-top: 40px;
                 margin-left: 12vw;
-                
                 animation: icon-burger-fade-in 2.5s ease-in;
                 animation-delay: 1s;
                 
