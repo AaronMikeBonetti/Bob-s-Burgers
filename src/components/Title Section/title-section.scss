@@ -8,6 +8,7 @@
     grid-template-rows: 20% 50% 30%;
     height: 100vh;
     width: 100%;
+    background-color: red;
     background-image: url(./images/Title-img.png);
     background-size: cover;
     background-position: left;
@@ -45,9 +46,7 @@
         font-size: 4.5vh;
         color: rgb(251, 251, 251);
         padding-left: 20px;
-        
-
-        
+            
     }
     .six{
         display: grid;
@@ -85,7 +84,7 @@
 
 @media only screen and (min-width:900px){
     .title-container{  
-        grid-template-columns: 50% 20% 45px 27%;
+        grid-template-columns: 50% 20% 45px 30%;
 
         .desktop-sidebar{
             display: grid;
