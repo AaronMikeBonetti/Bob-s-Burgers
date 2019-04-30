@@ -5,14 +5,15 @@ class TitleSection extends Component{
     constructor(){
         super()
         this.state={
-            image: "title-container"        
+                  
         }
     }
     
 
     render(){
         return(
-            <div className={this.state.image}>
+            <div className="title-container">
+                <div className="main-page-loading-screen"></div>
                 
                 <div className="jumbotron">Burgers Made, The Right Way.</div>
                 <div className="six"></div>

@@ -2,17 +2,18 @@
   height: 50vh;
   width: 100%;
   overflow: hidden;
-  opacity: 1;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-bottom: 1vw solid red;
 }
 
 .carousel-container span {
   position: absolute;
-  font-size: 10vw;
-  top: 35vh;
+  z-index: 2;
+  font-size: 8vw;
+  top: 40vh;
   left: 20px;
   color: white;
   -webkit-animation: header-scale 3000ms ease-in-out infinite;
@@ -51,14 +52,77 @@
 
 .carousel-container .carousel-image {
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
   margin-top: 40px;
   background-position: center;
   background-size: cover;
 }
 
+.carousel-container .img-transition-1 {
+  -webkit-animation: animation1 2s;
+          animation: animation1 2s;
+}
+
+.carousel-container .img-transition-2 {
+  -webkit-animation: animation2 2s;
+          animation: animation2 2s;
+}
+
+@-webkit-keyframes animation1 {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes animation1 {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@-webkit-keyframes animation2 {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes animation2 {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
 .carousel-container .fa-arrow-circle-left, .carousel-container .fa-arrow-circle-right {
   position: absolute;
+  z-index: 2;
   font-size: 30px;
   padding: 5px;
   color: red;
@@ -77,5 +141,45 @@
   color: white;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
+}
+
+@media screen and (min-width: 600px) {
+  .carousel-container {
+    height: 60vh;
+  }
+  .carousel-container .carousel-image {
+    height: 60vh;
+  }
+  .carousel-container .fa-arrow-circle-left, .carousel-container .fa-arrow-circle-right {
+    position: absolute;
+    z-index: 2;
+    font-size: 5vw;
+    padding: 10px;
+    color: red;
+    top: 30vh;
+    opacity: 1;
+  }
+  .carousel-container span {
+    position: absolute;
+    z-index: 2;
+    font-size: 7vw;
+    top: 45vh;
+    left: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .carousel-container {
+    height: 80vh;
+  }
+  .carousel-container .carousel-image {
+    height: 80vh;
+  }
+  .carousel-container span {
+    z-index: 2;
+    font-size: 6vw;
+    top: 60vh;
+    left: 30px;
+  }
 }
 /*# sourceMappingURL=carousel.css.map */

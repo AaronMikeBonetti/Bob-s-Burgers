@@ -12,8 +12,9 @@
       flex-wrap: wrap;
   margin: 0;
   padding: 1vh 5vw 2vh 5vw;
-  height: 120px;
+  height: 100%;
   width: 100%;
+  margin: auto;
   background: red;
   border-bottom: 2px solid rgba(255, 255, 255, 0.555);
 }
@@ -25,9 +26,14 @@
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
+  color: black;
 }
 
-.menu-item-container .menu-discription {
+.menu-item-container .menu-item-name:hover {
+  color: white;
+}
+
+.menu-item-container .menu-description {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -65,10 +71,39 @@
   height: 100%;
   color: black;
   padding: 1px;
-  font-size: 30px;
+  font-size: 5vw;
 }
 
 .menu-item-container .menu-item-button .fa-plus-square:hover {
   color: white;
+}
+
+@media screen and (min-width: 540px) {
+  .menu-item-container {
+    width: 80%;
+    margin: auto;
+    padding: 4vw;
+  }
+  .menu-item-container .menu-item-name {
+    font-size: 4vw;
+  }
+  .menu-item-container .menu-description {
+    font-size: 2vw;
+    padding: 3vw;
+  }
+  .menu-item-container .menu-item-price {
+    padding: 8vw 0 0 6vw;
+    font-size: 4vw;
+  }
+  .menu-item-container .menu-item-button .fa-plus-square {
+    padding: 8vw 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .menu-item-container {
+    width: 90%;
+    padding: 2vw;
+  }
 }
 /*# sourceMappingURL=menu-item.css.map */

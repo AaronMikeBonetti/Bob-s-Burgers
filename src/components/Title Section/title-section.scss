@@ -1,5 +1,6 @@
 
 .title-container{
+    
     overflow-x: hidden;
     position: initial;
     z-index: 0;
@@ -14,6 +15,7 @@
     background-position: left;
     overflow: hidden;
     animation: fade-in 2s;
+    animation-delay: 2s;
     
     @keyframes fade-in {
         0%{
@@ -23,6 +25,40 @@
         100%{
             opacity: 1;
             
+        }
+    }
+    .main-page-loading-screen{
+        background: rgb(255, 0, 0);
+        position: absolute;
+        z-index: 3;
+        height: 100vh;
+        width: 100%;
+        transition: none;
+        visibility: hidden;
+        text-align: center;
+        animation: load 2s ease-in;
+        h1{
+            font-size: 160px;
+            width: 40%;
+            margin: auto;
+            animation: loading-icon 2s ease-in;
+            
+        }
+        @keyframes loading-icon {
+            0%{
+                
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    }
+    @keyframes load {
+        0%{
+            visibility: visible;
+        }
+        100%{
+            visibility: hidden;
         }
     }
 
@@ -98,7 +134,8 @@
                 padding-left: 60px;
                 padding-top: 15vh;
                 text-align: center;
-                animation: content-animation 2s ease-in-out;
+                animation-name: content-animation; animation-duration:2s;
+                animation-delay: 2s;
 
         @keyframes content-animation {
             0%{
@@ -126,7 +163,7 @@
             h1{
                 display: block;
                 color: white;
-                padding-top: 8vh;
+                padding-top: 12vh;
                 font-size: 70px;
                 word-spacing: -50px;
                 writing-mode: vertical-lr;
@@ -151,7 +188,9 @@
                 margin-top: 60px;
                 margin-left: 12vw;
                 padding: -30px;
+                
                 animation: icon-fries-fade-in 2s ease-in;
+                animation-delay: 1.5s;
                 
             }
 
@@ -179,7 +218,9 @@
                 background-repeat: no-repeat;
                 margin-top: 40px;
                 margin-left: 12vw;
+                
                 animation: icon-burger-fade-in 2.5s ease-in;
+                animation-delay: 1s;
                 
                 
                 
@@ -208,6 +249,7 @@
                 margin-top: 40px;
                 margin-left: 12vw;
                 animation: icon-drink-fade-in 3s ease-in;
+                animation-delay: 1s;
                 
                 
             }
