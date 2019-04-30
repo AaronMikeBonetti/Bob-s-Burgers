@@ -15,8 +15,6 @@ import Checkout from "./components/Checkout/Checkout"
 export const intialState = {
   header:{itemsInCart: null},
   Cart:[],
-//   Cart:[{itemInfo: ["test",999,0], cookingInstructions: "", addOns:["test"],
-// }],
   payPortal:{
     firstName:"",
     lastName:"",

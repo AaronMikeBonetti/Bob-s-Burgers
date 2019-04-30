@@ -12,9 +12,9 @@
     background-size: cover;
     background-position: left;
     overflow: hidden;
-    animation: animation1 2s;
+    animation: fade-in 2s;
     
-    @keyframes animation1 {
+    @keyframes fade-in {
         0%{
             opacity: 0;
             
@@ -24,9 +24,17 @@
             
         }
     }
-  
-    
-   
+
+    .desktop-sidebar{
+        display: none;    
+    }
+    .sidebar-header{
+        display: none;
+    }
+    .desktop-main-section{
+        display: none;
+    }
+
     .jumbotron{
         position: relative;
         display: grid;
@@ -34,7 +42,7 @@
         grid-row: 3/4;
         height: 100%;
         text-align: left;
-        font-size: 4.8vh;
+        font-size: 4.5vh;
         color: rgb(251, 251, 251);
         padding-left: 20px;
         
@@ -50,25 +58,204 @@
         background-size: cover;
         background-position: left;
         
-               
     }
-    @media only screen and (min-width: 400px){
+}
+
+@media only screen and (min-width: 400px){
+    .title-container{
+
     .jumbotron{           
             padding: 30px;
+            font-size: 7vw;
     }
     .six{
         background-image: url("./images/six.png");
     }
 }
+}
+
+@media only screen and (min-width:650px){
+    .title-container{   
     
+        .jumbotron{  
+            font-size: 5.5vw;
+        }
+    }
 }
 
 @media only screen and (min-width:900px){
- .title-container{   
+    .title-container{  
+        grid-template-columns: 50% 20% 45px 27%;
+
+        .desktop-sidebar{
+            display: grid;
+            grid-column: 4/-1;
+            grid-row: 1/-1;
+            background: red;
+
+            .sidebar-content{
+                font-size: 2vw;
+                padding-right: 60px;
+                padding-left: 60px;
+                padding-top: 15vh;
+                text-align: center;
+                animation: content-animation 2s ease-in-out;
+
+        @keyframes content-animation {
+            0%{
+                margin-left: 400px;
+                
+            }
+            
+        }
+            }
+            
+            span{
+                display: block;
+                font-size: 4vw;
+                color: white;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+            }
+        }
+            .sidebar-header{
+                position: relative;
+                z-index: 1;
+                grid-column: 3/4;
+                grid-row: 1/-1;
+                display: initial;
+                
+            h1{
+                display: block;
+                color: white;
+                padding-top: 8vh;
+                font-size: 70px;
+                word-spacing: -50px;
+                writing-mode: vertical-lr;
+                text-orientation: upright
+            }
+        
+        }
+        .icon-container{
+            margin-top: 20vh;
+            grid-column: 4/-1;
+            grid-row: 2/-1;
+            display: flex;
+            flex-direction: column;
+            
+            .icon-fries{
+                height: 15%;
+                width: 100%;
+                background-image: url(./images/fries-icon.png);
+                background-size: contain;
+                background-position: left;
+                background-repeat: no-repeat;
+                margin-top: 60px;
+                margin-left: 12vw;
+                padding: -30px;
+                animation: icon-fries-fade-in 2s ease-in;
+                
+            }
+
+            @keyframes icon-fries-fade-in {
+                0%{
+                    opacity: 0;
+                }
+                60%{
+                    opacity: 0;
+                }
+                70%{
+                    opacity: 1;
+                }
+                
+                
+            }
+            
+            .icon-burger{
+                
+                height: 15%;
+                width: 100%;
+                background-image: url(./images/burger-icon.svg);
+                background-size: contain;
+                background-position: left;
+                background-repeat: no-repeat;
+                margin-top: 40px;
+                margin-left: 12vw;
+                animation: icon-burger-fade-in 2.5s ease-in;
+                
+                
+                
+            }
+            @keyframes icon-burger-fade-in {
+                0%{
+                    opacity: 0;
+                }
+                80%{
+                    opacity: 0;
+                }
+                90%{
+                    opacity: 1;
+                }
+                
+            }
+
+            .icon-drink{
+                
+                height: 15%;
+                width: 100%;
+                background-image: url(./images/soda.svg);
+                background-size: contain;
+                background-position: left;
+                background-repeat: no-repeat;
+                margin-top: 40px;
+                margin-left: 12vw;
+                animation: icon-drink-fade-in 3s ease-in;
+                
+                
+            }
+            @keyframes icon-drink-fade-in {
+                0%{
+                    opacity: 0;
+                }
+                90%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+                
+            }
+            
+        }
+        
+        .desktop-main-section{
+            display: grid;
+            grid-column: 1/4;
+            grid-row: 1/4;
+            background-image: url(./images/Title-img.png);
+            background-size: cover;
+            background-position: left;
+
+        }
+        
+        .jumbotron{
+            font-size: 5vw;
+            position: relative;
+            z-index: 2;
+        }
+        .six{
+            z-index: 1;
+        }
+    }
+}
+@media only screen and (min-width:1200px){
+    .title-container{   
     
-    .jumbotron{
-        font-size: 8vh;
-        padding-left: 50px;
+        .jumbotron{
+            font-size: 5vw;
+            padding: 20px;
+        }
+    }
 }
-}
-}
+
+
+
