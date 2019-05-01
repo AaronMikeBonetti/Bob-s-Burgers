@@ -189,8 +189,7 @@
                 margin-left: 12vw;
                 padding: -30px;
                 animation: icon-fries-fade-in 2s ease-in;
-                animation-delay: 1.5s;
-                
+                animation-delay: 1.5s;    
             }
 
             @keyframes icon-fries-fade-in {
@@ -202,9 +201,7 @@
                 }
                 70%{
                     opacity: 1;
-                }
-                
-                
+                }    
             }
             
             .icon-burger{
@@ -218,10 +215,9 @@
                 margin-left: 12vw;
                 animation: icon-burger-fade-in 2.5s ease-in;
                 animation-delay: 1s;
-                
-                
-                
+                    
             }
+            
             @keyframes icon-burger-fade-in {
                 0%{
                     opacity: 0;
