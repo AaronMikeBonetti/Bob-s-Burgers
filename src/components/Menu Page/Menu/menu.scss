@@ -1,42 +1,41 @@
 .menu-page-container{
-    background: center/10vw url("./images/burger-icon.svg");
+    padding-bottom: 50px;
     
 .menu-header{
     height: 100%;
     width: 100%;
-    margin: 5vw auto;
+    margin: 3vw auto;
     text-align: center;
     padding-bottom: 10px;
     line-height: 12vw;
     background:rgb(255, 255, 255);
-    border-bottom: 2px solid rgb(255, 0, 0);
-    border-top: 2px solid rgb(255, 0, 0);
     font-size: 7vw;
     
 }
+
+}
 @media screen and (min-width:600px){
     .menu-page-container{
-        
+        background: center/15vw url("./images/burger-icon.svg");
         
     .menu-header{
         font-size: 5vw;
         padding: 2vw;
-        margin-top: 5vw;
+        margin-top: 0vw;
         margin-bottom: 5vw;
-        border-bottom: 2px solid rgb(0, 0, 0);
-        border-top: 2px solid rgb(0, 0, 0);
+        border-bottom: 1vw solid rgb(255, 0, 0);
+        
         background: rgb(255, 255, 255);
     }
 
     .menu-items-list-container{
         width: 60%;
-        margin:  40px auto;
+        margin:  0px auto;
         padding-top: 60px;
         padding-bottom: 60px;
         background: rgb(255, 255, 255);
-        border: 10px solid rgb(255, 255, 255);
+        border: 10px solid rgb(255, 0, 0);
     }
-}
 }
 }
 

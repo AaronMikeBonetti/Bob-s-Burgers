@@ -76,7 +76,6 @@ class Menu extends Component{
             <div className="menu-items-list-container">
             {burgers}
             </div>
-            
             </div>
         )
     }
