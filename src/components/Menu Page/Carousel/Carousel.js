@@ -1,10 +1,10 @@
 import React, { Component }from "react"
 import "./carousel.scss"
 
-import img1 from "../Carousel/Carousel Image/images/carosuel-burger-1.jpg"
-import img2 from "../Carousel/Carousel Image/images/carosuel-burger-2.jpg"
-import img3 from "../Carousel/Carousel Image/images/carosuel-burger-3.jpg"
-import img4 from "../Carousel/Carousel Image/images/carosuel-burger-4.jpg"
+import img1 from "../Carousel/Carousel Image/images/carosuel-burger-1.webp"
+import img2 from "../Carousel/Carousel Image/images/carosuel-burger-2.webp"
+import img3 from "../Carousel/Carousel Image/images/carosuel-burger-3.webp"
+import img4 from "../Carousel/Carousel Image/images/carosuel-burger-4.webp"
 
 
 

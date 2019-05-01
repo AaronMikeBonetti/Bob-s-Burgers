@@ -13,7 +13,7 @@ class TitleSection extends Component{
     render(){
         return(
             <div className="title-container">
-                <div className="main-page-loading-screen"></div>
+                {/* <div className="main-page-loading-screen"></div> */}
                 
                 <div className="jumbotron">Burgers Made, The Right Way.</div>
                 <div className="six"></div>
