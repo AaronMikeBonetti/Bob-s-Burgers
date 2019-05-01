@@ -1,11 +1,14 @@
 .cart-container{
     padding-top: 60px;
     
+    
     .cart-title{
         color: red;
         border-bottom: 2px solid black;
         margin-bottom: 10px;
         text-align: center;
+        font-size: 5vw;
+        
     }
     .cart-items-container{
         display: flex;
@@ -15,6 +18,7 @@
     .empty-cart{
         text-align: center;
         padding: 40px;
+        font-size: 6vw;
     }
     .empty-cart-button{
         margin: 15px 33.33vw;
@@ -25,8 +29,7 @@
         background: red;
         border: none;
         cursor: pointer;
-        outline: none;
-        
+        outline: none;   
     }
     .subtotal{
         color: red;
@@ -42,7 +45,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .cart-buttton{
+        
+        .cart-button{
         width: 35vw;
         padding: 3vw 0vw;
         color: white;
@@ -55,4 +59,64 @@
         }
     }
    
+}
+
+@media screen and (min-width:900px){
+    .cart-container{
+        padding-top: 70px;
+        
+        .cart-title{
+            margin-bottom: 40px;  
+        }
+        .cart-items-container{
+            
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        .empty-cart{
+            text-align: center;
+            padding: 40px;
+            font-size: 6vw;
+        }
+        .empty-cart-button{
+            margin: 15px 33.33vw;
+            width: 33.33vw;
+            height: 15vw;
+            font-size: 5vw;
+            color: white;
+            background: red;
+            border: none;
+            cursor: pointer;
+            outline: none;   
+        }
+        .subtotal{
+            color: red;
+            margin-left: 40%;
+            margin-right: 10%;
+            margin: 10px 10% 50px 40%;
+            padding: 10px;
+            border-top: 2px solid black
+        }
+        .cart-button-container{
+            width:80vw;
+            margin: 30px auto;    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .cart-button{
+            width: 35vw;
+            padding: 3vw 0vw;
+            color: white;
+            background: red;
+            outline: none;
+            font-size: 5vw;
+            border: 0;
+            cursor: pointer;
+            
+            }
+        }
+       
+    }
 }

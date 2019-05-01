@@ -37,6 +37,11 @@ class Menu extends Component{
                         description:"When one is never enough. Comes with 2 paddies, 4 buns, all business! lettuce, onions, american cheese and our special sauce.",
                         price: 10.79
                     },
+                    {
+                        name: "Porto",
+                        description:"Meaty and juicy, marinated portobello mushrooms, red peppers, provolone on a seasoned patty. ",
+                        price: 10.79
+                    },
                     
                 ]
                 
@@ -47,25 +52,24 @@ class Menu extends Component{
 
         this.handleAdd = this.handleAdd.bind(this)
         }
-        
+
         componentDidMount(){
-            window.scrollTo(0,0)
+            window.scroll(0,0)
         }
+        
+        
 
         handleAdd(props){
-
             this.props.addItemToOrder(props)
         }
     
     
     
     render(){
-      
         const burgers=  
             this.state.item.burgers.map(burger=> <MenuItem key={burger.name} itemID={`${burger.name}${Math.random()}`} name={burger.name} price={burger.price} description={burger.description} handleAdd={this.handleAdd}/>)     
-    
         return(
-            <div>
+            <div className="menu-page-container">
                 
             <Carousel/>
             <h1 className="menu-header">Burgers</h1>

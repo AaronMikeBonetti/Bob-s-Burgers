@@ -12,6 +12,7 @@ class MenuSection extends Component{
         }
     }
     render(){
+
         return(
             <div className="menu-container">
             

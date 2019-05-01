@@ -12,7 +12,7 @@ import Checkout from "./components/Checkout/Checkout"
 
 
 
-export const intialState = {
+export const initialState = {
   header:{itemsInCart: null},
   Cart:[],
   payPortal:{
@@ -29,7 +29,7 @@ export const intialState = {
 
   
 
-export const store = createStore(rootReducer,intialState,applyMiddleware())
+export const store = createStore(rootReducer,initialState,applyMiddleware())
 
 store.subscribe(()=> console.log("store", store.getState()))
 
@@ -37,11 +37,11 @@ function App(){
 
   
   
-    return (
+  return (
       <BrowserRouter >
       <div className="container">
       <Header />
-      <Route onUpdate={()=> window.scrollTo(0,0)} exact path="/" component={Home}/>
+      <Route exact path="/" component={Home}/>
       <Route path="/menu" component={Menu}/>
       <Route path="/order" component={Order}/>
       <Route path="/cart" component={Cart}/>

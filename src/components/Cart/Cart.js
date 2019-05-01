@@ -71,13 +71,13 @@ class Cart extends Component{
        let CartButtons =
     this.props.Cart[0]===undefined || 
     <div className="cart-button-container">
-    <Link to="/menu"><button className="cart-buttton">Menu</button></Link>
-    <Link to="/checkout"><button className="cart-buttton">Checkout</button></Link>
+    <Link to="/menu"><button className="cart-button">Menu</button></Link>
+    <Link to="/checkout"><button className="cart-button">Checkout</button></Link>
     </div> 
        
    let findSubtotal = () =>{
         if(this.props.Cart[0]===undefined){
-            return <div><div className="empty-cart">Your Cart is Empty</div><Link to="/menu"><button className="empty-cart-button">Go to Menu</button></Link></div>
+            return <div><div className="empty-cart">Your Cart is Empty... :(<br/> Lets change that!</div><Link to="/menu"><button className="empty-cart-button">Go to Menu</button></Link></div>
         }
         else{
         return <div className="subtotal">Subtotal: ${this.state.subtotal}</div>

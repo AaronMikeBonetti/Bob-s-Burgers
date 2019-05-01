@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     border-bottom: 1vw solid red;
+    background: white;
     
 
     span{
@@ -73,15 +74,17 @@
         position: absolute;
         z-index: 2;
         font-size: 30px;
-        padding: 5px;
-        color: red;
+        padding-left: 1vw;
+        color:red;
         top:20vh;
         opacity: 1;
+        cursor: pointer;
     }
     .fa-arrow-circle-right{
         position: absolute;
         top:20vh;
         right: 0;
+        
     }
     .fa-arrow-circle-left:hover,
     .fa-arrow-circle-right:hover{
@@ -100,11 +103,23 @@
         .fa-arrow-circle-left, .fa-arrow-circle-right{
             position: absolute;
             z-index: 2;
-            font-size: 5vw;
+            font-size: 3vw;
             padding: 10px;
-            color: red;
+            color: white;
+            background: red;
             top:30vh;
             opacity: 1;
+        }
+        .fa-arrow-circle-left:hover,.fa-arrow-circle-right:hover{
+            color: black;
+        }
+        .fa-arrow-circle-right{
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+        .fa-arrow-circle-left{
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
         }
         span{
             position: absolute;
