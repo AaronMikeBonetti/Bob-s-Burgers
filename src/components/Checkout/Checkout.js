@@ -33,6 +33,10 @@ class Checkout extends Component{
         this.formValid = this.formValid.bind(this)
 
     }
+
+    componentDidMount(){
+        window.scroll(0,0)
+    }
     
 
     handleChange(e){
@@ -149,7 +153,7 @@ formValid(errors, ...rest){
         let items = this.props.items
 
         return(
-            
+            <div className="checkout-page-container">
             <div 
             className="checkout-container">  
                 <h1 className="checkout-header">Checkout</h1>
@@ -220,7 +224,7 @@ formValid(errors, ...rest){
                 </button></Link>
                 <button>Submit Payment<br/></button></div>
             </form>
-            
+            </div>
             </div>
             
             

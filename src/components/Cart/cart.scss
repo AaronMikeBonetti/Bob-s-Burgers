@@ -89,12 +89,15 @@ a{
 
 
 .cart-page-container{
-    height: 100vh;
+    background: center 1000px url("./images/wood-background.webp");
+    height: 100%;
     padding-top: 60px;
+    padding-bottom:250px;
 
 .cart-container{
     
     padding-top: 20px;
+    padding-bottom: 20px;
     background: rgba(255, 255, 255, 0.514);
     
     
@@ -111,10 +114,11 @@ a{
         justify-content: space-around;
         align-items: flex-start;
         
+        
     }
     
     .subtotal{
-        color: red;
+        color: rgb(0, 0, 0);
         margin-left: 40%;
         margin-right: 10%;
         margin: 10px 10% 50px 40%;
@@ -146,11 +150,18 @@ a{
 @media screen and (min-width:600px){
 
 .cart-page-container{
-    background: center 1000px url("./images/wood-background.webp");
+    
     .cart-container{
         width: 60vw;
         margin: auto;
-        
+        .subtotal{
+        font-size: 2.5vw;  
+        margin-left: 20%;
+        margin-right: 10%;
+        margin: 10px 10% 50px 30%;
+        padding: 10px;
+        border-top: 2px solid black
+        }
         .cart-button-container{
             width:60vw;
             

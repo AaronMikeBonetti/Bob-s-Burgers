@@ -20,6 +20,7 @@ class Cart extends Component{
     }
 
     componentDidMount(){
+        window.scroll(0,0)
         this.getSubtotal()
         
     }

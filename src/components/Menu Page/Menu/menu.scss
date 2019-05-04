@@ -1,5 +1,5 @@
 .menu-page-container{
-    padding-bottom: 50px;
+    
     
 .menu-header{
     height: 100%;
@@ -17,6 +17,7 @@
 @media screen and (min-width:600px){
     .menu-page-container{
         background: center/15vw url("./images/wood-background.webp");
+        padding-bottom: 50px;
         
     .menu-header{
         font-size: 5vw;
@@ -40,9 +41,5 @@
 }
 
 @media screen and (min-width:1000px){
-    .menu-items-list-container{
-        width: 60%;
-        margin: auto;
-        
-    }
+    
 }

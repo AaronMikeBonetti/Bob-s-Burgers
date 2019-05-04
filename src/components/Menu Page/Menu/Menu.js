@@ -39,8 +39,8 @@ class Menu extends Component{
                     },
                     {
                         name: "Porto",
-                        description:"Meaty and juicy, marinated portobello mushrooms, red peppers, provolone on a seasoned patty. ",
-                        price: 10.79
+                        description:"Meaty & juicy, marinated portobello mushrooms, red peppers, provolone on a grilled patty. ",
+                        price: 8.79
                     },
                     
                 ]
