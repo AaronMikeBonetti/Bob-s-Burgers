@@ -1,5 +1,101 @@
-.cart-container{
+// :::::::::::::Empty Cart Displayed:::::::::::::
+
+
+.empty-cart-page-container{
+padding-top: 40px;
+height: 100vh;
+background: center 1000px url("./images/wood-background.webp");
+
+.empty-cart{
+    margin: 40px auto;
+    height: 60vw;
+    width: 60vw;
+    background: rgba(255, 255, 255, 0.671);
+    text-align: center;
+    padding: 40px;
+    font-size: 5vw;
+}
+a{
+    text-decoration: none;
+}
+.empty-cart-button{
+    display: block;
+    margin: 3vh auto;
+    width: 35vw;
+    height: 10vw;
+    font-size: 4vw;
+    color: white;
+    background: red;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    
+        
+}
+.empty-cart-button:hover{
+    color:black;
+}
+} 
+
+@media screen and (min-width:500px){
+    .empty-cart-page-container{
+        
+        
+        .empty-cart{
+            margin: 40px auto;
+            height: 60vw;
+            width: 60vw;
+            background: rgba(255, 255, 255, 0.671);
+            text-align: center;
+            padding: 8vw;
+            font-size: 5vw;
+        }
+        .empty-cart-button{  
+            margin: 8vh auto; 
+            display: block;
+            width: 35vw;
+            height: 10vw;
+            font-size: 4vw;
+            color: white;
+            background: red;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease-in-out;     
+        }
+    } 
+}
+@media screen and (min-width:900px){
+    .empty-cart-page-container{
+        
+        
+        .empty-cart{
+            height: 40vw;
+            width: 60vw;
+            padding: 8vw;
+            font-size: 4vw;
+        }
+        .empty-cart-button{  
+            width: 25vw;
+            height: 6vw;
+            font-size: 3vw;        
+        }
+    } 
+}
+
+
+// :::::::::::::Occupied Cart Displayed:::::::::::::
+
+
+.cart-page-container{
+    height: 100vh;
     padding-top: 60px;
+
+.cart-container{
+    
+    padding-top: 20px;
+    background: rgba(255, 255, 255, 0.514);
     
     
     .cart-title{
@@ -14,23 +110,9 @@
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
+        
     }
-    .empty-cart{
-        text-align: center;
-        padding: 40px;
-        font-size: 6vw;
-    }
-    .empty-cart-button{
-        margin: 15px 33.33vw;
-        width: 33.33vw;
-        height: 15vw;
-        font-size: 5vw;
-        color: white;
-        background: red;
-        border: none;
-        cursor: pointer;
-        outline: none;   
-    }
+    
     .subtotal{
         color: red;
         margin-left: 40%;
@@ -58,65 +140,54 @@
         
         }
     }
-   
+}
 }
 
-@media screen and (min-width:900px){
+@media screen and (min-width:600px){
+
+.cart-page-container{
+    background: center 1000px url("./images/wood-background.webp");
     .cart-container{
-        padding-top: 70px;
+        width: 60vw;
+        margin: auto;
         
-        .cart-title{
-            margin-bottom: 40px;  
-        }
-        .cart-items-container{
-            
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-        }
-        .empty-cart{
-            text-align: center;
-            padding: 40px;
-            font-size: 6vw;
-        }
-        .empty-cart-button{
-            margin: 15px 33.33vw;
-            width: 33.33vw;
-            height: 15vw;
-            font-size: 5vw;
-            color: white;
-            background: red;
-            border: none;
-            cursor: pointer;
-            outline: none;   
-        }
-        .subtotal{
-            color: red;
-            margin-left: 40%;
-            margin-right: 10%;
-            margin: 10px 10% 50px 40%;
-            padding: 10px;
-            border-top: 2px solid black
-        }
         .cart-button-container{
-            width:80vw;
-            margin: 30px auto;    
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            width:60vw;
             
             .cart-button{
-            width: 35vw;
+            width: 15vw;
+            margin: 20px 8vw;
             padding: 3vw 0vw;
-            color: white;
-            background: red;
-            outline: none;
-            font-size: 5vw;
-            border: 0;
-            cursor: pointer;
+            font-size: 2vw;
+            
             
             }
         }
        
     }
+}
+}
+@media screen and (min-width:900px){
+
+.cart-page-container{
+   
+    .cart-container{
+        width: 40vw;
+        margin: auto;
+        
+        .cart-button-container{
+            width:100%;
+            
+            .cart-button{
+            width: 12vw;
+            margin:20px 1vw;
+            padding: 1vw 0vw;
+            font-size: 2vw;
+            
+            
+            }
+        }
+       
+    }
+}
 }

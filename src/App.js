@@ -23,9 +23,13 @@ export const initialState = {
     cardCVV:"",
     cardExpirationDate:""
   },
-  order:[{name:null}],
+  order:[
+    {name:null},
+    {editedItemAddOns:[],
+    editedItemCookingInstructions:""},
     
-  }
+  ]
+}
 
   
 
@@ -39,9 +43,10 @@ function App(){
   
   return (
       <BrowserRouter >
-      <div className="container">
-      <Header />
-      <Route exact path="/" component={Home}/>
+      
+      <div>
+      <Header/>
+      <Route onEnter={window.scroll(0,0)}exact path="/" component={Home}/>
       <Route path="/menu" component={Menu}/>
       <Route path="/order" component={Order}/>
       <Route path="/cart" component={Cart}/>

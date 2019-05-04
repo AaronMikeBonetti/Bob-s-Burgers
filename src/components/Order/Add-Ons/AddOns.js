@@ -6,8 +6,8 @@ function AddOns(props){
                 <h1>{props.name}</h1>
                 <label><input className="add-on-checkbox" type="checkbox"
                 name={props.name}
-                value={props.value}
-                onChange={props.handleChange}></input><span></span></label>
+                onChange={props.handleChange}
+                ></input><span></span></label>
         </div>
     )
 }

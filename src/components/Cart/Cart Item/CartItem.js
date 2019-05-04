@@ -24,13 +24,13 @@ function CartItem(props){
                 }
                 </div>
                 <div className="item-cooking-instructions">
-                    <span>Cooking Instuctions: </span>
+                    <span>Cooking Instructions: </span>
                     {props.cookingInstructions}
                 </div>
                 <div><h1>{props.itemNumber}</h1></div>
                 <div className="item-buttons">
                 <button onClick={() => props.handleRemove(props)}>Remove</button>
-                <Link to="/menu"><button onClick={() => props.handleRemove(props)}>Edit</button></Link> </div>
+                <Link to="/order"><button onClick={() => props.handleEdit(props)}>Edit</button></Link> </div>
             </div>
         )
     

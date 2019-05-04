@@ -11,13 +11,16 @@
     width: 100%;
     padding: none;
     text-align: center;
-    line-height: 60px;    
+    line-height: 60px;
+    font-size: 6vw;
+    border-bottom: 2px solid black;    
+    border-top: 2px solid black; 
 }
 
 h2{
     color:red;
     padding: 10px;
-    font-size: 6vw;
+    font-size: 4vw;
 } 
 
 
@@ -48,16 +51,13 @@ label span{
     margin-right: 5vw;
     margin-bottom: 20px;
     background: white;
-    
-    
+    cursor: pointer;
+   
 }
 [type=checkbox]:checked + span{
     background-image: url("./images/checkmark.png");
-    background-size: cover;
-    
-}
-    
-  
+    background-size: cover;    
+} 
 }
 
 textarea{
@@ -87,35 +87,50 @@ textarea{
             outline: none;
             font-size: 5vw;
             border: 0;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            }
+            button:hover{
+                color: black;
+                
             }
     
+    
 }
 
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 500px){
+.order-page-container{
+    background: center/60vw url("./images/wood-background.webp");
+        
     
     .order-container{
-        padding-top: 50px;
-        height: 100vh;
+        width: 50%;
+        padding-top: 30px;
+        margin: 0px auto;
+        height: 100%;        
         border-bottom: 2px solid rgba(255, 255, 255, 0.555);
+        background: rgba(255, 255, 255, 0.5);
         
             
     
     .order-header{
         height: 10%;
-        width: 100%;
-        padding: none;
+        width: 80%;
+        margin: 40px auto;
+        padding: 2vw;
         text-align: center;
-        line-height: 60px;    
+        line-height: 60px;
+        font-size: 5vw;
+        
     }
     
     h2{
         color:red;
-        padding: 10px;
-        font-size: 6vw;
+        padding: 2vw;
+        font-size: 4vw;
     } 
-    
     
     .add-ons{
         display: flex;
@@ -158,7 +173,7 @@ textarea{
     
     textarea{
         border: 2px solid red;
-        width: 80vw;
+        width: 80%;
         height: 150px;
         font-size: 30px;
         margin: auto;
@@ -176,15 +191,121 @@ textarea{
         button{
             
                 
-                width: 35vw;
+                width: 15vw;
                 padding: 3vw 0vw;
                 color: white;
                 background: red;
                 outline: none;
-                font-size: 5vw;
+                font-size: 2vw;
                 border: 0;
+                }
+                button:hover{
+                    color: black;   
                 }
         
     }
     }
+}
+}
+@media screen and (min-width: 1000px){
+    .order-page-container{
+       
+        
+        .order-container{
+            width: 50%;
+            padding-top: 30px;
+            margin: 0px auto;
+            height: 100%;        
+            border-bottom: 2px solid rgba(255, 255, 255, 0.555);
+            background: rgba(255, 255, 255, 0.5);
+            
+                
+        
+        .order-header{
+            height: 10%;
+            width: 80%;
+            margin: 40px auto;
+            padding: 2vw;
+            text-align: center;
+            line-height: 60px;
+            
+        }
+        
+        h2{
+            color:red;
+            padding: 2vw;
+            font-size: 4vw;
+        } 
+        
+        .add-ons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: red;
+            width:100%;
+            padding: 2vw 5vw;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.568);
+        
+            h1{
+                color:white;
+                font-size: 5vw;
+            }
+        
+            input{ 
+                visibility: hidden;
+                        
+        }
+        label span{
+            display: flex;
+            align-items: flex-start;
+            width:6vw;
+            height: 6vw;
+            margin-right: 5vw;
+            margin-bottom: 20px;
+            background: white;
+            
+            
+        }
+        [type=checkbox]:checked + span{
+            background-image: url("./images/checkmark.png");
+            background-size: cover;
+            
+        }
+            
+
+        }
+        
+        textarea{
+            border: 2px solid red;
+            width: 80%;
+            height: 150px;
+            font-size: 30px;
+            margin: auto;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+            outline: none;
+        }
+        .button-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 15vw;
+        
+            button{
+                
+                    
+                    width: 12vw;
+                    padding: 3vw 0vw;
+                    color: white;
+                    background: red;
+                    outline: none;
+                    font-size: 1.5vw;
+                    border: 0;
+                    }
+            
+            }
+        }
+    } 
 }

@@ -23,7 +23,7 @@ class MenuSection extends Component{
                 <div className="box3"><Link to="/menu">"The Hawaiian"</Link></div>
                 <div className="box4"><Link to="/menu">"The Southwestern"</Link></div>
                 <div className="box5"><Link to="/menu">&&&&&&</Link></div>
-                <div className="box6"><i className="fas fa-angle-double-left"></i>Hand Cut Fries Made Daily</div>
+                <div className="box6"><i className="fas fa-angle-double-left"></i>Handmade buns, baked daily.</div>
                 <div className="box7">Grilled to perfection,<br/> any way you want it.</div>
                 <div className="box8"><Link to="/menu">"The Porto"</Link></div>
                 <div className="box9"><p>Hungry? You've come to the right place.</p></div>

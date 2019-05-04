@@ -12,18 +12,20 @@ class Navbar extends Component{
                 navDisplay: "nav-hidden"
             }
         }
-        this.HandleDisplayNav = this.HandleDisplayNav.bind(this)
-        this.HandleNavAnimation = this.HandleNavAnimation.bind(this)
+        this.handleDisplayNav = this.handleDisplayNav.bind(this)
+        this.handleNavAnimation = this.handleNavAnimation.bind(this)
         this.handleReset = this.handleReset.bind(this)
         
     }
-    HandleNavAnimation(){
+
+
+    handleNavAnimation(){
         this.setState({
             classNames:{
                 navButton:(this.state.classNames.navButton=== "fas fa-hamburger" ?"fas fa-hamburger fa-hamburger-active" :"fas fa-hamburger")}
     })
 }
-    HandleDisplayNav(){ 
+    handleDisplayNav(){ 
         this.setState({     
             classNames:{
                     navButton:(this.state.classNames.navButton=== "fas fa-hamburger" ?"fas fa-hamburger fa-hamburger-active" :"fas fa-hamburger"),
@@ -59,7 +61,7 @@ class Navbar extends Component{
             {navLinks}   
             </ul>
             <i className={this.state.classNames.navButton}
-            onClick={this.HandleDisplayNav}></i>
+            onClick={this.handleDisplayNav}></i>
             </div>
         )
     }

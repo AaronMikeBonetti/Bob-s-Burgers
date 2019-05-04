@@ -12,37 +12,53 @@ class Order extends Component{
         this.state= {
             
             addOns:[
-            'Ketchup',
-            'Mayo',
-            'Mustard',
-            'Pickels',
-            'Onions',
+                "Ketchup","Mayo","Mustard","Pickles","Onions"
+            // {name:'Ketchup',value:false},
+            // {name:'Mayo',value:false},
+            // {name:'Mustard',value:false},
+            // {name:'Pickles',value:false},
+            // {name:'Onions',value:false}
             ],
             cookingInstructions:"",
             Ketchup:false,
             Mayo:false,
             Mustard:false,
-            Pickels:false,
+            Pickles:false,
             Onions:false
-            
-            
-
         }
+        
         this.handleChange=this.handleChange.bind(this)
         this.handleSubmit=this.handleSubmit.bind(this)
+        this.handleItemEditState=this.handleItemEditState.bind(this)
         
     }
     
     componentDidMount(){
         window.scrollTo(0,0)
+        this.handleItemEditState()
+        
     } 
+
+    handleItemEditState(){
+        // const [Ketchup,Mayo,Pickles,Mustard,Onions]=this.props.oldAddOns 
+        
+        this.setState(prevState=>{
+            return{
+
+                // Ketchup:Ketchup?true:false,
+                // Mayo:Mayo?true:false,
+                // Pickles:Pickles?true:false,
+                // Mustard:Mustard?true:false,
+                // Onions:Onions?true:false,
+                cookingInstructions: this.props.oldCookingInstructions
+        }})
+    }
 
 
 
 
 
 handleChange(e){
-    
     const {name,value,type,checked}= e.target
     
     type === "checkbox" ? this.setState(() => {
@@ -62,10 +78,10 @@ handleChange(e){
 
 
 handleSubmit(){
-    //Here I deconstructed state put the add ons into an Array and pushed the ones that were true to an a final array and sent that to the store.
+    //Here I deconstructed state, put the add ons into an Array and pushed the ones that were true to a final array and sent that to the store.
     
-    const {Ketchup,Mayo,Mustard,Pickels,Onions,cookingInstructions} = this.state
-    const addOns = [Ketchup,Mayo,Mustard,Pickels,Onions]
+    const {Ketchup,Mayo,Mustard,Pickles,Onions,cookingInstructions} = this.state
+    const addOns = [Ketchup,Mayo,Mustard,Pickles,Onions]
     let filteredAddOns = []
     addOns.forEach(item=>{
         if(item!==false){
@@ -78,41 +94,40 @@ handleSubmit(){
     
 
     const burgerInfo = [this.props.burger[0].name,this.props.burger[0].price,
-this.props.burger[0].itemID]
+    this.props.burger[0].itemID]
 
     const updateCartIcon = this.props.CartNumber +1
 
     const completeOrder = [burgerInfo,cookingInstructions,updateCartIcon,...filteredAddOns,]
     
     this.props.addItemToCart(completeOrder)
-   
 }
     
     
 render(){
-    
-    const addOns= this.state.addOns.map(addOn=> 
-         <AddOns className="add-ons" key={addOn} name={addOn} onChange={this.handleChange}/>    
+    console.log(this.state)
+const addOns= this.state.addOns.map(addOn=> 
+    <AddOns className="add-ons" key={addOn} name={addOn} onChange={this.handleChange}/>    
 )
 
 const burgerName= this.props.burger[0].name
 
     return(
-    <div>
-       <div className="order-container">
-           <h1 className="order-header">{burgerName}</h1>
-           <form className="order-form"onChange=                {this.handleChange}>
-                <h2>Add Ons</h2>
-                {addOns}
-                <h2 className="cooking-instructions">Cooking Instructions</h2>
-                <textarea type="textarea" name="cookingInstructions" value={this.state.cookingInstructions} onChange={this.handleChange}/>
-                <div className="button-container">
-                <Link to="/Cart"><button onClick={this.handleSubmit}>Add To Cart</button></Link>
-                <Link to="/menu"><button >Cancel</button></Link>
-                </div>
-           </form>     
-       </div>
-    </div>
+        <div className="order-page-container">
+            <div className="order-container">
+                <h1 className="order-header">{burgerName}</h1>
+                <form className="order-form"onChange={this.handleChange}>
+                    <h2>Add Ons</h2>
+                    {addOns}
+                    <h2 className="cooking-instructions">Cooking Instructions</h2>
+                    <textarea type="textarea" name="cookingInstructions" value={this.state.cookingInstructions} onChange={this.handleChange}/>
+                    <div className="button-container">
+                    <Link to="/Cart"><button onClick={this.handleSubmit}>Add To Cart</button></Link>
+                    <Link to="/menu"><button >Cancel</button></Link>
+                    </div>
+                </form>     
+            </div>
+        </div>
 )
 }
 }
@@ -121,8 +136,9 @@ const burgerName= this.props.burger[0].name
 const mapStateToProps= state =>{
     return{
     burger: state.order,
-    CartNumber: state.header.itemsInCart
-   
+    CartNumber: state.header.itemsInCart,
+    oldAddOns: state.order[1].editedItemAddOns,
+    oldCookingInstructions: state.order[1].editedItemCookingInstructions
     }
 }
 const mapDispatchToProps= dispatch =>{
