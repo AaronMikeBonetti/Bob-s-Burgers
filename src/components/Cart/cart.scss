@@ -89,7 +89,7 @@ a{
 
 
 .cart-page-container{
-    background: center 1000px url("./images/wood-background.webp");
+   background: white;
     height: 100%;
     padding-top: 60px;
     padding-bottom:250px;
@@ -150,7 +150,7 @@ a{
 @media screen and (min-width:600px){
 
 .cart-page-container{
-    
+    background: center 1000px url("./images/wood-background.webp");
     .cart-container{
         width: 60vw;
         margin: auto;
