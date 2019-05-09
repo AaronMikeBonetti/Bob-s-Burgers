@@ -1,6 +1,7 @@
 .about-page-container{
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    padding-bottom: 40px;
     background: red;
     background-repeat: repeat;
     
@@ -32,9 +33,7 @@
 @media screen and (min-width:500px){
 
 .about-page-container{
-    height: 100%;
-    width: 100%;
-    padding-bottom: 40px;
+    
     
 
     .about-page-image{
