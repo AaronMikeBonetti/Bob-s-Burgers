@@ -1,10 +1,13 @@
 import React, { Component }from "react"
 import "./carousel.scss"
 
-import img1 from "../Carousel/Carousel Image/images/carosuel-burger-1.webp"
-import img2 from "../Carousel/Carousel Image/images/carosuel-burger-2.webp"
-import img3 from "../Carousel/Carousel Image/images/carosuel-burger-3.webp"
-import img4 from "../Carousel/Carousel Image/images/carosuel-burger-4.webp"
+import img1 from "../Carousel/images/burger-kale-carousel.jpg"
+import img2 from "../Carousel/images/burger-bohemian-carousel.jpg"
+import img3 from "../Carousel/images/burger-sweet-home-carousel.jpg"
+import img4 from "../Carousel/images/burger-hamsey-carousel.jpg"
+
+
+
 
 
 
@@ -17,7 +20,7 @@ class Carousel extends Component{
         this.state={
             images: [img1,img2,img3,img4],
             count: 0,
-            imgHeaders: ["The Classic","The Teriyaki","The Hawaiian","The Stacker"],
+            imgHeaders: ['"If Looks Could Kale"','"Bohemian Radishy"','"Sweet Home Avocado"','"Gorden Hamsey"'],
             CarouselOff: false,
             imgTransition1: " img-transition-1 carousel-image",
             imgTransition2: "img-transition-2 carousel-image",

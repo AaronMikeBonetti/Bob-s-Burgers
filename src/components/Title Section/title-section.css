@@ -11,7 +11,7 @@
   height: 100vh;
   width: 100%;
   background-color: red;
-  background-image: url(./images/Title-img.png);
+  background-image: url(./images/Title-img.webp);
   background-size: cover;
   background-position: left;
   overflow: hidden;
@@ -35,14 +35,6 @@
   100% {
     opacity: 1;
   }
-}
-
-.title-container .main-page-loading-screen {
-  background: #00ff2a;
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
 }
 
 .title-container .desktop-sidebar {
@@ -123,8 +115,10 @@
     padding-left: 60px;
     padding-top: 15vh;
     text-align: center;
-    -webkit-animation: content-animation 2s ease-in-out;
-            animation: content-animation 2s ease-in-out;
+    -webkit-animation-name: content-animation;
+            animation-name: content-animation;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
   }
   @-webkit-keyframes content-animation {
     0% {
@@ -140,7 +134,7 @@
     display: block;
     font-size: 4vw;
     color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Londrina Shadow', cursive;
   }
   .title-container .sidebar-header {
     position: relative;
@@ -154,7 +148,7 @@
   .title-container .sidebar-header h1 {
     display: block;
     color: white;
-    padding-top: 8vh;
+    padding-top: 15vh;
     font-size: 70px;
     word-spacing: -50px;
     -webkit-writing-mode: vertical-lr;
@@ -184,8 +178,8 @@
     margin-top: 60px;
     margin-left: 12vw;
     padding: -30px;
-    -webkit-animation: icon-fries-fade-in 2s ease-in;
-            animation: icon-fries-fade-in 2s ease-in;
+    -webkit-animation: icon-fries-fade-in 1.5s ease-in;
+            animation: icon-fries-fade-in 1.5s ease-in;
   }
   @-webkit-keyframes icon-fries-fade-in {
     0% {
@@ -218,8 +212,8 @@
     background-repeat: no-repeat;
     margin-top: 40px;
     margin-left: 12vw;
-    -webkit-animation: icon-burger-fade-in 2.5s ease-in;
-            animation: icon-burger-fade-in 2.5s ease-in;
+    -webkit-animation: icon-burger-fade-in 2s ease-in;
+            animation: icon-burger-fade-in 2s ease-in;
   }
   @-webkit-keyframes icon-burger-fade-in {
     0% {
@@ -252,8 +246,8 @@
     background-repeat: no-repeat;
     margin-top: 40px;
     margin-left: 12vw;
-    -webkit-animation: icon-drink-fade-in 3s ease-in;
-            animation: icon-drink-fade-in 3s ease-in;
+    -webkit-animation: icon-drink-fade-in 2.5s ease-in;
+            animation: icon-drink-fade-in 2.5s ease-in;
   }
   @-webkit-keyframes icon-drink-fade-in {
     0% {
@@ -286,7 +280,7 @@
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row: 1/4;
-    background-image: url(./images/Title-img.png);
+    background-image: url(./images/Title-img.webp);
     background-size: cover;
     background-position: left;
   }

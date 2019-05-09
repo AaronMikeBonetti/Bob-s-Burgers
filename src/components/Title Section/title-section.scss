@@ -6,13 +6,13 @@
     z-index: 0;
     display: grid;
     grid-template-columns: 50% 30% 20%;
-    grid-template-rows: 20% 50% 30%;
+    grid-template-rows: 20% 40% 40%;
     height: 100vh;
     width: 100%;
     background-color: red;
-    background-image: url(./images/Title-img.webp);
+    background-image: url(./images/bob-burgers-title.webp);
     background-size: cover;
-    background-position: left;
+    background-position: 20%;
     overflow: hidden;
     animation: fade-in 2s;
     
@@ -83,33 +83,45 @@
         grid-row: 3/4;
         height: 100%;
         text-align: left;
-        font-size: 4.5vh;
-        color: rgb(251, 251, 251);
+        font-size: 12vw;
+        line-height: 16vw;
+        color: rgb(0, 0, 0);
+        font-family: 'Gloria Hallelujah', cursive;
+        font-weight: 1000;
         padding-left: 20px;
+        span{
+            color: red;
+            font-family: 'Gloria Hallelujah', cursive;
+            font-weight: 1000;
+            
+        }
             
     }
-    .six{
-        display: grid;
-        grid-column: 1/4;
-        grid-row: 2/6;
-        height: 120%;
-        background-image: url("./images/six-mini.png");
-        background-size: cover;
-        background-position: left;
-        
-    }
+    
 }
 
 @media only screen and (min-width: 400px){
     .title-container{
 
     .jumbotron{           
-            padding: 30px;
-            font-size: 7vw;
+            padding: 20px;
+            padding-top: 0px;
+            font-size: 10vw;
+            line-height: 10vw;
     }
-    .six{
-        background-image: url("./images/six.png");
+    
+}
+}
+@media only screen and (min-width: 530px){
+    .title-container{
+
+    .jumbotron{           
+            padding: 20px;
+            padding-top: 0px;
+            font-size: 8vw;
+            line-height: 8vw;
     }
+    
 }
 }
 
@@ -117,7 +129,8 @@
     .title-container{   
     
         .jumbotron{  
-            font-size: 5.5vw;
+            font-size: 6vw;
+            padding-top: 0px;
         }
     }
 }
@@ -153,8 +166,9 @@
             span{
                 display: block;
                 font-size: 4vw;
-                color: white;
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+                color: rgb(255, 255, 255);
+                font-family: 'Londrina Shadow', cursive;
+                font-weight: 1000;
             }
         }
             .sidebar-header{
@@ -166,9 +180,10 @@
                 
             h1{
                 display: block;
-                color: white;
-                padding-top: 15vh;
-                font-size: 70px;
+                color: rgb(255, 255, 255);
+                font-weight: 1000;
+                padding-top: 20vh;
+                font-size: 80px;
                 word-spacing: -50px;
                 writing-mode: vertical-lr;
                 text-orientation: upright
@@ -265,7 +280,7 @@
             display: grid;
             grid-column: 1/4;
             grid-row: 1/4;
-            background-image: url(./images/Title-img.webp);
+            background-image: url(./images/bob-burgers-title.webp);
             background-size: cover;
             background-position: left;
         }
@@ -284,8 +299,10 @@
     .title-container{   
     
         .jumbotron{
-            font-size: 5vw;
-            padding: 20px;
+            width: 60%;
+            line-height: 6vw;
+            font-size: 3vw;
+            
         }
     }
 }

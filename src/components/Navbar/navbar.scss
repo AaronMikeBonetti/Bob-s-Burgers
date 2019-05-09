@@ -3,17 +3,18 @@
     .nav-show{
         position: absolute;
         z-index: 0;
-        top:39px;
+        top:46px;
         left:40%;
         width: 60%;
         height: 150px;
         padding: 3vw;
+        border-right: 2px solid rgba(255, 255, 255, 0);
         border-bottom-left-radius: 10%; 
-        background: rgb(255, 0, 0);
+        background: rgb(251, 255, 0);
         font-size: 10px;
         list-style: none;
         animation: nav-show 0.5s ease-in-out;
-        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.479);
+        box-shadow: -10px 5px 2px rgba(0, 0, 0, 0.479);
         
         @keyframes nav-show {
             0%{
@@ -35,7 +36,7 @@
 
         a{
             text-decoration: none;
-            color: white;
+            color: rgb(0, 0, 0);
             animation: opacity 0.9s ease-in-out;
             
         }
@@ -46,7 +47,10 @@
             margin: 5px;
             width: 60%;
             cursor: pointer;
-            border-bottom: 1vw solid white;
+            border-bottom: 1vw solid rgb(255, 0, 0);
+            font-family: 'Gloria Hallelujah', cursive;
+            font-weight: 1000;
+            line-height: 10px;
             animation: border 0.8s;
             transition: 0.2s transform;
             
@@ -64,7 +68,7 @@
                 
                 
                 100%{
-                   color: white
+                   color: rgb(0, 0, 0)
                    
                 }
                 
@@ -136,7 +140,7 @@
     }
 
     .fa-hamburger-initial{
-        color: white;
+        color: rgb(0, 0, 0);
         font-size: 1.7rem;
         margin-right: 5vw;
         cursor: pointer;
@@ -147,7 +151,7 @@
     }
     
     .fa-hamburger{
-        color: white;
+        color: rgb(0, 0, 0);
         font-size: 1.7rem;
         margin-right: 5vw;
         cursor: pointer;
@@ -186,9 +190,11 @@
         .nav-show{ 
         left:50%;
         width: 50%;
-        height: 220px;
+        height: 200px;
         font-size: 25px;
-        
+        li{
+            padding-bottom: 20px;
+        }       
         @keyframes nav-show {
             0%{
                 height: 0px; 
@@ -214,8 +220,10 @@
    .navbar-container{
         .nav-show{ 
        
-        height: 250px;
-        
+        height: 240px;
+        li{
+            padding: 15px;
+        }
         @keyframes nav-show {
             0%{
                 height: 0px; 

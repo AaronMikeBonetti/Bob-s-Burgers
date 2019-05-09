@@ -36,7 +36,7 @@
         grid-column:1/-1;
         grid-row: 1/1;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.383) 20%,
-        rgba(0, 0, 0, 0.383)), url('./images/lettuce-tomato.webp');
+        rgba(0, 0, 0, 0.383)), url('./images/Bobs-diner.jpg');
         background-size: cover;
         background-position: center;
         color: rgb(255, 255, 255);
@@ -45,16 +45,18 @@
     .box2{
         grid-column:1;
         grid-row: 2;
-        background:rgb(255, 0, 0);
+        background:rgb(255, 8, 0);
+        color: rgb(255, 251, 0);
         line-height: 80px;
+        font-weight: 1000;
         display: flex;
         flex-direction: column;
-        font-family: 'Lobster', cursive;
+        font-family: 'Londrina shadow', cursive;
             a{
                 text-decoration: underline;
             }
             a:hover{
-                color: red;
+                color: rgb(0, 0, 0);
                 background: white;
             }
     }
@@ -65,29 +67,31 @@
         grid-row: 2;
         color: rgb(229, 255, 0);
         background: linear-gradient(to right, rgba(0, 0, 0, 0.376) 20%,
-        rgba(255, 255, 255, 0.308)), url('./images/cheeseburger-black-gloves.webp');
+        rgba(255, 255, 255, 0.308)), url('./images/burger-bohemian.jpg');
         background-size: cover;
-        background-position: center;
+        background-repeat: no-repeat;
+        background-position: bottom;
         
     }
     .box4{
         
         grid-column:1/-1;
         grid-row: 3;
-        color: rgb(229, 255, 0);
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.096) 20%,
-        rgba(255, 255, 255, 0.096)), url('./images/cheese-burger-fries-veg.webp');
+        color: rgb(255, 255, 255);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.281) 20%,
+        rgba(255, 255, 255, 0.096)), url("./images/bob\'s-diner.png");
         background-size: cover;
-        background-position: center;
+        background-position: bottom;
     }
     .box5{
         
         grid-column:1;
         grid-row: 4;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%,
-        rgba(0, 0, 0, 0.089)), url('./images/bread-dough.webp');
+        rgba(0, 0, 0, 0.089)), url('./images/burger-peas.jpg');
         background-size: cover;
         background-position: center;
+        
         a{
             text-decoration: none;
             color:rgba(255, 255, 0, 0);
@@ -95,19 +99,21 @@
         }
     }
     .box6{
-        
         grid-column:2;
         grid-row: 4;
         background:rgb(255, 238, 0);
         padding-right: 10px;
-        font-family: 'Lobster', cursive;
+        font-family: 'Londrina Shadow', cursive;
+        font-weight: 800;
         text-align: right;
         height: 100%;
         
         .fa-angle-double-left{
+            
             font-size: 12vw;
             animation: pulse-arrow 1.5s infinite ease-in-out;
             width: 100%;
+            
             padding-right: 10px;
             
         }
@@ -125,10 +131,10 @@
         grid-column:1/-1;
         grid-row: 5;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.563) 20%,
-        rgba(0, 0, 0, 0.099)), url('./images/grill.webp');
+        rgba(0, 0, 0, 0.099)), url('./images/bobs-grill.jpg');
         background-size: cover;
         background-position: center;
-        color: red;
+        color: rgb(255, 255, 255);
         font-size: 6vw;
     }
     
@@ -137,7 +143,7 @@
         grid-column:2;
         grid-row: 6;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%,
-        rgba(0, 0, 0, 0.089)), url("./images/portabella-burger.webp");
+        rgba(0, 0, 0, 0.089)), url("./images/burger-kale.jpg");
         background-size: cover;
         background-position: center;
         color: yellow;
@@ -147,9 +153,9 @@
         grid-column:1;
         grid-row: 6/8;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%,
-        rgba(0, 0, 0, 0.089)), url('./images/burger-soada.webp');
+        rgba(0, 0, 0, 0.089)), url('./images/fataish-sign.jpg');
         background-size: cover;
-        background-position: left;
+        background-position: center;
         color: white;
         font-size: 7vw;
         p{
@@ -157,7 +163,7 @@
             width: 80%;
             margin: auto;
             padding: 40px;
-            font-family: 'Lobster', cursive;
+            font-family: 'Londrina Shadow', cursive;
         }
     }
     .box10{
@@ -165,7 +171,7 @@
         grid-column:2;
         grid-row: 7;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%,
-        rgba(0, 0, 0, 0.089)), url('./images/cheese-burger-close-up.webp');
+        rgba(0, 0, 0, 0.089)), url('./images/burger-olive.jpg');
         background-size: cover;
         background-position: center;
         color: yellow;
@@ -251,6 +257,7 @@
         grid-column:3/4;
         grid-row: 3;
         padding-right: 30px;
+        font-size: 3vw;
         
     }
     .box7{

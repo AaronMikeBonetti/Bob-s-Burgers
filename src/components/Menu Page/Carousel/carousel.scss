@@ -7,17 +7,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-bottom: 1vw solid red;
-    background: white;
+    background: rgb(255, 255, 255);
     
 
     span{
         position: absolute;
         z-index: 2;
         font-size: 8vw;
+        font-weight: 1000;
+        background: rgb(255, 255, 255);
+        border: 2px solid red;
+        padding: 6px;
         top: 40vh;
         left: 20px;
-        color: white;
+        color: rgb(255, 0, 0);
         animation: header-scale 3000ms ease-in-out infinite ;
     }
     @keyframes header-scale {
@@ -39,6 +42,7 @@
         margin-top: 40px;
         background-position: center;
         background-size: cover;
+        
     }
 
     
@@ -84,6 +88,12 @@
         position: absolute;
         top:20vh;
         right: 0;
+        
+    }
+    .fa-arrow-circle-left{
+        position: absolute;
+        top:20vh;
+        left: 0;
         
     }
     .fa-arrow-circle-left:hover,
@@ -134,9 +144,12 @@
 @media screen and (min-width:900px){
     .carousel-container{
         height: 80vh;
+        width: 80vw;
+        margin: auto;
         
         .carousel-image{   
             height: 80vh;
+            width: 80vw;
             }
 
         span{

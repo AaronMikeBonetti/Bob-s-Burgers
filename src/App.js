@@ -4,11 +4,13 @@ import {createStore, applyMiddleware} from "redux"
 import { rootReducer } from "./reducers/rootReducer"
 import { connect } from "react-redux"
 import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
 import Home from "./components/Home"
 import Menu from "./components/Menu Page/Menu/Menu"
 import Order from './components/Order/Order';
 import Cart from "./components/Cart/Cart"
 import Checkout from "./components/Checkout/Checkout"
+import About from "./components/About/About"
 
 
 
@@ -50,8 +52,9 @@ function App(){
       <Route path="/menu" component={Menu}/>
       <Route path="/order" component={Order}/>
       <Route path="/cart" component={Cart}/>
+      <Route path="/about" component={About}/>
       <Route path="/checkout" component={Checkout}/>
-      
+      <Footer/>
       </div>
       </BrowserRouter>
     )

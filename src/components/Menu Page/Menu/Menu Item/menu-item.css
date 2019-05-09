@@ -65,6 +65,7 @@
   border: none;
   text-align: right;
   outline: none;
+  cursor: pointer;
 }
 
 .menu-item-container .menu-item-button .fa-plus-square {

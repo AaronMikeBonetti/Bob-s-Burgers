@@ -6,7 +6,7 @@ class Navbar extends Component{
     constructor(){
         super()
         this.state={
-            navLinks:["Home","Menu","Cart"],
+            navLinks:["Home","Menu","Cart","About"],
             classNames:{
                 navButton:"fas fa-hamburger",
                 navDisplay: "nav-hidden"

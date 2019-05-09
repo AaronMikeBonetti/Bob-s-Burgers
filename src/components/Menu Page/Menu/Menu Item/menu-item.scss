@@ -10,32 +10,37 @@
     margin: auto;
     background: red;
     border-bottom: 2px solid rgba(255, 255, 255, 0.555);
-
-    .menu-item-name{
-        text-decoration: underline; 
+    a{
+        text-decoration: none;
+    }
+    .menu-item-name{ 
         font-size: 20px;
         text-align: left;
-        flex-grow: 2;
+        flex-basis: 100%;
+        width: 100%;
         color: black;
+        
         
     }
     .menu-item-name:hover{
         color: white;
     }
     .menu-description{
-        flex-grow: 2;
+        flex-basis: 100%;
         align-self: center;
-        font-size: 11px;
+        font-size: 20px;
         padding: 2vw;
         height: 50px;
         color: white;  
     }
     .menu-item-price{
-        flex-grow: 1;
+        flex-grow: 2;
         justify-items: center;
         text-align: left;
         padding: 2vw 0 0 6vw;
         font-size: 20px;
+        font-family: 'Gloria Hallelujah', cursive;
+        font-weight: 1000;
 
     }
     .menu-item-button{
@@ -78,9 +83,7 @@
     .menu-item-button{
         
         .fa-plus-square{
-            
-            padding: 8vw 0 0 0;
-            
+            padding: 8vw 0 0 0;  
         }
     } 
 }

@@ -13,35 +13,36 @@ class Menu extends Component{
             item:{
                 burgers:[
                     {
-                        name: "Classic",
-                        description:"Lettuce, cheese, bacon, beef. Everything you need, nothing you don't.",
+                        name: "If Looks Could Kale",
+                        description:"Heres looking at you, burger. (comes with kale)",
                         price: 6.49
                     },
                     {
-                        name: "Southwestern",
-                        description:"Need something with a little kick? Lettuce, pepper jack, jalapenos, all with our house made sweet and spicy ranch.",
+                        name: "Bohemian Radishy",
+                        description:"Her majesty, Queen of burgers. (comes with radishes)",
                         price: 7.29
                     },
                     {
-                        name: "Teriyaki",
-                        description:"Sweet and tangy, tomato, onion, pineapple, American cheese and bbq sauce.",
+                        name: "Sweet Home Avocado",
+                        description:"Roll Tide! in to taste this burger. (comes with avocado)",
                         price: 8.49
                     },
                     {
-                        name: "Hawaiian",
-                        description:"poultry and beef, never tasted so good, gilled chicken breast, lettuce, tomato, american cheese, spicy mayo.",
+                        name: "Gorden Hamsey",
+                        description:"Each burger is personally insulted for juiciness. (comes with slices of ham)",
                         price: 7.99
                     },
                     {
-                        name: "Stacker",
-                        description:"When one is never enough. Comes with 2 paddies, 4 buns, all business! lettuce, onions, american cheese and our special sauce.",
+                        name: "Olive And Let Die",
+                        description:"The names Burger, James burger (comes with olives)",
                         price: 10.79
                     },
                     {
-                        name: "Porto",
-                        description:"Meaty & juicy, marinated portobello mushrooms, red peppers, provolone on a grilled patty. ",
+                        name: "Peas And Thank Yous",
+                        description:"This burgers got manners so you don't have to. (comes with peas)",
                         price: 8.79
                     },
+                    
                     
                 ]
                 

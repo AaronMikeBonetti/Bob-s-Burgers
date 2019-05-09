@@ -16,18 +16,18 @@ class MenuSection extends Component{
         return(
             <div className="menu-container">
             
-                <div className="box1">We Use Only The Freshest Ingredients!</div>
+                <div className="box1">Family owned and operated ( mostly )</div>
                 <div className="box2">See What's Cooking...
                 <Link to="/menu" className="box-link">Menu</Link>
                 </div>
-                <div className="box3"><Link to="/menu">"The Hawaiian"</Link></div>
-                <div className="box4"><Link to="/menu">"The Southwestern"</Link></div>
+                <div className="box3"><Link to="/menu">"Bohemian Radishy"</Link></div>
+                <div className="box4">Classic American style diner.</div>
                 <div className="box5"><Link to="/menu">&&&&&&</Link></div>
-                <div className="box6"><i className="fas fa-angle-double-left"></i>Handmade buns, baked daily.</div>
+                <div className="box6"><i className="fas fa-angle-double-left"></i>Burger of The Day:  "Peas and Thank You"</div>
                 <div className="box7">Grilled to perfection,<br/> any way you want it.</div>
-                <div className="box8"><Link to="/menu">"The Porto"</Link></div>
+                <div className="box8"><Link to="/menu">"If Looks Could Kale"</Link></div>
                 <div className="box9"><p>Hungry? You've come to the right place.</p></div>
-                <div className="box10"><Link to="/menu">"The Classic"</Link></div>
+                <div className="box10"><Link to="/menu">"Olive And Let Die"</Link></div>
                 
                  
             </div>

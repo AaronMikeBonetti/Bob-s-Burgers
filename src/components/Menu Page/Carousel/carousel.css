@@ -7,6 +7,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: 1vw solid red;
+  background: white;
 }
 
 .carousel-container span {
@@ -124,10 +125,11 @@
   position: absolute;
   z-index: 2;
   font-size: 30px;
-  padding: 5px;
+  padding-left: 1vw;
   color: red;
   top: 20vh;
   opacity: 1;
+  cursor: pointer;
 }
 
 .carousel-container .fa-arrow-circle-right {
@@ -153,11 +155,23 @@
   .carousel-container .fa-arrow-circle-left, .carousel-container .fa-arrow-circle-right {
     position: absolute;
     z-index: 2;
-    font-size: 5vw;
+    font-size: 3vw;
     padding: 10px;
-    color: red;
+    color: white;
+    background: red;
     top: 30vh;
     opacity: 1;
+  }
+  .carousel-container .fa-arrow-circle-left:hover, .carousel-container .fa-arrow-circle-right:hover {
+    color: black;
+  }
+  .carousel-container .fa-arrow-circle-right {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  .carousel-container .fa-arrow-circle-left {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
   }
   .carousel-container span {
     position: absolute;

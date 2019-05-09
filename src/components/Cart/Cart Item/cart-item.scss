@@ -6,21 +6,22 @@
     font-size: 1rem;
     padding: 30px 10%;
     margin:20px;
-    border: 6px solid red;
+    border: 6px solid rgb(0, 0, 0);
     border-radius: 5%;
-    background: rgb(255, 255, 255);
+    background: rgb(255, 0, 0);
     .item-name{
         padding-left: 5%;
         flex-grow: 1;
-        color: red;
+        color: rgb(0, 0, 0);
         font-size: 1rem;
     }
     .item-price{
-        
+        color: rgb(255, 255, 255);
         padding-right: 40px;
+        font-size: 1.5rem;
     }
     .item-addons{
-        color: black;
+        color: rgb(255, 255, 255);
         flex-basis: 100vw;
         padding: 15px;
         font-size: 0.7rem;
@@ -31,14 +32,14 @@
         font-size: 0.7rem;
     }
     span{
-        color:red;
+        color: rgb(0, 0, 0);
     }
     .item-buttons button{
         padding: 5px;
         margin: 10px;
         background: red;
         outline: none;
-        border: none;
+        border: 1px solid white;
         cursor: pointer;
         color: rgb(255, 255, 255);
     }
