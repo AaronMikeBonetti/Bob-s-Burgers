@@ -6,6 +6,7 @@ import {Link} from "react-router-dom"
 function CartItem(props){
     
     const endOfAddOnsList = props.addOns.length - 1
+    console.log(endOfAddOnsList)
     let count = 0
      
         return (
@@ -13,7 +14,9 @@ function CartItem(props){
                 <div className="item-name">{props.item}</div>
                 <div className="item-price">{`$${props.price}`}</div>
                 <div className="item-addons"><span>Add-Ons: </span>
-                {props.addOns.map(addOn=>{                  
+                {props.addOns.map(addOn=>{                  if(addOn===""){
+                    return ""
+                }
                     if(count === endOfAddOnsList ){
                         return ` ${addOn}`}
                     else{

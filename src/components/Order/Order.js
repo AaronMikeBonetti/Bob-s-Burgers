@@ -6,6 +6,7 @@ import {addItemToCart} from "../../actions/action-creators";
 import { Link } from "react-router-dom"
 
 
+
 class Order extends Component{
     constructor(){
         super()
@@ -13,11 +14,6 @@ class Order extends Component{
             
             addOns:[
                 "Ketchup","Mayo","Mustard","Pickles","Onions"
-            // {name:'Ketchup',value:false},
-            // {name:'Mayo',value:false},
-            // {name:'Mustard',value:false},
-            // {name:'Pickles',value:false},
-            // {name:'Onions',value:false}
             ],
             cookingInstructions:"",
             Ketchup:false,
@@ -29,29 +25,51 @@ class Order extends Component{
         
         this.handleChange=this.handleChange.bind(this)
         this.handleSubmit=this.handleSubmit.bind(this)
-        this.handleItemEditState=this.handleItemEditState.bind(this)
-        
+        this.handleDefaultChecked=this.handleDefaultChecked.bind(this)
+        this.handleEditItemState=this.handleEditItemState.bind(this)
     }
     
     componentDidMount(){
         window.scrollTo(0,0)
-        this.handleItemEditState()
+        
+        this.handleEditItemState()
+        
         
     } 
 
-    handleItemEditState(){
-        // const [Ketchup,Mayo,Pickles,Mustard,Onions]=this.props.oldAddOns 
-        
-        this.setState(prevState=>{
-            return{
+    handleEditItemState(){
+        //Directly transfer the data from oldCooking to this state.
+        this.setState({
+            cookingInstructions:this.props.oldCookingInstructions
+        })
+        //Deconstructed addons in state
+        const { addOns } = this.state
+        //Spread the oldAddOns and the state addOns into one array 
+        const combinedArray = [...addOns,...this.props.oldAddOns]
+        //Created a new array that parses the data for only items that were duplicates
+        const filteredArray = combinedArray.filter((item,index) => {
+            return combinedArray.indexOf(item) !== index
+        });
+        //Return setState of all the items in the array to their respected values 
+        return filteredArray.forEach(item=>{
+            this.setState({
+                [item]:item
+            })
+        })    
+    }
 
-                // Ketchup:Ketchup?true:false,
-                // Mayo:Mayo?true:false,
-                // Pickles:Pickles?true:false,
-                // Mustard:Mustard?true:false,
-                // Onions:Onions?true:false,
-                cookingInstructions: this.props.oldCookingInstructions
-        }})
+    
+
+    handleDefaultChecked(name){
+        let value = false
+        this.props.oldAddOns.forEach(item=>{
+            if(item===name){
+                value=true
+            }  
+        })
+        return value
+            
+        
     }
 
 
@@ -64,13 +82,14 @@ handleChange(e){
     type === "checkbox" ? this.setState(() => {
         return{   
         //I set the value of name to either false or the name so I could more easily parse the data sent to the store.       
-        [name]: checked  ? name : null             
+        [name]: checked  ? name : ""            
     }
     }):
     this.setState({        
         [name]: value,
         
     })
+    
 }
 
 
@@ -107,8 +126,9 @@ handleSubmit(){
 render(){
     console.log(this.state)
 const addOns= this.state.addOns.map(addOn=> 
-    <AddOns className="add-ons" key={addOn} name={addOn} onChange={this.handleChange}/>    
+    <AddOns className="add-ons" key={addOn} name={addOn} onChange={this.handleChange} defaultChecked={this.handleDefaultChecked(addOn)}/>    
 )
+
 
 const burgerName= this.props.burger[0].name
 
