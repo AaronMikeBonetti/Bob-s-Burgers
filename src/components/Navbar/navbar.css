@@ -1,19 +1,20 @@
 .navbar-container .nav-show {
   position: absolute;
   z-index: 0;
-  top: 39px;
+  top: 46px;
   left: 40%;
   width: 60%;
-  height: 150px;
+  height: 180px;
   padding: 3vw;
+  border-right: 2px solid rgba(255, 255, 255, 0);
   border-bottom-left-radius: 10%;
-  background: red;
+  background: #fbff00;
   font-size: 10px;
   list-style: none;
   -webkit-animation: nav-show 0.5s ease-in-out;
           animation: nav-show 0.5s ease-in-out;
-  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.479);
-          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.479);
+  -webkit-box-shadow: -10px 5px 2px rgba(0, 0, 0, 0.479);
+          box-shadow: -10px 5px 2px rgba(0, 0, 0, 0.479);
 }
 
 @-webkit-keyframes nav-show {
@@ -27,7 +28,7 @@
     font-size: 0px;
   }
   100% {
-    height: 150px;
+    height: 180px;
     font-size: 3.5vw;
   }
 }
@@ -43,14 +44,14 @@
     font-size: 0px;
   }
   100% {
-    height: 150px;
+    height: 180px;
     font-size: 3.5vw;
   }
 }
 
 .navbar-container .nav-show a {
   text-decoration: none;
-  color: white;
+  color: black;
   -webkit-animation: opacity 0.9s ease-in-out;
           animation: opacity 0.9s ease-in-out;
 }
@@ -61,7 +62,10 @@
   margin: 5px;
   width: 60%;
   cursor: pointer;
-  border-bottom: 1vw solid white;
+  border-bottom: 1vw solid red;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-weight: 1000;
+  line-height: 10px;
   -webkit-animation: border 0.8s;
           animation: border 0.8s;
   -webkit-transition: 0.2s -webkit-transform;
@@ -78,7 +82,7 @@
     color: rgba(255, 255, 255, 0);
   }
   100% {
-    color: white;
+    color: black;
   }
 }
 
@@ -90,7 +94,7 @@
     color: rgba(255, 255, 255, 0);
   }
   100% {
-    color: white;
+    color: black;
   }
 }
 
@@ -180,7 +184,7 @@
 }
 
 .navbar-container .fa-hamburger-initial {
-  color: white;
+  color: black;
   font-size: 1.7rem;
   margin-right: 5vw;
   cursor: pointer;
@@ -192,7 +196,7 @@
 }
 
 .navbar-container .fa-hamburger {
-  color: white;
+  color: black;
   font-size: 1.7rem;
   margin-right: 5vw;
   cursor: pointer;
@@ -253,8 +257,11 @@
   .navbar-container .nav-show {
     left: 50%;
     width: 50%;
-    height: 220px;
+    height: 240px;
     font-size: 25px;
+  }
+  .navbar-container .nav-show li {
+    padding-bottom: 20px;
   }
   @-webkit-keyframes nav-show {
     0% {
@@ -267,7 +274,7 @@
       font-size: 0px;
     }
     100% {
-      height: 220px;
+      height: 240px;
       font-size: 3.5vw;
     }
   }
@@ -282,7 +289,7 @@
       font-size: 0px;
     }
     100% {
-      height: 220px;
+      height: 240px;
       font-size: 3.5vw;
     }
   }
@@ -290,7 +297,10 @@
 
 @media (min-width: 800px) {
   .navbar-container .nav-show {
-    height: 250px;
+    height: 270px;
+  }
+  .navbar-container .nav-show li {
+    padding: 15px;
   }
   @-webkit-keyframes nav-show {
     0% {
@@ -303,7 +313,7 @@
       font-size: 0px;
     }
     100% {
-      height: 250px;
+      height: 270px;
       font-size: 3.5vw;
     }
   }
@@ -318,7 +328,7 @@
       font-size: 0px;
     }
     100% {
-      height: 250px;
+      height: 270px;
       font-size: 3.5vw;
     }
   }

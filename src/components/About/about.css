@@ -1,0 +1,34 @@
+.about-page-container {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 40px;
+  background: red;
+  background-repeat: repeat;
+}
+
+.about-page-container .about-page-image {
+  height: 500px;
+  width: 100%;
+  padding-top: 220px;
+  background: url("./images/burgers-about-page.webp");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.about-page-container .about-page-content-container {
+  width: 40vw;
+  margin: 0px auto;
+  border: 2px solid white;
+}
+
+.about-page-container .about-page-content-container p {
+  background: yellow;
+  color: black;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1vw;
+  font-weight: 1000;
+  text-align: center;
+  padding: 20px;
+}
+/*# sourceMappingURL=about.css.map */

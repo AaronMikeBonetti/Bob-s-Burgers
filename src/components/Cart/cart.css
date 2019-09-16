@@ -6,7 +6,7 @@
 
 .empty-cart-page-container .empty-cart {
   margin: 40px auto;
-  height: 60vw;
+  height: 40vw;
   width: 60vw;
   background: rgba(255, 255, 255, 0.671);
   text-align: center;
@@ -40,7 +40,7 @@
 @media screen and (min-width: 500px) {
   .empty-cart-page-container .empty-cart {
     margin: 40px auto;
-    height: 60vw;
+    height: 40vh;
     width: 60vw;
     background: rgba(255, 255, 255, 0.671);
     text-align: center;
@@ -65,7 +65,7 @@
 
 @media screen and (min-width: 900px) {
   .empty-cart-page-container .empty-cart {
-    height: 40vw;
+    height: 60vh;
     width: 60vw;
     padding: 8vw;
     font-size: 4vw;
@@ -114,6 +114,8 @@
   color: black;
   margin-left: 40%;
   margin-right: 10%;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-weight: 1000;
   margin: 10px 10% 50px 40%;
   padding: 10px;
   border-top: 2px solid black;

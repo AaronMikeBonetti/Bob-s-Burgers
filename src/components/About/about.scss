@@ -7,26 +7,26 @@
     
 
     .about-page-image{
-        height: 0%;
+        height: 500px;
         width: 100%;
-        padding-top: 350px;
-        background: url("./images/burgers-about-page.jpg");
+        padding-top: 220px;
+        background: url("./images/burgers-about-page.webp");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
     .about-page-content-container{
-        width: 80vw;
+        width: 40vw;
         margin: 0px auto;
         border: 2px solid white;
         p{
             background:rgb(255, 255, 0);
             color: black;
             font-family: 'Gloria Hallelujah', cursive;
-            font-size: 5vw;
+            font-size: 1vw;
             font-weight: 1000;
             text-align: center;
-            padding: 30px;
+            padding: 20px;
         }
     }
 }
@@ -37,15 +37,14 @@
     
 
     .about-page-image{
-        height: 0%;
-        width: 80vw;
-        padding-top: 65vw;
-        margin:auto;
+        
+        
+        
         
     }
     .about-page-content-container{
         p{
-            font-size: 4vw;   
+               
         }
     }
 }
@@ -56,16 +55,10 @@
     
     
 
-    .about-page-image{
-        height: 0%;
-        width: 80vw;
-        padding-top: 65vw;
-        margin:auto;
-        
-    }
+    
     .about-page-content-container{
         p{
-            font-size: 5vw;   
+               
         }
     }
 }

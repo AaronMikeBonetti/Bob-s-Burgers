@@ -83,6 +83,8 @@
 
 .checkout-container .checkout-form-container .order-total-container h1 {
   padding: 1vw;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-weight: 1000;
 }
 
 @media screen and (min-width: 600px) {

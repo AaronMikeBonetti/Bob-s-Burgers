@@ -13,9 +13,9 @@
   font-size: 1rem;
   padding: 30px 10%;
   margin: 20px;
-  border: 6px solid red;
+  border: 6px solid black;
   border-radius: 5%;
-  background: white;
+  background: red;
 }
 
 .item .item-name {
@@ -23,16 +23,18 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  color: red;
+  color: black;
   font-size: 1rem;
 }
 
 .item .item-price {
+  color: white;
   padding-right: 40px;
+  font-size: 1.5rem;
 }
 
 .item .item-addons {
-  color: black;
+  color: white;
   -ms-flex-preferred-size: 100vw;
       flex-basis: 100vw;
   padding: 15px;
@@ -40,6 +42,7 @@
 }
 
 .item .item-cooking-instructions {
+  color: white;
   -ms-flex-preferred-size: 100vw;
       flex-basis: 100vw;
   padding: 0px 15px 15px 15px;
@@ -47,7 +50,7 @@
 }
 
 .item span {
-  color: red;
+  color: black;
 }
 
 .item .item-buttons button {
@@ -55,7 +58,7 @@
   margin: 10px;
   background: red;
   outline: none;
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
   color: white;
 }

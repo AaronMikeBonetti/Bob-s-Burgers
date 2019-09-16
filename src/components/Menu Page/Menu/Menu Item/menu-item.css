@@ -19,14 +19,19 @@
   border-bottom: 2px solid rgba(255, 255, 255, 0.555);
 }
 
+.menu-item-container a {
+  text-decoration: none;
+}
+
 .menu-item-container .menu-item-name {
-  text-decoration: underline;
   font-size: 20px;
   text-align: left;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
   color: black;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-item-container .menu-item-name:hover {
@@ -34,26 +39,27 @@
 }
 
 .menu-item-container .menu-description {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-size: 11px;
+  font-size: 20px;
   padding: 2vw;
   height: 50px;
   color: white;
 }
 
 .menu-item-container .menu-item-price {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   justify-items: center;
   text-align: left;
   padding: 2vw 0 0 6vw;
   font-size: 20px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-weight: 1000;
 }
 
 .menu-item-container .menu-item-button {
@@ -103,7 +109,7 @@
 
 @media screen and (min-width: 1000px) {
   .menu-item-container {
-    width: 90%;
+    width: 50%;
     padding: 2vw;
   }
 }
