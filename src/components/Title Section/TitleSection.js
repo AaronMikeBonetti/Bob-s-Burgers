@@ -5,13 +5,17 @@ class TitleSection extends Component{
     constructor(){
         super()
         this.state={
-                  
+                  menuSectionClass: null
         }
     }
+    componentDidMount(){
+        this.setState({menuSectionClass: document.getElementById('menu-section-component')})
+    }
+
     
 
     render(){
-        
+        console.log(this.state.menuSection)
         return(
             
             <div className='title-container'>
@@ -26,7 +30,7 @@ class TitleSection extends Component{
                     <div className='icon-burger'></div>
                     <div className='icon-drink'></div>
                     </div>
-                <button onClick={()=>window.scrollTo(0,780)} className='call-to-action-button'>
+                <button onClick={()=>this.state.menuSectionClass.scrollIntoView()} className='call-to-action-button'>
                     <i className='fas fa-angle-down'></i>
                     <i className='fas fa-angle-down'></i>
                     <i className='fas fa-angle-down'></i>

@@ -14,7 +14,7 @@ class MenuSection extends Component{
     render(){
 
         return(
-            <div className='menu-container' id='menu-section-component'>
+            <div className='menu-container'  id='menu-section-component'>
                 <div className='box1'>Family owned and operated ( mostly )</div>
                 <div className='box2'>See What's Cooking...
                 <Link to='/menu'>Menu</Link>

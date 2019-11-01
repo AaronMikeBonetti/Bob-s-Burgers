@@ -48,7 +48,7 @@
         font-weight: 1000;
         display: flex;
         flex-direction: column;
-        padding: 40px;
+        padding: 20px;
         font-family: map-get($fonts, 2);
         
         a{
@@ -64,7 +64,6 @@
             font-family: map-get($fonts, 1);
             border: 2px solid rgb(0, 0, 0);
             line-height: 0px;
-            
         }
         a:hover{
             background: rgb(255, 255, 255);
