@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .about-page-container{
     height: 100%;
     width: 100%;
@@ -22,7 +24,7 @@
         p{
             background:rgb(255, 255, 0);
             color: black;
-            font-family: 'Gloria Hallelujah', cursive;
+            font-family: map-get($fonts , 2 );
             font-size: 1vw;
             font-weight: 1000;
             text-align: center;

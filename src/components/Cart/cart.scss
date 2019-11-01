@@ -1,5 +1,5 @@
 // :::::::::::::Empty Cart Displayed:::::::::::::
-
+@import '../../index.scss';
 
 .empty-cart-page-container{
 padding-top: 40px;
@@ -121,7 +121,7 @@ a{
         color: rgb(0, 0, 0);
         margin-left: 40%;
         margin-right: 10%;
-        font-family: 'Gloria Hallelujah', cursive;
+        font-family: map-get($fonts , 2 );
             font-weight: 1000;
         margin: 10px 10% 50px 40%;
         padding: 10px;
@@ -190,14 +190,11 @@ a{
         
         .cart-button-container{
             width:100%;
-            
             .cart-button{
             width: 12vw;
             margin:20px 1vw;
             padding: 1vw 0vw;
             font-size: 2vw;
-            
-            
             }
         }
        

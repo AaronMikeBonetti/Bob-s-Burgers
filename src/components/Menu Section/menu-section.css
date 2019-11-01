@@ -1,13 +1,23 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .menu-container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
   background: red;
+  color: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-auto-rows: 50vw;
+  font-family: "Lobster";
+  font-weight: 1000;
 }
 
 .menu-container div {
@@ -28,20 +38,10 @@
 
 .menu-container div a {
   text-decoration: none;
-  color: yellow;
+  color: white;
   padding: 6vw;
   -webkit-transition: all .5s;
   transition: all .5s;
-}
-
-.menu-container div:hover {
-  -webkit-filter: brightness(1.3);
-          filter: brightness(1.3);
-}
-
-.menu-container div:hover a:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
 }
 
 .menu-container .box1 {
@@ -49,8 +49,8 @@
   grid-column: 1/-1;
   -ms-grid-row: 1;
   grid-row: 1/1;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.383)), to(rgba(0, 0, 0, 0.383))), url("./images/Bobs-diner.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.383) 20%, rgba(0, 0, 0, 0.383)), url("./images/Bobs-diner.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0.527)), to(rgba(0, 0, 0, 0.301))), url("./images/Bobs-diner.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.527) 50%, rgba(0, 0, 0, 0.301)), url("./images/Bobs-diner.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -62,7 +62,6 @@
   -ms-grid-row: 2;
   grid-row: 2;
   background: #ff0800;
-  color: #fffb00;
   line-height: 80px;
   font-weight: 1000;
   display: -webkit-box;
@@ -72,16 +71,29 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Londrina shadow', cursive;
+  padding: 40px;
+  font-family: "Staatliches";
 }
 
 .menu-container .box2 a {
-  text-decoration: underline;
+  background: black;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  margin-top: 0px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  width: 60%;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Lobster";
+  border: 2px solid black;
+  line-height: 0px;
 }
 
 .menu-container .box2 a:hover {
-  color: black;
   background: white;
+  color: black;
 }
 
 .menu-container .box3 {
@@ -121,7 +133,7 @@
 
 .menu-container .box5 a {
   text-decoration: none;
-  color: rgba(255, 255, 0, 0);
+  color: white;
   padding: 60px;
 }
 
@@ -132,10 +144,20 @@
   grid-row: 4;
   background: #ffee00;
   padding-right: 10px;
-  font-family: 'Londrina Shadow', cursive;
   font-weight: 800;
   text-align: right;
   height: 100%;
+  color: black;
+  font-family: "Staatliches";
+}
+
+.menu-container .box6 span {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: red;
+  color: white;
+  font-family: "Lobster";
 }
 
 .menu-container .box6 .fa-angle-double-left {
@@ -162,12 +184,13 @@
   grid-column: 1/-1;
   -ms-grid-row: 5;
   grid-row: 5;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.563)), to(rgba(0, 0, 0, 0.099))), url("./images/bobs-grill.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.563) 20%, rgba(0, 0, 0, 0.099)), url("./images/bobs-grill.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0.563)), to(rgba(0, 0, 0, 0.099))), url("./images/bobs-grill.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.563) 30%, rgba(0, 0, 0, 0.099)), url("./images/bobs-grill.jpg");
   background-size: cover;
   background-position: center;
   color: white;
   font-size: 6vw;
+  font-family: "Lobster";
 }
 
 .menu-container .box8 {
@@ -202,7 +225,6 @@
   width: 80%;
   margin: auto;
   padding: 40px;
-  font-family: 'Londrina Shadow', cursive;
 }
 
 .menu-container .box10 {
@@ -218,52 +240,6 @@
   font-size: 7vw;
 }
 
-.menu-container .box-link {
-  -webkit-animation: box-link-pulse 2s infinite;
-          animation: box-link-pulse 2s infinite;
-  padding: 1vw;
-  width: 20vw;
-  height: 15vw;
-  line-height: 12vw;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 5vw;
-  border-radius: 5%;
-}
-
-@-webkit-keyframes box-link-pulse {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes box-link-pulse {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 @media only screen and (min-width: 900px) {
   .menu-container {
     width: 100%;
@@ -272,9 +248,9 @@
     grid-auto-rows: 30vw;
   }
   .menu-container div {
-    font-size: 4vw;
-    border-top: 2px solid white;
-    border-right: 2px solid white;
+    font-size: 2.5vw;
+    border-top: 4px solid black;
+    border-right: 4px solid black;
   }
   .menu-container .box1 {
     -ms-grid-column: 1;
@@ -318,7 +294,6 @@
     -ms-grid-row: 3;
     grid-row: 3;
     padding-right: 30px;
-    font-size: 3vw;
   }
   .menu-container .box7 {
     -ms-grid-column: 1;
@@ -326,7 +301,7 @@
     grid-column: 1/3;
     -ms-grid-row: 4;
     grid-row: 4;
-    font-size: 4vw;
+    font-size: 2.5vw;
   }
   .menu-container .box8 {
     -ms-grid-column: 1;
@@ -334,7 +309,7 @@
     grid-column: 1/2;
     -ms-grid-row: 2;
     grid-row: 2;
-    font-size: 4vw;
+    font-size: 2.5vw;
   }
   .menu-container .box9 {
     -ms-grid-column: 4;
@@ -343,7 +318,7 @@
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     grid-row: 2/4;
-    font-size: 4vw;
+    font-size: 2.5vw;
   }
   .menu-container .box10 {
     -ms-grid-column: 3;
@@ -351,23 +326,7 @@
     grid-column: 3/5;
     -ms-grid-row: 4;
     grid-row: 4;
-    font-size: 4vw;
-  }
-  .menu-container .box-link {
-    -webkit-animation: box-link-pulse 2s infinite;
-            animation: box-link-pulse 2s infinite;
-    padding: 1vw;
-    margin-top: 20px;
-    width: 15vw;
-    height: 8vw;
-    line-height: 5vw;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    font-size: 4vw;
-    border-radius: 5%;
+    font-size: 2.5vw;
   }
 }
 /*# sourceMappingURL=menu-section.css.map */

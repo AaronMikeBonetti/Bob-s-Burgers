@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .about-page-container {
   height: 100%;
   width: 100%;
@@ -25,7 +32,7 @@
 .about-page-container .about-page-content-container p {
   background: yellow;
   color: black;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah";
   font-size: 1vw;
   font-weight: 1000;
   text-align: center;

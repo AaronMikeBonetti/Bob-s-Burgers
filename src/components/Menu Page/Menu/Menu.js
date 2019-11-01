@@ -19,27 +19,27 @@ class Menu extends Component{
                     },
                     {
                         name: "Bohemian Radishy",
-                        description:"Her majesty, Queen of burgers. (comes with radishes)",
+                        description:"Her Majesty, Queen of Burgers. (comes with radishes)",
                         price: 7.29
                     },
                     {
                         name: "Sweet Home Avocado",
-                        description:"Roll Tide! in to taste this burger. (comes with avocado)",
+                        description:"Roll Tide! in to Taste this Burger. (Comes with Avocado)",
                         price: 8.49
                     },
                     {
                         name: "Gorden Hamsey",
-                        description:"Each burger is personally insulted for juiciness. (comes with slices of ham)",
+                        description:"Each Burger is Personally Insulted for Juiciness. (Comes with Slices of Ham)",
                         price: 7.99
                     },
                     {
                         name: "Olive And Let Die",
-                        description:"The names Burger, James burger (comes with olives)",
+                        description:"The Names' Burger, James Burger (comes with olives)",
                         price: 10.79
                     },
                     {
                         name: "Peas And Thank Yous",
-                        description:"This burgers got manners so you don't have to. (comes with peas)",
+                        description:"This Burgers Got Manners so You Don't Have to. (Comes with Peas)",
                         price: 8.79
                     },
                     

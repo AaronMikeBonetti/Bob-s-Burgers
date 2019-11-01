@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar-container .nav-show {
   position: absolute;
   z-index: 0;
@@ -63,7 +70,7 @@
   width: 60%;
   cursor: pointer;
   border-bottom: 1vw solid red;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah";
   font-weight: 1000;
   line-height: 10px;
   -webkit-animation: border 0.8s;

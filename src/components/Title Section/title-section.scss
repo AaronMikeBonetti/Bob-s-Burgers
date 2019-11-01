@@ -1,3 +1,4 @@
+@import '../../index.scss';
 
 .title-container{
     overflow-x: hidden;
@@ -14,6 +15,7 @@
     background-position: 20%;
     overflow: hidden;
     animation: fade-in 2s;
+    font-family: map-get($fonts, 1 );
     
     @keyframes fade-in {
         0%{
@@ -26,58 +28,22 @@
         }
     }
 
-
-    // .main-page-loading-screen{
-    //     background: rgb(255, 0, 0);
-    //     position: absolute;
-    //     z-index: 3;
-    //     height: 100vh;
-    //     width: 100%;
-    //     transition: none;
-    //     visibility: hidden;
-    //     text-align: center;
-    //     animation: load 2s ease-in;
-    //     h1{
-    //         font-size: 160px;
-    //         width: 40%;
-    //         margin: auto;
-    //         animation: loading-icon 2s ease-in;
-            
-    //     }
-    //     @keyframes loading-icon {
-    //         0%{
-                
-    //         }
-    //         100%{
-    //             transform: rotate(360deg);
-    //         }
-    //     }
-    // }
-    // @keyframes load {
-    //     0%{
-    //         visibility: visible;
-    //     }
-    //     100%{
-    //         visibility: hidden;
-    //     }
-    // }
-
-
-
     .desktop-sidebar{
         display: none;
             
     }
+
     .sidebar-header{
         display: none;
     }
+
     .desktop-main-section{
         display: none;
     }
 
     .jumbotron{
         position: relative;
-        display: grid;
+        display: none;
         grid-column: 1/2;
         grid-row: 3/4;
         height: 100%;
@@ -85,18 +51,60 @@
         font-size: 12vw;
         line-height: 16vw;
         color: rgb(0, 0, 0);
-        font-family: 'Gloria Hallelujah', cursive;
+        font-family: map-get($fonts , 2 );
         font-weight: 1000;
         padding-left: 20px;
         
         
         span{
             color: red;
-            font-family: 'Gloria Hallelujah', cursive;
             font-weight: 1000;
             
         }
             
+    }
+
+    .call-to-action-button{
+        position: absolute;
+        bottom: 40px;
+        width: 120px;
+        height: 120px;
+        left: calc(50% - 40px);
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        
+        
+        padding: 20px;
+        border-radius: 50%;
+        
+        i{
+            display: block;
+            font-size: 80px;
+            color: rgb(0, 0, 0);
+            line-height: 40px;
+            border-radius: 50%;
+            animation: pulse 3s infinite;
+
+        }
+        i:nth-child(2){
+            animation-delay: 0.5s;
+            
+        }
+        i:nth-child(3){
+            animation-delay: 1s;
+            
+        }
+
+        @keyframes pulse {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        }
     }
     
 }
@@ -138,13 +146,14 @@
 
 @media only screen and (min-width:900px){
     .title-container{  
-        grid-template-columns: 50% 20% 45px 30%;
+        grid-template-columns: 50% 18% 45px 30%;
 
         .desktop-sidebar{
             display: grid;
             grid-column: 4/-1;
             grid-row: 1/-1;
             background: red;
+            border-left: 4px solid rgb(0, 0, 0);
 
             .sidebar-content{
                 font-size: 2vw;
@@ -168,8 +177,8 @@
                 display: block;
                 font-size: 4vw;
                 color: rgb(255, 255, 255);
-                font-family: 'Londrina Shadow', cursive;
-                font-weight: 1000;
+                font-family: map-get($fonts , 3);
+                font-weight: 600;
             }
         }
             .sidebar-header{
@@ -179,15 +188,17 @@
                 grid-row: 1/-1;
                 display: initial;
                 
+                
             h1{
-                display: block;
-                color: rgb(255, 255, 255);
-                font-weight: 1000;
+                display: none;
+                color: rgba(255, 255, 255, 0.335);
                 padding-top: 20vh;
                 font-size: 80px;
                 word-spacing: -50px;
                 writing-mode: vertical-lr;
-                text-orientation: upright
+                text-orientation: upright;
+                font-family: map-get($fonts , 3 );
+                font-weight: 600;
             }
         
         }
@@ -250,7 +261,6 @@
             }
 
             .icon-drink{
-                
                 height: 15%;
                 width: 100%;
                 background-image: url(./images/soda.svg);
@@ -291,18 +301,17 @@
             position: relative;
             z-index: 2;
         }
-        .six{
-            z-index: 1;
-        }
+        
     }
 }
 @media only screen and (min-width:1200px){
     .title-container{   
-    
+        
         .jumbotron{
             width: 60%;
             line-height: 6vw;
             font-size: 3vw;
+            
             
         }
     }

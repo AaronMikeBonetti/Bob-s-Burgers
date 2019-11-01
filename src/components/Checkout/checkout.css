@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .checkout-container .checkout-header {
   padding-top: 60px;
   border-bottom: 2px solid red;
@@ -83,7 +90,7 @@
 
 .checkout-container .checkout-form-container .order-total-container h1 {
   padding: 1vw;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah";
   font-weight: 1000;
 }
 

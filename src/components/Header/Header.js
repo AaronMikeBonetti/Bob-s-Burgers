@@ -13,19 +13,14 @@ class Header extends Component{
         this.state={
 
         }
-        this.handleScroll = this.handleScroll.bind(this)
+        
     }
-
-handleScroll(){    
-    window.scroll(0,0)
-}
-    
     
     render(){
             if(window.screen.width < 1200){
             return (
             <div className="header">
-            <Link onClick={this.handleScroll} to="/" className="header-title" ><div className="header-logo-img"></div></Link>
+            <Link onClick={()=>window.scroll(0,0)} to="/" className="header-title" ><div className="header-logo-img"></div></Link>
             <Link to="/cart"><i className="fas fa-shopping-cart"><span className="cart-number">{this.props.itemNumber}</span></i></Link>
             <Navbar/>
             </div>
@@ -34,13 +29,13 @@ handleScroll(){
         else{
             return(
             <div className="header">
-            <Link onClick={this.handleScroll} to="/" className="header-title">
+            <Link onClick={()=>window.scroll(0,0)} to="/" className="header-title">
             <div className="header-logo-img"></div>
             </Link>
-            <Link  onClick={this.handleScroll} to="/Menu" className="link">Menu</Link>
-            <Link  onClick={this.handleScroll} to="/About" className="link">About</Link>
+            <Link  onClick={()=>window.scroll(0,0)} to="/Menu" className="link">Menu</Link>
+            <Link  onClick={()=>window.scroll(0,0)} to="/About" className="link">About</Link>
             
-            <Link onClick={this.handleScroll} to="/cart"><i className="fas fa-shopping-cart"><span className="cart-number">{this.props.itemNumber}</span></i></Link>
+            <Link onClick={()=>window.scroll(0,0)} to="/cart"><i className="fas fa-shopping-cart"><span className="cart-number">{this.props.itemNumber}</span></i></Link>
             </div>
             )
         }

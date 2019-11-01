@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .checkout-container{
     
 
@@ -69,7 +71,7 @@
         font-size: 3vw;
         h1{
             padding: 1vw;
-            font-family: 'Gloria Hallelujah', cursive;
+            font-family: map-get($fonts , 2 );
             font-weight: 1000;
         }
         

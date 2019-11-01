@@ -1,10 +1,9 @@
+@import '../../index.scss';
 .footer-container{
-    
     height: 180px;
     width: 100%;
     background:rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    border-top: 2px solid red;
     a{
         color: rgb(255, 0, 0);
         font-size: 30px;
@@ -16,7 +15,6 @@
     .social-media-container{
         display: flex;
         justify-content: space-around;
-        
         align-items: center;
         list-style: none;
         width: 50vw;
@@ -32,9 +30,10 @@
         text-align: center;
         font-size: 10px;
         padding: 20px;
+        font-family: map-get($fonts, 1 );
         a{
             font-size: 20px;
-            
+            font-family: map-get($fonts, 2 );
             text-decoration: none;
         }
     }
@@ -42,14 +41,12 @@
 
 @media screen and (min-width:500px){
 
-.footer-container{
-    
+.footer-container{ 
     height: 180px;
     width: 100%;
     background:rgb(255, 0, 0);
-    border-top: 2px solid white;
+    border-top: 2px solid black;
     color: rgb(255, 255, 255);
-    
     a{
         color: rgb(0, 0, 0);
         font-size: 30px;
@@ -67,7 +64,6 @@
         padding-top: 40px;
         border-bottom: 2px solid black;
     }
-    
     .sources-container{
         width: 90vw;
         margin: auto;

@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 *{
     
 .nav-hidden{
@@ -17,7 +19,7 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Londrina Shadow', cursive;
+    font-family: map-get($fonts , 3 );
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.479);
     
     

@@ -1,4 +1,4 @@
-
+@import '../../../index.scss';
 
 .carousel-container{
     height: 50vh;
@@ -22,7 +22,10 @@
         left: 20px;
         color: rgb(255, 0, 0);
         animation: header-scale 3000ms ease-in-out infinite ;
+        font-family: map-get($fonts, 1 );
+
     }
+
     @keyframes header-scale {
         0%{
             transform: scale(1.05)
@@ -34,7 +37,6 @@
             transform: scale(1.05)
         }
     }
-    
     
     .carousel-image{
         width: 100vw;
@@ -61,6 +63,7 @@
         filter: blur(0)
     }
 }
+
 @keyframes animation2 {
     0%{
         opacity: 0;
@@ -115,12 +118,12 @@
             font-size: 3vw;
             padding: 10px;
             color: white;
-            background: red;
+            background: rgba(255, 0, 0, 0.472);
             top:30vh;
             opacity: 1;
         }
         .fa-arrow-circle-left:hover,.fa-arrow-circle-right:hover{
-            color: black;
+            color: rgb(70, 70, 70);
         }
         .fa-arrow-circle-right{
             border-top-left-radius: 50%;
@@ -143,19 +146,19 @@
 @media screen and (min-width:900px){
     .carousel-container{
         height: 80vh;
-        width: 80vw;
+        width: 100%;
         margin: auto;
         
         .carousel-image{   
-            height: 80vh;
-            width: 80vw;
+            height: 100%;
             }
 
         span{
             z-index: 2;
-            font-size: 6vw;
-            top: 60vh;
-            left: 30px;
+            font-size: 4vw;
+            top: 65vh;
+            width: 600px;
+            left: calc(5vw);
             
         }
     }

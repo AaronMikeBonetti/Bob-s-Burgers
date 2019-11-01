@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 * .nav-hidden {
   display: none;
 }
@@ -20,7 +27,6 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Londrina Shadow', cursive;
   -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.479);
           box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.479);
 }

@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .empty-cart-page-container {
   padding-top: 40px;
   height: 100vh;
@@ -114,7 +121,7 @@
   color: black;
   margin-left: 40%;
   margin-right: 10%;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah";
   font-weight: 1000;
   margin: 10px 10% 50px 40%;
   padding: 10px;
