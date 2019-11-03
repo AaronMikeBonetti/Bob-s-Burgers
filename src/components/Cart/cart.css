@@ -1,24 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Londrina+Shadow|Staatliches&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-display: auto;
 }
 
 .empty-cart-page-container {
   padding-top: 40px;
   height: 100vh;
-  background: center 1000px url("./images/wood-background.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#3f3f3f));
+  background: linear-gradient(to bottom, #242424, #3f3f3f);
+  font-family: "Staatliches";
 }
 
 .empty-cart-page-container .empty-cart {
   margin: 40px auto;
-  height: 40vw;
-  width: 60vw;
-  background: rgba(255, 255, 255, 0.671);
+  height: 200px;
+  width: 300px;
+  background: #db0101;
   text-align: center;
   padding: 40px;
-  font-size: 5vw;
+  font-size: 25px;
 }
 
 .empty-cart-page-container a {
@@ -26,61 +30,39 @@
 }
 
 .empty-cart-page-container .empty-cart-button {
-  display: block;
-  margin: 3vh auto;
-  width: 35vw;
-  height: 10vw;
-  font-size: 4vw;
+  background: black;
+  text-decoration: none;
   color: white;
-  background: red;
-  border: none;
+  padding: 20px;
+  margin-top: 20px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  width: 60%;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Lobster";
+  border: 2px solid black;
+  line-height: 0px;
   cursor: pointer;
-  outline: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .empty-cart-page-container .empty-cart-button:hover {
+  background: white;
   color: black;
-}
-
-@media screen and (min-width: 500px) {
-  .empty-cart-page-container .empty-cart {
-    margin: 40px auto;
-    height: 40vh;
-    width: 60vw;
-    background: rgba(255, 255, 255, 0.671);
-    text-align: center;
-    padding: 8vw;
-    font-size: 5vw;
-  }
-  .empty-cart-page-container .empty-cart-button {
-    margin: 8vh auto;
-    display: block;
-    width: 35vw;
-    height: 10vw;
-    font-size: 4vw;
-    color: white;
-    background: red;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
 }
 
 @media screen and (min-width: 900px) {
   .empty-cart-page-container .empty-cart {
-    height: 60vh;
-    width: 60vw;
-    padding: 8vw;
-    font-size: 4vw;
+    height: 300px;
+    width: 500px;
+    padding: 50px;
+    font-size: 35px;
   }
   .empty-cart-page-container .empty-cart-button {
-    width: 25vw;
-    height: 6vw;
-    font-size: 3vw;
+    margin-top: 20px;
+    height: 60px;
+    font-size: 20px;
+    width: 60%;
   }
 }
 
@@ -104,6 +86,7 @@
   margin-bottom: 10px;
   text-align: center;
   font-size: 5vw;
+  font-family: "Staatliches";
 }
 
 .cart-page-container .cart-container .cart-items-container {

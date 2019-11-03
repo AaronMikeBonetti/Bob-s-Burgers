@@ -1,26 +1,30 @@
+@import '../../index.scss';
 .order-container{
     padding-top: 60px;
     height: 100%;
-    background: white;
+    background: linear-gradient(to bottom, #242424, #3f3f3f); 
+    font-family: map-get($fonts,1);
+
     
-    
-        
 
 .order-header{
     height: 10%;
-    width: 100%;
+    width: 60%;
+    margin:  40px auto; 
     padding: none;
     text-align: center;
     line-height: 60px;
     font-size: 6vw;
-    border-bottom: 2px solid black;    
-    border-top: 2px solid black; 
+    border-bottom: 2px solid red;    
+    border-top: 2px solid red; 
+    color: white;
 }
 
 h2{
-    color:red;
+    color:rgb(255, 255, 255);
     padding: 10px;
     font-size: 4vw;
+    font-family: map-get($fonts, 2 );
 } 
 
 
@@ -29,7 +33,7 @@ h2{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background: red;
+    background: rgb(226, 0, 0);
     width:100%;
     padding: 15px 20px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.568);
@@ -48,7 +52,6 @@ label span{
     align-items: flex-start;
     width:6vw;
     height: 6vw;
-    
     margin-bottom: 20px;
     background: white;
     cursor: pointer;
@@ -61,15 +64,16 @@ label span{
 }
 
 textarea{
-    border: 2px solid red;
+    
     width: 80vw;
     height: 150px;
-    font-size: 30px;
+    font-size: 16px;
     margin: auto;
     display: flex;
     align-self: center;
     justify-self: center;
     outline: none;
+    font-family: map-get($fonts, 2 );
 }
 .button-container{
     display: flex;
@@ -78,21 +82,23 @@ textarea{
     height: 100px;
 
     button{
-        
-            
             width: 35vw;
             padding: 3vw 0vw;
             color: white;
-            background: red;
+            background: rgb(226, 0, 0);
             outline: none;
             font-size: 5vw;
             border: 0;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
+            font-family: map-get($fonts, 1);
+            border: 2px solid rgb(226, 0, 0);
             }
+            
             button:hover{
-                color: black;
-                
+                color: rgb(226, 0, 0);
+                background: white;
+                border: 2px solid rgb(226, 0, 0);
             }
     
     
@@ -104,7 +110,8 @@ textarea{
 .order-page-container{
     padding-top: 60px;
     padding-bottom: 60px;
-    background: center/60vw url("./images/wood-background.webp");
+    background: linear-gradient(to bottom, #242424, #3f3f3f); 
+    
         
     
     .order-container{
@@ -112,7 +119,7 @@ textarea{
         padding: 10px 30px;
         margin: 0px auto;
         height: 100%;        
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.164);
         
             
     
@@ -125,10 +132,11 @@ textarea{
         line-height: 60px;
         font-size: 5vw;
         
+        
     }
     
     h2{
-        color:red;
+        color:white;
         padding: 2vw;
         font-size: 4vw;
     } 
@@ -175,6 +183,7 @@ textarea{
             width: 15vw;
             padding: 3vw 0vw;
             font-size: 2vw;
+            
         }
                 
         
@@ -186,7 +195,7 @@ textarea{
     .order-page-container{
         padding-top: 60px;
         padding-bottom: 60px;
-        background: center/60vw url("./images/wood-background.webp");
+        
             
         
         .order-container{
@@ -194,7 +203,7 @@ textarea{
             padding: 10px 30px;
             margin: 0px auto;
             height: 100%;        
-            background: rgba(255, 255, 255, 0.5);
+            
             
                 
         
@@ -221,11 +230,20 @@ textarea{
         .button-container{
             
             height: 100px;
-        
+            
             button{
                 width: 150px;
                 padding: 15px 0px;
                 font-size: 20px;
+                border: 2px solid red;
+                background: red;
+
+               
+            }
+            button:hover{
+                color: rgb(255, 0, 0);
+                background: white;
+                border: 2px solid rgb(255, 0, 0);
             }
                     
             

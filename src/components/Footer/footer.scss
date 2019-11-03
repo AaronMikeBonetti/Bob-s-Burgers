@@ -2,15 +2,15 @@
 .footer-container{
     height: 180px;
     width: 100%;
-    background:rgb(255, 255, 255);
+    background:rgb(266, 0, 0);
     color: rgb(0, 0, 0);
     a{
-        color: rgb(255, 0, 0);
+        color: rgb(0, 0, 0);
         font-size: 30px;
         transition: all 0.5s;
     }
     a:hover{
-        color: black;
+        color: rgb(255, 255, 255);
     }
     .social-media-container{
         display: flex;
@@ -44,16 +44,12 @@
 .footer-container{ 
     height: 180px;
     width: 100%;
-    background:rgb(255, 0, 0);
     border-top: 2px solid black;
     color: rgb(255, 255, 255);
     a{
-        color: rgb(0, 0, 0);
         font-size: 30px;
     }
-    a:hover{
-        color: white;
-    }
+    
     .social-media-container{
         display: flex;
         justify-content: space-around;
@@ -73,7 +69,6 @@
         padding: 20px;
         a{
             font-size: 20px;
-            
             text-decoration: none;
         }
     }

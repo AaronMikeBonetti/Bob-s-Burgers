@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'Londrina Shadow';
+  font-display: swap;
+  src: url(fonts/LondrinaShadow-Regular.ttf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-display: auto;
 }
 
 .menu-container {
@@ -49,11 +56,12 @@
   grid-column: 1/-1;
   -ms-grid-row: 1;
   grid-row: 1/1;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0.527)), to(rgba(0, 0, 0, 0.301))), url("./images/Bobs-diner.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.527) 50%, rgba(0, 0, 0, 0.301)), url("./images/Bobs-diner.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.327)), to(rgba(0, 0, 0, 0.301))), url("./images/Bobs-diner.webp");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.327) 20%, rgba(0, 0, 0, 0.301)), url("./images/Bobs-diner.webp");
   background-size: cover;
   background-position: center;
   color: white;
+  text-decoration: underline;
 }
 
 .menu-container .box2 {
@@ -102,8 +110,8 @@
   -ms-grid-row: 2;
   grid-row: 2;
   color: #e5ff00;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.376)), to(rgba(255, 255, 255, 0.308))), url("./images/burger-bohemian.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.376) 20%, rgba(255, 255, 255, 0.308)), url("./images/burger-bohemian.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.376)), to(rgba(255, 255, 255, 0.308))), url("./images/burger-bohemian.webp");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.376) 20%, rgba(255, 255, 255, 0.308)), url("./images/burger-bohemian.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -114,10 +122,11 @@
   -ms-grid-row: 3;
   grid-row: 3;
   color: white;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.281)), to(rgba(255, 255, 255, 0.096))), url("./images/bob's-diner.png");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.281) 20%, rgba(255, 255, 255, 0.096)), url("./images/bob's-diner.png");
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.281)), to(rgba(255, 255, 255, 0.096))), url("./images/bob's-diner.webp");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.281) 20%, rgba(255, 255, 255, 0.096)), url("./images/bob's-diner.webp");
   background-size: cover;
   background-position: bottom;
+  text-decoration: underline;
 }
 
 .menu-container .box5 {
@@ -125,8 +134,8 @@
   grid-column: 1;
   -ms-grid-row: 4;
   grid-row: 4;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("./images/burger-peas.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("./images/burger-peas.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("./images/burger-peas.webp");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("./images/burger-peas.webp");
   background-size: cover;
   background-position: center;
 }
@@ -149,6 +158,8 @@
   height: 100%;
   color: black;
   font-family: "Staatliches";
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
 }
 
 .menu-container .box6 span {
@@ -184,13 +195,14 @@
   grid-column: 1/-1;
   -ms-grid-row: 5;
   grid-row: 5;
-  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0.563)), to(rgba(0, 0, 0, 0.099))), url("./images/bobs-grill.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.563) 30%, rgba(0, 0, 0, 0.099)), url("./images/bobs-grill.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0.563)), to(rgba(0, 0, 0, 0.099))), url("./images/bobs-grill.webp");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.563) 30%, rgba(0, 0, 0, 0.099)), url("./images/bobs-grill.webp");
   background-size: cover;
   background-position: center;
   color: white;
   font-size: 6vw;
   font-family: "Lobster";
+  text-decoration: underline;
 }
 
 .menu-container .box8 {
@@ -198,8 +210,8 @@
   grid-column: 2;
   -ms-grid-row: 6;
   grid-row: 6;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("./images/burger-kale.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("./images/burger-kale.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("./images/burger-kale.webp");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("./images/burger-kale.webp");
   background-size: cover;
   background-position: center;
   color: yellow;
@@ -212,8 +224,8 @@
   -ms-grid-row: 6;
   -ms-grid-row-span: 2;
   grid-row: 6/8;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("./images/fataish-sign.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("./images/fataish-sign.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("./images/fataish-sign.webp");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("./images/fataish-sign.webp");
   background-size: cover;
   background-position: center;
   color: white;
@@ -232,8 +244,8 @@
   grid-column: 2;
   -ms-grid-row: 7;
   grid-row: 7;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("./images/burger-olive.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("./images/burger-olive.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0.363)), to(rgba(0, 0, 0, 0.089))), url("./images/burger-olive.webp");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.363) 20%, rgba(0, 0, 0, 0.089)), url("./images/burger-olive.webp");
   background-size: cover;
   background-position: center;
   color: yellow;

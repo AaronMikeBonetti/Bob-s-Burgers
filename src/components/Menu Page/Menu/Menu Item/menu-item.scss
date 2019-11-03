@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 5% 1fr 1fr 5%;
     grid-template-rows: 75px 30px 75px 75px;
-    background: red;
+    background:rgb(209, 0, 0);
     border-bottom: 2px solid black;
     
     
@@ -76,10 +76,12 @@
         }
     }
 }
+
+
 @media screen and (min-width: 540px){
     .menu-item-container{
         border: none;
-        
+        background: red;
        
     .menu-item-name{
         
@@ -89,17 +91,7 @@
        font-size: 16px;
         
     }
-    .menu-item-price{
-        
-        
-        
-    }
-    .menu-item-button{
-        
-        .fa-plus-square{
-              
-        }
-    } 
+    
 }
 }
 @media screen and (min-width: 1000px){

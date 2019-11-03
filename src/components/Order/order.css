@@ -1,24 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Londrina+Shadow|Staatliches&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-display: auto;
+}
+
 .order-container {
   padding-top: 60px;
   height: 100%;
-  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#3f3f3f));
+  background: linear-gradient(to bottom, #242424, #3f3f3f);
+  font-family: "Lobster";
 }
 
 .order-container .order-header {
   height: 10%;
-  width: 100%;
+  width: 60%;
+  margin: 40px auto;
   padding: none;
   text-align: center;
   line-height: 60px;
   font-size: 6vw;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
+  border-bottom: 2px solid red;
+  border-top: 2px solid red;
+  color: white;
 }
 
 .order-container h2 {
-  color: red;
+  color: white;
   padding: 10px;
   font-size: 4vw;
+  font-family: "Staatliches";
 }
 
 .order-container .add-ons {
@@ -33,7 +47,7 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: red;
+  background: #e20000;
   width: 100%;
   padding: 15px 20px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.568);
@@ -68,10 +82,9 @@
 }
 
 .order-container textarea {
-  border: 2px solid red;
   width: 80vw;
   height: 150px;
-  font-size: 30px;
+  font-size: 16px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,6 +93,7 @@
       align-self: center;
   justify-self: center;
   outline: none;
+  font-family: "Staatliches";
 }
 
 .order-container .button-container {
@@ -98,31 +112,36 @@
   width: 35vw;
   padding: 3vw 0vw;
   color: white;
-  background: red;
+  background: #e20000;
   outline: none;
   font-size: 5vw;
   border: 0;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-family: "Lobster";
+  border: 2px solid #e20000;
 }
 
 .order-container .button-container button:hover {
-  color: black;
+  color: #e20000;
+  background: white;
+  border: 2px solid #e20000;
 }
 
 @media screen and (min-width: 550px) {
   .order-page-container {
     padding-top: 60px;
     padding-bottom: 60px;
-    background: center/60vw url("./images/wood-background.webp");
+    background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#3f3f3f));
+    background: linear-gradient(to bottom, #242424, #3f3f3f);
   }
   .order-page-container .order-container {
     width: 50%;
     padding: 10px 30px;
     margin: 0px auto;
     height: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.164);
   }
   .order-page-container .order-container .order-header {
     height: 10%;
@@ -134,7 +153,7 @@
     font-size: 5vw;
   }
   .order-page-container .order-container h2 {
-    color: red;
+    color: white;
     padding: 2vw;
     font-size: 4vw;
   }
@@ -175,14 +194,12 @@
   .order-page-container {
     padding-top: 60px;
     padding-bottom: 60px;
-    background: center/60vw url("./images/wood-background.webp");
   }
   .order-page-container .order-container {
     width: 40%;
     padding: 10px 30px;
     margin: 0px auto;
     height: 100%;
-    background: rgba(255, 255, 255, 0.5);
   }
   .order-page-container .order-container .order-header {
     font-size: 4vw;
@@ -202,6 +219,13 @@
     width: 150px;
     padding: 15px 0px;
     font-size: 20px;
+    border: 2px solid red;
+    background: red;
+  }
+  .order-page-container .order-container .button-container button:hover {
+    color: red;
+    background: white;
+    border: 2px solid red;
   }
 }
 /*# sourceMappingURL=order.css.map */

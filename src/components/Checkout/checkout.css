@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'Londrina Shadow';
+  font-display: swap;
+  src: url(fonts/LondrinaShadow-Regular.ttf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-display: auto;
 }
 
 .checkout-container .checkout-header {

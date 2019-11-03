@@ -1,13 +1,16 @@
-$fonts: (
+@import url('https://fonts.googleapis.com/css?family=Lobster|Londrina+Shadow|Staatliches&display=swap');
+
+  $fonts: (
     1 : 'Lobster',
-    2 : 'Staatliches' ,
-    3 : 'Londrina Shadow',
+    2 : 'Staatliches',
+    3 : 'Londrina Shadow'
 );
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-display: auto;
 }
 
 
