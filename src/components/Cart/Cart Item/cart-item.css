@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Londrina+Shadow|Staatliches&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-display: auto;
+}
+
 .item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,9 +22,8 @@
   font-size: 1rem;
   padding: 30px 10%;
   margin: 20px;
-  border: 6px solid black;
-  border-radius: 5%;
   background: red;
+  font-family: "Staatliches";
 }
 
 .item .item-name {
@@ -25,6 +33,7 @@
           flex-grow: 1;
   color: black;
   font-size: 1rem;
+  font-family: "Lobster";
 }
 
 .item .item-price {
@@ -53,13 +62,27 @@
   color: black;
 }
 
+.item .item-buttons {
+  width: 70%;
+  margin: auto;
+}
+
 .item .item-buttons button {
-  padding: 5px;
-  margin: 10px;
-  background: red;
+  padding: 10px;
+  margin: 2.5%;
+  width: 45%;
+  background: white;
   outline: none;
-  border: 1px solid white;
+  border: none;
   cursor: pointer;
+  color: red;
+  font-family: "Lobster";
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.item .item-buttons button:hover {
+  background: black;
   color: white;
 }
 /*# sourceMappingURL=cart-item.css.map */

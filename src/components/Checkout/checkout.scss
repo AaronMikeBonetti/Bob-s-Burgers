@@ -1,13 +1,14 @@
 @import '../../index.scss';
 
 .checkout-container{
+    font-family: map-get($fonts, 2);
     
-
 .checkout-header{
     padding-top: 60px;
     border-bottom: 2px solid rgb(255, 0, 0);
     text-align: center;
     font-size: 10vw;
+    font-family: map-get($fonts, 1);
 }
 
 .checkout-form-container{
@@ -48,6 +49,7 @@
         display: flex;
         justify-content: space-between;
         margin-top: 20vw;
+        
         button{
         width: 35vw;
         padding: 0.5vw 0vw;
@@ -57,6 +59,14 @@
         font-size: 5vw;
         border: 0;
         cursor: pointer;
+        font-family: map-get($fonts, 1);
+        border: 2px solid red;
+        transition: all 0.5s;
+            
+        }
+        button:hover{
+            background: rgb(255, 255, 255);
+            color: rgb(255, 0, 0);
         }
         
     }
@@ -84,20 +94,22 @@
 
 .checkout-page-container{
     padding: 60px 0px;
-    background: center 1000px url("./images/wood-background.webp");
+    background: linear-gradient(to bottom, #242424, #3f3f3f); 
 
 
 .checkout-container{
     width: 60vw;
     margin: auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.698);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.74);
 
 .checkout-header{
     padding-top: 0px;
     border-bottom: 2px solid rgb(255, 0, 0);
     text-align: center;
     font-size: 50px;
+    width: 60%;
+    margin: auto;
 }
 
 .checkout-form-container{
@@ -116,7 +128,6 @@
     }
     input{
         margin-top:5px;
-        
     }
     .error-message{
         color:red;
@@ -128,13 +139,20 @@
         margin-bottom: 40px;
         button{
         width: 150px;
-        padding: 5px 0px;
-        color: white;
-        background: red;
+        padding: 5px 20px;
+        color: rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
         outline: none;
         font-size: 30px;
-        
+        font-family: map-get($fonts, 1);
+        transition: all 0.5s;
+        border: none;
         }
+        button:hover{
+            color: rgb(255, 255, 255);
+            background: rgb(0, 0, 0);
+        }
+
         
     }
 
@@ -142,8 +160,8 @@
         display: flex;
         justify-content: space-between;
         margin-top: 60px;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
+        border-top: 2px solid rgb(255, 0, 0);
+        border-bottom: 2px solid rgb(255, 0, 0);
         padding: 10px 5px;
         font-size: 20px;
         h1{

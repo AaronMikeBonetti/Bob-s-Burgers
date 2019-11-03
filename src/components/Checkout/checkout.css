@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'Londrina Shadow';
-  font-display: swap;
-  src: url(fonts/LondrinaShadow-Regular.ttf);
-}
-
+@import url("https://fonts.googleapis.com/css?family=Lobster|Londrina+Shadow|Staatliches&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,11 +7,16 @@
   font-display: auto;
 }
 
+.checkout-container {
+  font-family: "Staatliches";
+}
+
 .checkout-container .checkout-header {
   padding-top: 60px;
   border-bottom: 2px solid red;
   text-align: center;
   font-size: 10vw;
+  font-family: "Lobster";
 }
 
 .checkout-container .checkout-form-container {
@@ -79,6 +79,15 @@
   font-size: 5vw;
   border: 0;
   cursor: pointer;
+  font-family: "Lobster";
+  border: 2px solid red;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.checkout-container .checkout-form-container .checkout-buttons button:hover {
+  background: white;
+  color: red;
 }
 
 .checkout-container .checkout-form-container .order-total-container {
@@ -104,19 +113,22 @@
 @media screen and (min-width: 600px) {
   .checkout-page-container {
     padding: 60px 0px;
-    background: center 1000px url("./images/wood-background.webp");
+    background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#3f3f3f));
+    background: linear-gradient(to bottom, #242424, #3f3f3f);
   }
   .checkout-page-container .checkout-container {
     width: 60vw;
     margin: auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.698);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.74);
   }
   .checkout-page-container .checkout-container .checkout-header {
     padding-top: 0px;
     border-bottom: 2px solid red;
     text-align: center;
     font-size: 50px;
+    width: 60%;
+    margin: auto;
   }
   .checkout-page-container .checkout-container .checkout-form-container {
     padding-top: 30px;
@@ -145,11 +157,19 @@
   }
   .checkout-page-container .checkout-container .checkout-form-container .checkout-buttons button {
     width: 150px;
-    padding: 5px 0px;
-    color: white;
-    background: red;
+    padding: 5px 20px;
+    color: black;
+    background: white;
     outline: none;
     font-size: 30px;
+    font-family: "Lobster";
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border: none;
+  }
+  .checkout-page-container .checkout-container .checkout-form-container .checkout-buttons button:hover {
+    color: white;
+    background: black;
   }
   .checkout-page-container .checkout-container .checkout-form-container .order-total-container {
     display: -webkit-box;
@@ -159,8 +179,8 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-top: 60px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
     padding: 10px 5px;
     font-size: 20px;
   }

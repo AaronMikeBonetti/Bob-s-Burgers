@@ -2,8 +2,8 @@
 @import '../../index.scss';
 
 .empty-cart-page-container{
-padding-top: 40px;
-height: 100vh;
+padding-top: 50px;
+height:calc(100vh - 200px);
 background: linear-gradient(to bottom, #242424, #3f3f3f); 
 font-family: map-get($fonts , 2 );
 
@@ -56,7 +56,6 @@ a{
 @media screen and (min-width:900px){
     .empty-cart-page-container{
         
-        
         .empty-cart{
             height: 300px;
             width: 500px;
@@ -77,34 +76,36 @@ a{
 
 
 .cart-page-container{
-   background: white;
+    background: linear-gradient(to bottom, #242424, #3f3f3f); 
     height: 100%;
     padding-top: 60px;
-    padding-bottom:300px;
+    padding-bottom:50px;
     
 
 .cart-container{
     height: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    background: rgba(255, 255, 255, 0.514);
+    
     
     
     .cart-title{
-        color: red;
-        border-bottom: 2px solid black;
+        width: 60%;
+        margin: auto;
+        color: rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 0, 0);
+        padding-bottom: 10px;
         margin-bottom: 10px;
         text-align: center;
         font-size: 5vw;
         font-family: map-get($fonts, 2);
+
         
     }
     .cart-items-container{
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
-        
-        
     }
     
     .subtotal{
@@ -112,10 +113,13 @@ a{
         margin-left: 40%;
         margin-right: 10%;
         font-family: map-get($fonts , 2 );
-            font-weight: 1000;
+        font-weight: 1000;
+        font-size: 4vw;
         margin: 10px 10% 50px 40%;
         padding: 10px;
-        border-top: 2px solid black
+        letter-spacing: 1px;
+        color: rgb(255, 255, 255);
+        border-top: 2px solid rgb(255, 0, 0);
     }
     .cart-button-container{
         width:80vw;
@@ -133,7 +137,15 @@ a{
         font-size: 5vw;
         border: 0;
         cursor: pointer;
+        font-family: map-get($fonts, 1); 
         
+        transition: 0.5s all;
+        
+        }
+        .cart-button:hover{
+            color: rgb(226, 0, 0);
+            background: white;
+            
         }
     }
 }
@@ -142,17 +154,17 @@ a{
 @media screen and (min-width:600px){
 
 .cart-page-container{
-    background: center 1000px url("./images/wood-background.webp");
+    
     .cart-container{
         width: 60vw;
         margin: auto;
+
         .subtotal{
-        font-size: 2.5vw;  
-        margin-left: 20%;
-        margin-right: 10%;
-        margin: 10px 10% 50px 30%;
+        width: 50%;
         padding: 10px;
-        border-top: 2px solid black
+        margin: 20px 30px 0 auto;
+        font-size: 2.5vw;
+        
         }
         .cart-button-container{
             width:60vw;
@@ -160,9 +172,9 @@ a{
             .cart-button{
             width: 15vw;
             margin: 20px 8vw;
-            padding: 3vw 0vw;
-            font-size: 2vw;
-            
+            padding: 2vw 0vw;
+            font-size: 3vw;
+            font-family: map-get($fonts, 1); 
             
             }
         }

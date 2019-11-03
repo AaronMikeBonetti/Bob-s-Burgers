@@ -8,8 +8,8 @@
 }
 
 .empty-cart-page-container {
-  padding-top: 40px;
-  height: 100vh;
+  padding-top: 50px;
+  height: calc(100vh - 200px);
   background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#3f3f3f));
   background: linear-gradient(to bottom, #242424, #3f3f3f);
   font-family: "Staatliches";
@@ -67,22 +67,25 @@
 }
 
 .cart-page-container {
-  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#3f3f3f));
+  background: linear-gradient(to bottom, #242424, #3f3f3f);
   height: 100%;
   padding-top: 60px;
-  padding-bottom: 300px;
+  padding-bottom: 50px;
 }
 
 .cart-page-container .cart-container {
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(255, 255, 255, 0.514);
 }
 
 .cart-page-container .cart-container .cart-title {
-  color: red;
-  border-bottom: 2px solid black;
+  width: 60%;
+  margin: auto;
+  color: white;
+  border-bottom: 2px solid red;
+  padding-bottom: 10px;
   margin-bottom: 10px;
   text-align: center;
   font-size: 5vw;
@@ -106,9 +109,12 @@
   margin-right: 10%;
   font-family: "Staatliches";
   font-weight: 1000;
+  font-size: 4vw;
   margin: 10px 10% 50px 40%;
   padding: 10px;
-  border-top: 2px solid black;
+  letter-spacing: 1px;
+  color: white;
+  border-top: 2px solid red;
 }
 
 .cart-page-container .cart-container .cart-button-container {
@@ -134,23 +140,26 @@
   font-size: 5vw;
   border: 0;
   cursor: pointer;
+  font-family: "Lobster";
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.cart-page-container .cart-container .cart-button-container .cart-button:hover {
+  color: #e20000;
+  background: white;
 }
 
 @media screen and (min-width: 600px) {
-  .cart-page-container {
-    background: center 1000px url("./images/wood-background.webp");
-  }
   .cart-page-container .cart-container {
     width: 60vw;
     margin: auto;
   }
   .cart-page-container .cart-container .subtotal {
-    font-size: 2.5vw;
-    margin-left: 20%;
-    margin-right: 10%;
-    margin: 10px 10% 50px 30%;
+    width: 50%;
     padding: 10px;
-    border-top: 2px solid black;
+    margin: 20px 30px 0 auto;
+    font-size: 2.5vw;
   }
   .cart-page-container .cart-container .cart-button-container {
     width: 60vw;
@@ -158,8 +167,9 @@
   .cart-page-container .cart-container .cart-button-container .cart-button {
     width: 15vw;
     margin: 20px 8vw;
-    padding: 3vw 0vw;
-    font-size: 2vw;
+    padding: 2vw 0vw;
+    font-size: 3vw;
+    font-family: "Lobster";
   }
 }
 

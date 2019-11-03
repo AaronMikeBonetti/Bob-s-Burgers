@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'Londrina Shadow';
-  font-display: swap;
-  src: url(fonts/LondrinaShadow-Regular.ttf);
-}
-
+@import url("https://fonts.googleapis.com/css?family=Lobster|Londrina+Shadow|Staatliches&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

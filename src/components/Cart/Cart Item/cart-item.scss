@@ -1,3 +1,4 @@
+@import '../../../index.scss';
 .item{
     display: flex;
     flex-wrap: wrap;
@@ -6,14 +7,15 @@
     font-size: 1rem;
     padding: 30px 10%;
     margin:20px;
-    border: 6px solid rgb(0, 0, 0);
-    border-radius: 5%;
     background: rgb(255, 0, 0);
+    font-family: map-get($fonts, 2 );
+    
     .item-name{
         padding-left: 5%;
         flex-grow: 1;
         color: rgb(0, 0, 0);
         font-size: 1rem;
+        font-family: map-get($fonts, 1 );
     }
     .item-price{
         color: rgb(255, 255, 255);
@@ -35,13 +37,25 @@
     span{
         color: rgb(0, 0, 0);
     }
+    .item-buttons{
+        
+        width: 70%;
+        margin: auto;
+    }
     .item-buttons button{
-        padding: 5px;
-        margin: 10px;
-        background: red;
+        padding: 10px;
+        margin: 2.5%;
+        width: 45%;
+        background: white;
         outline: none;
-        border: 1px solid white;
+        border: none;
         cursor: pointer;
-        color: rgb(255, 255, 255);
+        color: rgb(255, 0, 0);
+        font-family: map-get($fonts, 1 );
+        transition: all 0.5s;
+    }
+    .item-buttons button:hover{
+        background: rgb(0, 0, 0);
+        color: white;
     }
 }

@@ -220,9 +220,9 @@ formValid(errors, ...rest){
                     </div>
                 </div>
                 <div className="checkout-buttons">
-                <Link to="/cart"><button>Review<br/> Order
+                <Link to="/cart"><button>Review<br/>Order
                 </button></Link>
-                <button>Submit Payment<br/></button></div>
+                <button>Submit<br/>Payment</button></div>
             </form>
             </div>
             </div>
