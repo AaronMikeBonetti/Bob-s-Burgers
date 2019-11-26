@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Londrina+Shadow|Staatliches&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,36 +8,60 @@
 }
 
 .about-page-container {
-  height: 100%;
-  width: 100%;
-  padding-bottom: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 1fr 10%;
+      grid-template-columns: 10% 1fr 10%;
+  -ms-grid-rows: 8vh 500px 200px 20vh;
+      grid-template-rows: 8vh 500px 200px 20vh;
   background: red;
-  background-repeat: repeat;
 }
 
 .about-page-container .about-page-image {
-  height: 500px;
-  width: 100%;
-  padding-top: 220px;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
   background: url("./images/burgers-about-page.webp");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .about-page-container .about-page-content-container {
-  width: 40vw;
-  margin: 0px auto;
-  border: 2px solid white;
+  width: 100%;
+  margin: 30px auto;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 3;
+  grid-row: 3;
 }
 
 .about-page-container .about-page-content-container p {
+  height: 100%;
   background: yellow;
   color: black;
   font-family: "Staatliches";
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-weight: 1000;
   text-align: center;
-  padding: 20px;
+  padding: 40px;
+}
+
+@media screen and (max-width: 900px) {
+  .about-page-container {
+    -ms-grid-rows: 8vh 50vw 150px 20vh;
+        grid-template-rows: 8vh 50vw 150px 20vh;
+  }
+  .about-page-container .about-page-content-container p {
+    font-size: 2vw;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-page-container .about-page-content-container p {
+    font-size: 3vw;
+  }
 }
 /*# sourceMappingURL=about.css.map */

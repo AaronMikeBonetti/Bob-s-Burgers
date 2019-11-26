@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Londrina+Shadow|Staatliches&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -98,7 +99,7 @@
 
 .title-container .call-to-action-button i {
   display: block;
-  font-size: 80px;
+  font-size: 50px;
   color: black;
   line-height: 40px;
   border-radius: 50%;

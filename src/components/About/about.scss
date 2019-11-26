@@ -1,66 +1,65 @@
 @import '../../index.scss';
 
 .about-page-container{
-    height: 100%;
-    width: 100%;
-    padding-bottom: 40px;
-    background: red;
-    background-repeat: repeat;
-    
-
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 8vh 500px 200px 20vh;
+    background: rgb(255, 0, 0);
+   
     .about-page-image{
-        height: 500px;
-        width: 100%;
-        padding-top: 220px;
+        grid-column: 2;
+        grid-row: 2;
         background: url("./images/burgers-about-page.webp");
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
+        
     }
     .about-page-content-container{
-        width: 40vw;
-        margin: 0px auto;
-        border: 2px solid white;
+        width:100%;
+        margin: 30px auto;
+
+        grid-column: 2;
+            grid-row: 3;
         p{
+            height: 100%;
             background:rgb(255, 255, 0);
             color: black;
             font-family: map-get($fonts , 2 );
-            font-size: 1vw;
+            font-size: 1.5vw;
             font-weight: 1000;
             text-align: center;
-            padding: 20px;
+            padding: 40px;
         }
     }
 }
-@media screen and (min-width:500px){
+@media screen and (max-width:900px){
 
 .about-page-container{
     
+    grid-template-rows: 8vh 50vw 150px 20vh;
     
 
     .about-page-image{
-        
-        
-        
-        
+           
     }
     .about-page-content-container{
         p{
-               
+            font-size: 2vw;
+            padding: 10px;  
         }
     }
 }
 }
-@media screen and (min-width:800px){
+@media screen and (max-width:600px){
 
 .about-page-container{
     
-    
-
-    
     .about-page-content-container{
         p{
+               font-size: 3vw;
                
+
         }
     }
 }

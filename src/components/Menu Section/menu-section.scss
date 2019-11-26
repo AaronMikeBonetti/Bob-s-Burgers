@@ -69,8 +69,7 @@
         a:hover{
             background: rgb(255, 255, 255);
             color: black;
-        }
-            
+        }  
     }
     
     .box3{
@@ -120,6 +119,7 @@
         grid-row: 4;
         background:rgb(255, 238, 0);
         padding-right: 10px;
+        padding: 40px;
         font-weight: 800;
         text-align: right;
         height: 100%;
@@ -135,8 +135,7 @@
             color:white;
             font-family: map-get($fonts, 1 );
         }
-    
-        
+
         .fa-angle-double-left{
             font-size: 12vw;
             animation: pulse-arrow 1.5s infinite ease-in-out;

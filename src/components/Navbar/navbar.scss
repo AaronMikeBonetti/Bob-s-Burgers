@@ -5,10 +5,10 @@
     .nav-show{
         position: absolute;
         z-index: 0;
-        top:46px;
-        left:40%;
+        top: 46px;
+        left: 40%;
         width: 60%;
-        height: 180px;
+        height: 210px;
         padding: 3vw;
         border-right: 2px solid rgba(255, 255, 255, 0);
         border-bottom-left-radius: 10%; 
@@ -48,14 +48,15 @@
             margin: 5px;
             width: 60%;
             cursor: pointer;
-            border-bottom: 1vw solid rgb(255, 0, 0);
+            border-bottom: 5px solid rgb(255, 0, 0);
             font-family: map-get($fonts , 2 );
             font-weight: 1000;
-            line-height: 10px;
+            font-size: 25px;
+            line-height: 15px;
             animation: border 0.8s;
             transition: 0.2s transform;
             
-            
+
             @keyframes opacity {
                 0%{
                     
@@ -99,6 +100,7 @@
                 
             }
         }
+
         li:hover{
             
             transform: scale(0.9);
@@ -130,12 +132,9 @@
             
         }
         100%{           
-            
             height: 0px;
             padding: 0;
             margin-left: 300px;
-            
-            
         }
     }
 
@@ -165,10 +164,12 @@
     .fa-hamburger:focus{
         outline: white;  
    }
+
     .fa-hamburger-active{
         animation-name: nav-active;
         animation-duration: 0.5s;
     }
+
     @keyframes nav-active {
         100%{           
             transform: rotate(360deg);
@@ -188,13 +189,12 @@
 @media (min-width:450px){
    .navbar-container{
         .nav-show{ 
+
         left:50%;
         width: 50%;
         height: 240px;
         font-size: 25px;
-        li{
-            padding-bottom: 20px;
-        }       
+            
         @keyframes nav-show {
             0%{
                 height: 0px; 
@@ -219,10 +219,9 @@
 @media (min-width:800px){
    .navbar-container{
         .nav-show{ 
-       
-        height: 270px;
+
         li{
-            padding: 15px;
+            
         }
         @keyframes nav-show {
             0%{
@@ -235,9 +234,8 @@
                 font-size: 0px;
                 
             }
-            100%{ 
-                        
-                height: 270px;
+            100%{        
+                height: 240px;
                 font-size: 3.5vw;
             }
         }
