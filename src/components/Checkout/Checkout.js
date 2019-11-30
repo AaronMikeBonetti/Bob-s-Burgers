@@ -120,6 +120,8 @@ formValid(errors, ...rest){
     }
 
     render(){
+
+        
         
         const { formErrors } = this.state
 
@@ -185,7 +187,7 @@ formValid(errors, ...rest){
                 </label>
                 
                 <label>CVV
-                    <input name="cvv" value={this.state.cvv} onChange={this.handleChange} className="card-cvv"type="text" required>
+                    <input name="cvv" value={this.state.cvv} onChange={this.handleChange} className="card-cvv" type="text" required>
                     </input>
                     {errorMessage(formErrors.cvv)}
                 </label>
